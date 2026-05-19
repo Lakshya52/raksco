@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased text-slate-700 bg-slate-50;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-primary font-semibold leading-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-primary px-6 py-3 rounded font-semibold text-lg transition-colors duration-300 border-2 border-gold hover:border-gold-dark;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-primary px-6 py-3 rounded font-semibold text-lg transition-colors duration-300 border-2 border-white;
+  }
+  .nav-link {
+    @apply font-medium text-[0.95rem] text-slate-700 hover:text-gold transition-colors;
+  }
+}
