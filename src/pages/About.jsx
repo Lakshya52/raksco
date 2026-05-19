@@ -40,8 +40,8 @@ function About() {
           <div className="relative">
             <div className="absolute inset-0 bg-gold/10 rounded-2xl transform translate-x-4 translate-y-4"></div>
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
-              alt="Team collaborating"
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+              alt="Professional office setup"
               className="rounded-2xl shadow-lg relative z-10 w-full object-cover h-[500px]"
             />
           </div>

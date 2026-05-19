@@ -1,65 +1,65 @@
 import React from 'react';
-import { Calculator, Briefcase, TrendingUp, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Calculator, Briefcase, TrendingUp, ShieldCheck, CheckCircle2, ArrowRight, Building2, Factory, MonitorSmartphone, HeartPulse, Landmark, ShoppingCart, Shield, FileSearch, Users2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 bg-primary text-white overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-primary/90 bg-gradient-to-br from-primary/95 to-primary/80 mix-blend-multiply"></div>
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-            alt="City skyline"
-            className="w-full h-full object-cover"
-          />
+      <section className="relative min-h-[100svh] flex items-center pt-20 bg-primary text-white overflow-hidden">
+        {/* Background Image with Parallax & Gradient Overlay */}
+        <div
+          className="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center bg-fixed"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70"></div>
+          {/* Decorative glowing orbs */}
+          <div className="absolute top-1/4 left-1/4 w-[30rem] h-[30rem] bg-gold/20 rounded-full blur-[128px] animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-gold/10 rounded-full blur-[128px] animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-20">
-          <div className="max-w-4xl">
-            <div className="inline-block px-4 py-1.5 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-12 md:py-16 2xl:py-20">
+          <div className="max-w-4xl relative">
+            <div className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-5 py-1.5 md:py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs md:text-sm font-semibold mb-6 2xl:mb-8 tracking-widest uppercase text-gold shadow-[0_0_20px_rgba(212,175,55,0.1)]">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
+              </span>
               Chartered Accountants
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl text-white mb-6">
-              Excellence in <span className="text-gold">Financial</span> Advisory & Compliance.
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem] font-serif text-white mb-6 2xl:mb-8 leading-[1.1] drop-shadow-2xl">
+              Excellence in <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-200 to-gold">
+                Financial
+              </span> Advisory <br className="hidden md:block" />& Compliance.
             </h1>
-            <p className="text-xl text-slate-200 mb-10 max-w-2xl leading-relaxed">
-              Strategic financial insights, rigorous tax compliance, and trusted advisory tailored for
-              forward-thinking businesses. Empowering your growth with clarity and precision.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/services" className="btn-primary justify-center">
-                Our Services <ArrowRight size={20} />
+
+            <div className="border-l-4 border-gold/50 pl-4 md:pl-6 mb-8 2xl:mb-12">
+              <p className="text-lg md:text-xl 2xl:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light">
+                Strategic financial insights, rigorous tax compliance, and trusted advisory tailored for
+                forward-thinking businesses. Empowering your growth with clarity and precision.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start">
+              <Link to="/services" className="group relative inline-flex items-center justify-center gap-2 md:gap-3 bg-gold hover:bg-gold-dark text-primary px-6 md:px-8 py-3 md:py-4 rounded font-bold text-base md:text-lg transition-all duration-300 shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:-translate-y-1">
+                Our Services
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
-              <Link to="/contact" className="btn-outline justify-center">
+              <Link to="/contact" className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-6 md:px-8 py-3 md:py-4 rounded font-bold text-base md:text-lg transition-all duration-300 hover:-translate-y-1">
                 Contact Us
               </Link>
             </div>
+
           </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/50 animate-bounce hidden md:flex">
+          <span className="text-xs tracking-widest uppercase font-medium">Scroll</span>
+          <div className="w-[1px] h-8 bg-gradient-to-b from-white/50 to-transparent"></div>
         </div>
       </section>
-
-      {/* Stats Section */}
-      <div className="max-w-7xl mx-auto px-6 relative z-20 -mt-12 md:-mt-16">
-        <div className="bg-white rounded-xl shadow-soft p-8 md:p-12 border border-slate-100">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-x-0 md:divide-x divide-slate-100">
-            <div className="p-4">
-              <h3 className="text-4xl md:text-5xl text-gold font-sans font-bold mb-2">500+</h3>
-              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Corporate Clients</p>
-            </div>
-            <div className="p-4">
-              <h3 className="text-4xl md:text-5xl text-gold font-sans font-bold mb-2">2B+</h3>
-              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Assets Advised</p>
-            </div>
-            <div className="p-4">
-              <h3 className="text-4xl md:text-5xl text-gold font-sans font-bold mb-2">100%</h3>
-              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Compliance Rate</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Services Section */}
       <section id="services" className="py-24 bg-slate-50">
@@ -128,21 +128,21 @@ function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop"
-                alt="Accounting professionals reviewing documents"
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop"
+                alt="Financial charts and desk"
                 className="rounded-2xl shadow-soft w-full"
               />
             </div>
 
             <div>
-              <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Why Choose Us</span>
-              <h2 className="text-4xl md:text-5xl mb-6">A Legacy of Trust & Uncompromising Quality</h2>
+              <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Firm Overview</span>
+              <h2 className="text-4xl md:text-5xl mb-6">Professional Services with Integrity and Ethics</h2>
               <div className="space-y-4 text-lg text-slate-600 mb-8">
                 <p>
-                  At Raks & Co, we believe that accounting is more than just numbers; it's about providing the strategic clarity you need to make confident business decisions.
+                  At Raks & Co, we provide professional services in the fields of auditing, taxation, and corporate advisory.
                 </p>
                 <p>
-                  Our team of seasoned Chartered Accountants brings global best practices to local business challenges, delivering bespoke solutions that drive tangible results.
+                  Our team of Chartered Accountants is dedicated to maintaining the highest level of professional ethics, delivering services in accordance with statutory requirements.
                 </p>
               </div>
 
@@ -151,21 +151,106 @@ function Home() {
                   <div className="bg-gold/10 p-1.5 rounded-full text-gold">
                     <CheckCircle2 size={20} />
                   </div>
-                  <span>Proactive advisory, not just reactive compliance</span>
+                  <span>Adherence to ICAI guidelines and regulations</span>
                 </li>
                 <li className="flex items-center gap-4 text-slate-800 font-medium">
                   <div className="bg-gold/10 p-1.5 rounded-full text-gold">
                     <CheckCircle2 size={20} />
                   </div>
-                  <span>Industry-specific deep expertise</span>
+                  <span>Professional services in accounting and taxation</span>
                 </li>
                 <li className="flex items-center gap-4 text-slate-800 font-medium">
                   <div className="bg-gold/10 p-1.5 rounded-full text-gold">
                     <CheckCircle2 size={20} />
                   </div>
-                  <span>Unwavering commitment to ethics and confidentiality</span>
+                  <span>Commitment to ethics and client confidentiality</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-24 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Industries</span>
+            <h2 className="text-4xl md:text-5xl mb-6">Sectors We Serve</h2>
+            <p className="text-lg text-slate-600">Providing specialized professional services tailored to the unique regulatory and financial requirements of various industries.</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              { icon: <Building2 size={24} />, name: "Real Estate" },
+              { icon: <Factory size={24} />, name: "Manufacturing" },
+              { icon: <MonitorSmartphone size={24} />, name: "Technology" },
+              { icon: <HeartPulse size={24} />, name: "Healthcare" },
+              { icon: <Landmark size={24} />, name: "Financial" },
+              { icon: <ShoppingCart size={24} />, name: "Retail" }
+            ].map((industry, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gold/10 text-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold group-hover:text-white transition-colors duration-300">
+                  {industry.icon}
+                </div>
+                <h3 className="font-semibold text-slate-800 text-sm">{industry.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology Section */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Methodology</span>
+              <h2 className="text-4xl md:text-5xl mb-6">Our Professional Approach</h2>
+              <div className="space-y-4 text-lg text-slate-600 mb-8">
+                <p>
+                  We are committed to delivering services with the highest degree of professional skepticism, independence, and objectivity.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center shrink-0">
+                    <Shield size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-serif text-primary mb-2">Ethical Standards</h4>
+                    <p className="text-slate-600">Strict adherence to the Code of Ethics issued by the Institute of Chartered Accountants of India.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center shrink-0">
+                    <FileSearch size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-serif text-primary mb-2">Rigorous Analysis</h4>
+                    <p className="text-slate-600">Thorough examination of financial data to ensure accurate compliance and reporting.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center shrink-0">
+                    <Users2 size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-serif text-primary mb-2">Clear Communication</h4>
+                    <p className="text-slate-600">Timely and professional correspondence regarding regulatory updates and compliance requirements.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-gold/10 rounded-2xl transform translate-x-4 translate-y-4"></div>
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+                alt="Professional desk environment"
+                className="rounded-2xl shadow-lg relative z-10 w-full object-cover h-[500px]"
+              />
             </div>
           </div>
         </div>
@@ -174,12 +259,12 @@ function Home() {
       {/* CTA Section */}
       <section className="py-24 bg-primary text-white relative text-center">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <h2 className="text-4xl md:text-5xl text-white mb-6">Ready to elevate your financial strategy?</h2>
+          <h2 className="text-4xl md:text-5xl text-white mb-6">Professional Enquiries</h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            Partner with Raks & Co to ensure compliance, optimize performance, and drive sustainable growth for your business.
+            For professional consultations and service inquiries, please reach out to our office.
           </p>
           <Link to="/contact" className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded font-semibold text-lg hover:bg-gold transition-colors duration-300 shadow-xl hover:-translate-y-1 transform">
-            Schedule a Consultation
+            Contact Us
           </Link>
         </div>
       </section>

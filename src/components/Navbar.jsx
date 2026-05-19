@@ -33,8 +33,8 @@ function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-8 items-center">
             <Link to="/" className="nav-link">Home</Link>
-            <Link to="/services" className="nav-link">Services</Link>
             <Link to="/about" className="nav-link">About Us</Link>
+            <Link to="/services" className="nav-link">Services</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
             <button
               onClick={() => setCalendlyOpen(true)}

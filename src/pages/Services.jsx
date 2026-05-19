@@ -60,9 +60,9 @@ function Services() {
     },
     {
       icon: <PieChart size={32} />,
-      title: "Project Finance & CMA Data",
-      description: "Preparation of project reports and Credit Monitoring Arrangement (CMA) data for securing bank financing.",
-      features: ["Project Reports", "CMA Data Preparation", "Working Capital Assessment", "Term Loan Syndication", "Financial Projections"]
+      title: "Project Reports & CMA Data",
+      description: "Preparation of project reports and Credit Monitoring Arrangement (CMA) data for project evaluation.",
+      features: ["Project Reports", "CMA Data Preparation", "Working Capital Assessment", "Project Viability Studies", "Financial Projections"]
     },
     {
       icon: <ShieldCheck size={32} />,
@@ -72,9 +72,9 @@ function Services() {
     },
     {
       icon: <Globe size={32} />,
-      title: "Outsourced CFO Services",
-      description: "Professional financial oversight and leadership for organizations requiring specialized financial management.",
-      features: ["Financial Strategy", "Cash Flow Management", "Budgeting & Forecasting", "Board Reporting", "Performance Metrics (KPIs)"]
+      title: "Management Consultancy Services",
+      description: "Professional advisory and strategic financial leadership for organizations requiring specialized financial management.",
+      features: ["Financial Strategy", "Cash Flow Management", "Budgeting & Forecasting", "MIS Development", "Performance Metrics (KPIs)"]
     }
   ];
 
@@ -85,7 +85,7 @@ function Services() {
         <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <div className="inline-block px-4 py-1.5 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase">
-            What We Do
+            Areas of Practice
           </div>
           <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">Our <span className="text-gold">Services</span></h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -98,7 +98,7 @@ function Services() {
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-24">
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-8 md:p-10 rounded-xl shadow-soft border border-slate-100 hover:shadow-lg transition-shadow duration-300 group">
+            <div key={index} className="bg-white p-8 md:p-10 rounded-xl shadow-soft border border-slate-100 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 group">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-gold/10 text-gold rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-primary transition-colors duration-300">
                   {service.icon}
