@@ -113,12 +113,21 @@ function Contact() {
 
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">Service Required</label>
-                  <select className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white">
-                    <option>Tax Advisory & Compliance</option>
-                    <option>Audit & Assurance</option>
-                    <option>Financial Advisory</option>
-                    <option>Risk Management</option>
-                    <option>Other Services</option>
+                  <select className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white" defaultValue="">
+                    <option value="" disabled>Select a service...</option>
+                    <option value="Tax Advisory & Compliance">Tax Advisory & Compliance</option>
+                    <option value="Audit & Assurance">Audit & Assurance</option>
+                    <option value="GST Advisory & Compliance">GST Advisory & Compliance</option>
+                    <option value="Financial Advisory">Financial Advisory</option>
+                    <option value="Accounting & Bookkeeping">Accounting & Bookkeeping</option>
+                    <option value="Startup Advisory & Registration">Startup Advisory & Registration</option>
+                    <option value="Corporate Law Advisory">Corporate Law Advisory</option>
+                    <option value="FEMA & RBI Compliance">FEMA & RBI Compliance</option>
+                    <option value="Income Tax & Wealth Planning">Income Tax & Wealth Planning</option>
+                    <option value="Project Reports & CMA Data">Project Reports & CMA Data</option>
+                    <option value="Risk Management">Risk Management</option>
+                    <option value="Management Consultancy Services">Management Consultancy Services</option>
+                    <option value="Other Services">Other Services</option>
                   </select>
                 </div>
 
