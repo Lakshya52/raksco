@@ -139,7 +139,7 @@ function Home() {
               <h2 className="text-4xl md:text-5xl mb-6">Professional Services with Integrity and Ethics</h2>
               <div className="space-y-4 text-lg text-slate-600 mb-8">
                 <p>
-                  At Raks & Co, we provide professional services in the fields of auditing, taxation, and corporate advisory.
+                  At Raks & Company, we provide professional services in the fields of auditing, taxation, and corporate advisory.
                 </p>
                 <p>
                   Our team of Chartered Accountants is dedicated to maintaining the highest level of professional ethics, delivering services in accordance with statutory requirements.

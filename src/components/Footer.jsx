@@ -9,7 +9,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           <div className="lg:col-span-4">
             <Link to="/" className="font-serif text-2xl font-bold text-white flex items-center gap-1 mb-6">
-              Raks<span className="text-gold">&</span>Co.
+              Raks<span className="text-gold">&</span>Company
             </Link>
             <p className="leading-relaxed mb-6 text-slate-400 max-w-sm">
               A firm of Chartered Accountants providing professional services in audit, taxation, and financial advisory.
@@ -27,12 +27,14 @@ function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-white font-semibold mb-6">Services</h4>
+            <h4 className="text-white font-semibold mb-6 hover:text-gold transition-colors">
+              <Link to="/services">Major Services</Link>
+            </h4>
             <ul className="space-y-4">
+              <li><Link to="/services" className="hover:text-gold transition-colors">Tax Advisory & Compliance</Link></li>
               <li><Link to="/services" className="hover:text-gold transition-colors">Audit & Assurance</Link></li>
-              <li><Link to="/services" className="hover:text-gold transition-colors">Tax Compliance</Link></li>
-              <li><Link to="/services" className="hover:text-gold transition-colors">Corporate Finance</Link></li>
-              <li><Link to="/services" className="hover:text-gold transition-colors">Risk Advisory</Link></li>
+              <li><Link to="/services" className="hover:text-gold transition-colors">Financial Advisory</Link></li>
+              <li><Link to="/services" className="hover:text-gold transition-colors">Risk Management</Link></li>
             </ul>
           </div>
 
@@ -56,7 +58,7 @@ function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Raks & Co Chartered Accountants. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Raks & Company Chartered Accountants. All rights reserved.</p>
         </div>
       </div>
     </footer>

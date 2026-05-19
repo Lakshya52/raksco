@@ -27,7 +27,7 @@ function Navbar() {
       <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-white/95 backdrop-blur-md py-4'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <Link to="/" className="font-serif text-2xl font-bold text-primary flex items-center gap-1">
-            Raks<span className="text-gold">&</span>Co.
+            Raks<span className="text-gold">&</span>Company
           </Link>
 
           {/* Desktop Nav */}

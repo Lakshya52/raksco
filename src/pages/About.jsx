@@ -12,7 +12,7 @@ function About() {
           <div className="inline-block px-4 py-1.5 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase">
             Who We Are
           </div>
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">About <span className="text-gold">Raks & Co.</span></h1>
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">About <span className="text-gold">Raks & Company</span></h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             A firm of Chartered Accountants dedicated to providing professional services with integrity and ethical standards.
           </p>
@@ -27,7 +27,7 @@ function About() {
             <h2 className="text-3xl md:text-4xl font-serif text-primary mb-6">Professionalism, Ethics, and Integrity</h2>
             <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
               <p>
-                Raks & Co is a firm of Chartered Accountants established to provide professional services in the fields of auditing, taxation, and corporate advisory.
+                Raks & Company is a firm of Chartered Accountants established to provide professional services in the fields of auditing, taxation, and corporate advisory.
               </p>
               <p>
                 We are committed to maintaining the highest level of professional ethics and integrity, strictly adhering to the guidelines set forth by the Institute of Chartered Accountants of India (ICAI).
