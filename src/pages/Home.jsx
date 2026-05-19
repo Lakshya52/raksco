@@ -18,15 +18,16 @@ function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-20">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <div className="inline-block px-4 py-1.5 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase">
               Chartered Accountants
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl text-white mb-6">
-              Professional <span className="text-gold">Financial</span> Advisory & Compliance.
+              Excellence in <span className="text-gold">Financial</span> Advisory & Compliance.
             </h1>
             <p className="text-xl text-slate-200 mb-10 max-w-2xl leading-relaxed">
-              Providing professional audit, tax, and advisory services. Committed to upholding the highest standards of professional ethics and integrity as mandated by the Institute of Chartered Accountants of India.
+              Strategic financial insights, rigorous tax compliance, and trusted advisory tailored for
+              forward-thinking businesses. Empowering your growth with clarity and precision.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/services" className="btn-primary justify-center">
@@ -39,6 +40,26 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* Stats Section */}
+      <div className="max-w-7xl mx-auto px-6 relative z-20 -mt-12 md:-mt-16">
+        <div className="bg-white rounded-xl shadow-soft p-8 md:p-12 border border-slate-100">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-x-0 md:divide-x divide-slate-100">
+            <div className="p-4">
+              <h3 className="text-4xl md:text-5xl text-gold font-sans font-bold mb-2">500+</h3>
+              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Corporate Clients</p>
+            </div>
+            <div className="p-4">
+              <h3 className="text-4xl md:text-5xl text-gold font-sans font-bold mb-2">2B+</h3>
+              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Assets Advised</p>
+            </div>
+            <div className="p-4">
+              <h3 className="text-4xl md:text-5xl text-gold font-sans font-bold mb-2">100%</h3>
+              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Compliance Rate</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Services Section */}
       <section id="services" className="py-24 bg-slate-50">
@@ -114,14 +135,14 @@ function Home() {
             </div>
 
             <div>
-              <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Our Firm</span>
-              <h2 className="text-4xl md:text-5xl mb-6">Professional Services with Integrity and Ethics</h2>
+              <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Why Choose Us</span>
+              <h2 className="text-4xl md:text-5xl mb-6">A Legacy of Trust & Uncompromising Quality</h2>
               <div className="space-y-4 text-lg text-slate-600 mb-8">
                 <p>
-                  At Raks & Co, we provide comprehensive professional services in the fields of auditing, taxation, and corporate advisory.
+                  At Raks & Co, we believe that accounting is more than just numbers; it's about providing the strategic clarity you need to make confident business decisions.
                 </p>
                 <p>
-                  Our team of Chartered Accountants is dedicated to maintaining the highest level of professional ethics, delivering services in strict accordance with statutory requirements.
+                  Our team of seasoned Chartered Accountants brings global best practices to local business challenges, delivering bespoke solutions that drive tangible results.
                 </p>
               </div>
 
@@ -153,12 +174,12 @@ function Home() {
       {/* CTA Section */}
       <section className="py-24 bg-primary text-white relative text-center">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <h2 className="text-4xl md:text-5xl text-white mb-6">Professional Enquiries</h2>
+          <h2 className="text-4xl md:text-5xl text-white mb-6">Ready to elevate your financial strategy?</h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            For professional consultations and service inquiries, please reach out to our office.
+            Partner with Raks & Co to ensure compliance, optimize performance, and drive sustainable growth for your business.
           </p>
           <Link to="/contact" className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded font-semibold text-lg hover:bg-gold transition-colors duration-300 shadow-xl hover:-translate-y-1 transform">
-            Contact Us
+            Schedule a Consultation
           </Link>
         </div>
       </section>
