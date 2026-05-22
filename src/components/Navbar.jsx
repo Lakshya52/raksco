@@ -27,13 +27,14 @@ function Navbar() {
       <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-white/95 backdrop-blur-md py-4'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <Link to="/" className="font-serif text-2xl font-bold text-primary flex items-center gap-1">
-            Raks<span className="text-gold">&</span>Company
+            RAKS<span className="text-gold">&</span>Company
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-8 items-center">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/about" className="nav-link">About Us</Link>
+            <Link to="/leadership" className="nav-link">Leadership</Link>
             <Link to="/services" className="nav-link">Services</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
             <button
@@ -57,6 +58,7 @@ function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-slate-100 py-4 px-6 flex flex-col gap-4">
             <Link to="/" className="nav-link block">Home</Link>
+            <Link to="/leadership" className="nav-link block" onClick={() => setMobileMenuOpen(false)}>Leadership</Link>
             <Link to="/services" className="nav-link block" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             <Link to="/about" className="nav-link block" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
             <Link to="/contact" className="nav-link block">Contact</Link>

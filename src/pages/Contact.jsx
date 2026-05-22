@@ -10,7 +10,7 @@ function Contact() {
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">Contact <span className="text-gold">Us</span></h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-            Get in touch with our team of expert Chartered Accountants. We are here to help you navigate your financial landscape.
+            Get in touch with our team of Chartered Accountants. We are here to help you navigate your financial landscape.
           </p>
         </div>
       </div>
@@ -29,7 +29,7 @@ function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary mb-1">Our Office</h4>
-                    <p>123 Financial District, Suite 500<br />Business Hub, 10001</p>
+                    <span>214, 2nd Floor, Vishal Chambers, Noida Sector 18, Uttar Pradesh - 201301<br /></span>
                   </div>
                 </div>
 
@@ -39,7 +39,7 @@ function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary mb-1">Phone Number</h4>
-                    <p>+1 (555) 123-4567<br />+1 (555) 987-6543</p>
+                    <p>+91 120 444 5816</p>
                   </div>
                 </div>
 
@@ -79,7 +79,7 @@ function Contact() {
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                      placeholder="John"
+                      // placeholder="John"
                     />
                   </div>
                   <div>
@@ -87,7 +87,7 @@ function Contact() {
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                      placeholder="Doe"
+                      // placeholder="Doe"
                     />
                   </div>
                 </div>
@@ -98,7 +98,7 @@ function Contact() {
                     <input
                       type="email"
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                      placeholder="john@company.com"
+                      // placeholder="john@company.com"
                     />
                   </div>
                   <div>
@@ -106,7 +106,7 @@ function Contact() {
                     <input
                       type="tel"
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                      placeholder="+1 (555) 000-0000"
+                      // placeholder="phone number to contact"
                     />
                   </div>
                 </div>

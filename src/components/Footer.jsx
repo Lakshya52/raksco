@@ -9,7 +9,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           <div className="lg:col-span-4">
             <Link to="/" className="font-serif text-2xl font-bold text-white flex items-center gap-1 mb-6">
-              Raks<span className="text-gold">&</span>Company
+              RAKS<span className="text-gold">&</span>Company
             </Link>
             <p className="leading-relaxed mb-6 text-slate-400 max-w-sm">
               A firm of Chartered Accountants providing professional services in audit, taxation, and financial advisory.
@@ -21,8 +21,8 @@ function Footer() {
             <ul className="space-y-4">
               <li><Link to="/services" className="hover:text-gold transition-colors">Our Services</Link></li>
               <li><Link to="/about" className="hover:text-gold transition-colors">About Us</Link></li>
+              <li><Link to="/leadership" className="hover:text-gold transition-colors">Leadership</Link></li>
               <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
-              <li><a href="#" className="hover:text-gold transition-colors">Insights</a></li>
             </ul>
           </div>
 
@@ -43,11 +43,11 @@ function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-gold shrink-0 mt-1" size={20} />
-                <span>123 Financial District, Suite 500<br />Business Hub, 10001</span>
+                <span>214, 2nd Floor, Vishal Chambers, Noida Sector 18, Uttar Pradesh - 201301<br /></span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-gold shrink-0" size={20} />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 120 444 5816</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-gold shrink-0" size={20} />
@@ -58,7 +58,7 @@ function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Raks & Company Chartered Accountants. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} RAKS & Company Chartered Accountants. All rights reserved.</p>
         </div>
       </div>
     </footer>

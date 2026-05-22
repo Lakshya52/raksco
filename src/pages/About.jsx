@@ -1,6 +1,7 @@
 import React from 'react';
 import { Target, Lightbulb, Shield, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Cta from '../components/cta';
 
 function About() {
   return (
@@ -12,7 +13,7 @@ function About() {
           <div className="inline-block px-4 py-1.5 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase">
             Who We Are
           </div>
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">About <span className="text-gold">Raks & Company</span></h1>
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">About <span className="text-gold">RAKS & Company</span></h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             A firm of Chartered Accountants dedicated to providing professional services with integrity and ethical standards.
           </p>
@@ -23,17 +24,17 @@ function About() {
         {/* Story Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <div>
-            <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Our Firm</span>
-            <h2 className="text-3xl md:text-4xl font-serif text-primary mb-6">Professionalism, Ethics, and Integrity</h2>
+            {/* <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">About Us</span> */}
+            {/* <h2 className="text-3xl md:text-4xl font-serif text-primary mb-6">Professionalism, Ethics, and Integrity</h2> */}
             <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
               <p>
-                Raks & Company is a firm of Chartered Accountants established to provide professional services in the fields of auditing, taxation, and corporate advisory.
+                RAKS & CO. is a contemporary Chartered Accountancy firm focused on delivering specialized assurance, audit, compliance, and advisory solutions with a strong emphasis on the banking and financial services sector.
               </p>
               <p>
-                We are committed to maintaining the highest level of professional ethics and integrity, strictly adhering to the guidelines set forth by the Institute of Chartered Accountants of India (ICAI).
+                Founded with the objective of combining professional rigor with sector-specific expertise, the firm is strategically positioned to undertake diversified banking assignments including stock audits, revenue audits, credit audits, concurrent audits, forensic reviews, and Information Systems (IS) audits. Alongside traditional assurance services, the firm is also actively building capabilities in sustainability assurance, ESG compliance reviews, and green finance advisory aligned with evolving regulatory and international frameworks.
               </p>
               <p>
-                Our practice is focused on delivering quality services to our clients, assisting them in meeting their statutory compliances and regulatory requirements efficiently.
+                The firm operates with a dedicated team of qualified professionals and domain specialists capable of handling assignments involving financial scrutiny, regulatory compliance, operational assessment, and investigative procedures across varied industries.
               </p>
             </div>
           </div>
@@ -46,6 +47,43 @@ function About() {
             />
           </div>
         </div>
+
+        {/* Vision Section */}
+        <section className="mb-24 bg-white rounded-[2rem] border border-slate-200 shadow-soft p-10 md:p-14">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Our Vision</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">A purpose-driven, professional chartered accountancy firm</h2>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              To build a professionally driven Chartered Accountancy firm recognized for specialized banking audits, investigative assurance services, and sustainability-focused advisory solutions while maintaining the highest standards of integrity, independence, and professional excellence.
+            </p>
+          </div>
+        </section>
+
+        <section className="grid gap-8 lg:grid-cols-3 mb-24">
+          <div className="bg-white rounded-[2rem] p-10 shadow-soft border border-slate-200">
+            <span className="text-gold font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">What We Stand For</span>
+            <h3 className="text-2xl font-serif mb-4">Focused Industry Expertise</h3>
+            <p className="text-slate-300 leading-relaxed">
+              We concentrate on banking, finance, and risk-oriented engagements to deliver deeper insights and more relevant assurance outcomes.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-[2rem] p-10 shadow-soft border border-slate-200">
+            <span className="text-gold font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">How We Deliver</span>
+            <h3 className="text-2xl font-serif mb-4">Professional, Process-Driven Execution</h3>
+            <p className="text-slate-600 leading-relaxed">
+              Our structured review methodology, strong documentation practices, and rigorous quality checks ensure clarity and consistency across every assignment.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-[2rem] p-10 shadow-soft border border-slate-200">
+            <span className="text-gold font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">Our Engagement Focus</span>
+            <h3 className="text-2xl font-serif mb-4">Advisory for evolving regulatory requirements</h3>
+            <p className="text-slate-600 leading-relaxed">
+              We combine experience in audits, investigations, and ESG advisory to support clients through changing compliance expectations.
+            </p>
+          </div>
+        </section>
 
         {/* Core Values */}
         <div className="mb-24">
@@ -89,21 +127,8 @@ function About() {
           </div>
         </div>
 
-        {/* Call to Action Mini */}
-        <div className="bg-primary rounded-2xl p-10 md:p-16 text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
-
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">Professional Inquiries</h2>
-            <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
-              For professional consultations and service inquiries, please reach out to our office.
-            </p>
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-primary px-8 py-4 rounded font-semibold text-lg transition-colors duration-300 shadow-xl">
-              Contact Us <ArrowRight size={20} />
-            </Link>
-          </div>
-        </div>
+        <Cta />
+        
       </div>
     </div>
   );

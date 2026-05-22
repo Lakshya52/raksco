@@ -8,24 +8,27 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0f172a',
-          light: '#1e293b',
+          DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
+          light: 'rgb(var(--color-primary-light) / <alpha-value>)',
         },
         gold: {
-          DEFAULT: '#d4af37',
-          dark: '#b5952f',
-          light: '#f3e5ab',
-          50: '#fdfbf4',
-          100: '#fbf5e6',
-          200: '#f6e7c1',
-          300: '#efd391',
-          400: '#e5b958',
-          500: '#d4af37',
-          600: '#c58b21',
-          700: '#a56a1e',
-          800: '#87541f',
-          900: '#71461e',
-        }
+          DEFAULT: 'rgb(var(--color-gold) / <alpha-value>)',
+          dark: 'rgb(var(--color-gold-dark) / <alpha-value>)',
+          light: 'rgb(var(--color-gold-light) / <alpha-value>)',
+        },
+        slate: {
+          50: 'rgb(var(--color-slate-50) / <alpha-value>)',
+          100: 'rgb(var(--color-slate-100) / <alpha-value>)',
+          200: 'rgb(var(--color-slate-200) / <alpha-value>)',
+          300: 'rgb(var(--color-slate-300) / <alpha-value>)',
+          400: 'rgb(var(--color-slate-400) / <alpha-value>)',
+          500: 'rgb(var(--color-slate-500) / <alpha-value>)',
+          600: 'rgb(var(--color-slate-600) / <alpha-value>)',
+          700: 'rgb(var(--color-slate-700) / <alpha-value>)',
+          800: 'rgb(var(--color-slate-800) / <alpha-value>)',
+          900: 'rgb(var(--color-slate-900) / <alpha-value>)',
+        },
+        white: 'rgb(255 255 255 / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

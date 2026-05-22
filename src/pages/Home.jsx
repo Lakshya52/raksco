@@ -1,18 +1,19 @@
 import React from 'react';
 import { Calculator, Briefcase, TrendingUp, ShieldCheck, CheckCircle2, ArrowRight, Building2, Factory, MonitorSmartphone, HeartPulse, Landmark, ShoppingCart, Shield, FileSearch, Users2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import WhyUs from '../components/WhyUs';
+import Cta from '../components/cta';
 
 function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] flex items-center pt-20 bg-primary text-white overflow-hidden">
+      <section className="relative min-h-svh flex items-center pt-20 bg-primary text-white overflow-hidden">
         {/* Background Image with Parallax & Gradient Overlay */}
         <div
           className="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center bg-fixed"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70"></div>
-          {/* Decorative glowing orbs */}
+          <div className="absolute inset-0 bg-linear-to-r from-primary via-primary/90 to-primary/70"></div>
           <div className="absolute top-1/4 left-1/4 w-[30rem] h-[30rem] bg-gold/20 rounded-full blur-[128px] animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-gold/10 rounded-full blur-[128px] animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
@@ -28,16 +29,12 @@ function Home() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem] font-serif text-white mb-6 2xl:mb-8 leading-[1.1] drop-shadow-2xl">
-              Excellence in <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-200 to-gold">
-                Financial
-              </span> Advisory <br className="hidden md:block" />& Compliance.
+              Financial Advisory <br className="hidden md:block" />& Compliance.
             </h1>
 
             <div className="border-l-4 border-gold/50 pl-4 md:pl-6 mb-8 2xl:mb-12">
               <p className="text-lg md:text-xl 2xl:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light">
-                Strategic financial insights, rigorous tax compliance, and trusted advisory tailored for
-                forward-thinking businesses. Empowering your growth with clarity and precision.
+                Financial insights, tax compliance, and advisory for regulated businesses. Supporting your work with clear professional guidance.
               </p>
             </div>
 
@@ -57,7 +54,7 @@ function Home() {
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/50 animate-bounce hidden md:flex">
           <span className="text-xs tracking-widest uppercase font-medium">Scroll</span>
-          <div className="w-[1px] h-8 bg-gradient-to-b from-white/50 to-transparent"></div>
+          <div className="w-px h-8 bg-linear-to-b from-white/50 to-transparent"></div>
         </div>
       </section>
 
@@ -139,7 +136,7 @@ function Home() {
               <h2 className="text-4xl md:text-5xl mb-6">Professional Services with Integrity and Ethics</h2>
               <div className="space-y-4 text-lg text-slate-600 mb-8">
                 <p>
-                  At Raks & Company, we provide professional services in the fields of auditing, taxation, and corporate advisory.
+                  At RAKS & Company, we provide professional services in the fields of auditing, taxation, and corporate advisory.
                 </p>
                 <p>
                   Our team of Chartered Accountants is dedicated to maintaining the highest level of professional ethics, delivering services in accordance with statutory requirements.
@@ -170,6 +167,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <WhyUs />
 
       {/* Industries Section */}
       <section className="py-24 bg-slate-50 border-t border-slate-100">
@@ -256,8 +255,11 @@ function Home() {
         </div>
       </section>
 
+      <div className="max-w-7xl mx-auto px-6 mb-10" >
+        <Cta />
+      </div>
       {/* CTA Section */}
-      <section className="py-24 bg-primary text-white relative text-center">
+      {/* <section className="py-24 bg-primary text-white relative text-center">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl text-white mb-6">Professional Enquiries</h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
@@ -267,7 +269,8 @@ function Home() {
             Contact Us
           </Link>
         </div>
-      </section>
+      </section> */}
+
     </>
   );
 }
