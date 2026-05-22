@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, ArrowRight } from 'lucide-react';
-import Cta from '../components/cta';
+import Cta from '../components/Cta';
 
 function Leadership() {
   const partners = [

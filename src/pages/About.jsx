@@ -1,7 +1,7 @@
 import React from 'react';
 import { Target, Lightbulb, Shield, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Cta from '../components/cta';
+import Cta from '../components/Cta';
 
 function About() {
   return (

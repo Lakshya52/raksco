@@ -2,7 +2,7 @@ import React from 'react';
 import { Calculator, Briefcase, TrendingUp, ShieldCheck, CheckCircle2, ArrowRight, Building2, Factory, MonitorSmartphone, HeartPulse, Landmark, ShoppingCart, Shield, FileSearch, Users2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import WhyUs from '../components/WhyUs';
-import Cta from '../components/cta';
+import Cta from '../components/Cta';
 
 function Home() {
   return (

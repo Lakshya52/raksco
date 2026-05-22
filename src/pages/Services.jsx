@@ -1,6 +1,6 @@
 import React from 'react';
 import { Building2, Globe, ShieldCheck } from 'lucide-react';
-import Cta from '../components/cta';
+import Cta from '../components/Cta';
 
 function Services() {
   const featuredServices = [
