@@ -63,7 +63,7 @@ function About() {
           <div className="bg-white rounded-[2rem] p-10 shadow-soft border border-slate-200">
             <span className="text-gold font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">What We Stand For</span>
             <h3 className="text-2xl font-serif mb-4">Focused Industry Expertise</h3>
-            <p className="text-slate-300 leading-relaxed">
+            <p className="text-slate-600 leading-relaxed">
               We concentrate on banking, finance, and risk-oriented engagements to deliver deeper insights and more relevant assurance outcomes.
             </p>
           </div>
