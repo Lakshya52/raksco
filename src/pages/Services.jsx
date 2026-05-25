@@ -1,9 +1,16 @@
-import React from 'react';
-import { Building2, Globe, ShieldCheck } from 'lucide-react';
+import React, { useRef } from 'react';
+import { Building2, Globe, ShieldCheck, Eye, Briefcase, FileText, Layers } from 'lucide-react';
 import Cta from '../components/Cta';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Services() {
-  const featuredServices = [
+  const containerRef = useRef(null);
+
+  const coreServices = [
     {
       icon: <Building2 size={32} />,
       title: 'Banking & Financial Sector Assignments',
@@ -35,6 +42,54 @@ function Services() {
         'Risk management and internal control reviews',
         'Financial due diligence and corporate advisory',
         'Governance support and compliance monitoring',
+      ],
+    },
+    {
+      icon: <Eye size={32} />,
+      title: 'Agency for Specialized Monitoring (ASM)',
+      description: 'Independent monitoring and oversight services for lenders, investors, and institutions requiring structured supervision of financed projects, stressed assets, and operational performance.',
+      details: [
+        'Monitoring of funded projects, capital utilization, and cash flow movement',
+        'Site visits, progress tracking, and submission of periodic monitoring reports',
+        'Verification of asset creation, inventory, receivables, and end-use of funds',
+        'Early warning signal identification and risk escalation support',
+        'Compliance monitoring against sanction terms, covenants, and regulatory requirements',
+        'Coordination support between lenders, borrowers, consultants, and stakeholders',
+      ],
+    },
+  ];
+
+  const otherServices = [
+    {
+      icon: <Briefcase size={32} />,
+      title: 'Business Advisory',
+      description: 'Empowering businesses and individuals through robust financial and strategic solutions.',
+      details: [
+        'Advisory on business setup, financial planning, and strategic consulting.',
+        'Implementation of risk management frameworks to foster sustainable growth.',
+        'Compliance support and data-driven insights for informed decision-making in an evolving economic landscape.',
+      ],
+    },
+    {
+      icon: <Layers size={32} />,
+      title: 'Regulatory & Compliance Support',
+      description: 'Secretarial compliances including company incorporation, statutory maintenance, and regulatory filings.',
+      details: [
+        'Company incorporation, maintenance of statutory registers, and Board/AGM documentation.',
+        'Advisory and filings under FEMA and RBI regulations for foreign investments and cross-border transactions.',
+        'Assistance obtaining and renewing statutory licenses and registrations such as FSSAI, MSME, BIS, ISO and sector-specific approvals.',
+        'Regulatory monitoring and compliance management for timely adherence to evolving legal requirements.',
+      ],
+    },
+    {
+      icon: <FileText size={32} />,
+      title: 'Accounting & Financial Reporting',
+      description: 'Maintaining statutory-compliant financial records and reporting for operational clarity and regulatory confidence.',
+      details: [
+        'Maintaining statutory-compliant financial records and preparation of financial statements.',
+        'Managing payables, receivables, reconciliations, and general ledger efficiently.',
+        'Support for tax compliance, budgeting, and financial analysis for informed decision-making.',
+        'Leveraging cloud-based solutions and automation for real-time insights and process optimization.',
       ],
     },
   ];
@@ -77,44 +132,205 @@ function Services() {
     },
   ];
 
+  useGSAP(() => {
+    // Hero intro load animations
+    gsap.from(".services-hero-fade", {
+      y: 40,
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.15,
+      ease: "power4.out"
+    });
+
+    // Core Services section header
+    gsap.from(".core-services-header", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: ".core-services-section",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Core Services cards grid
+    gsap.from(".core-service-card", {
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".core-services-grid",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Other Services section header
+    gsap.from(".other-services-header", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: ".other-services-section",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Other Services cards grid
+    gsap.from(".other-service-card", {
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".other-services-grid",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Industry Split Section Left Panel
+    gsap.from(".industry-left-panel", {
+      x: -40,
+      opacity: 0,
+      duration: 0.85,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".industry-split-section",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Industry Items Stagger
+    gsap.from(".industry-item", {
+      scale: 0.95,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.05,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".industry-items-grid",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Industry Split Section Right Panel
+    gsap.from(".focus-right-panel", {
+      x: 40,
+      opacity: 0,
+      duration: 0.85,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".industry-split-section",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Focus Cards Stagger
+    gsap.from(".focus-item-card", {
+      y: 30,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.12,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".focus-items-list",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Vision Section
+    gsap.from(".vision-section-el", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".vision-section",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+  }, { scope: containerRef });
+
   return (
-    <div className="pt-24 pb-24 min-h-screen bg-slate-50">
+    <div ref={containerRef} className="pt-24 pb-24 min-h-screen bg-slate-50">
       <div className="bg-primary py-24 text-white -mt-24 pt-48 mb-16 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <div className="inline-flex items-center justify-center gap-3 px-4 py-2 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase">
-            Core Service Focus
+          <div className="inline-flex items-center justify-center gap-3 px-4 py-2 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase services-hero-fade">
+            Our services
           </div>
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">Focused Financial Expertise for Modern Businesses</h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 services-hero-fade">Focused Financial Expertise for Modern Businesses</h1>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto services-hero-fade">
             We combine banking sector experience, ESG advisory, and assurance approaches to help clients navigate regulatory complexity with clarity.
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid gap-8 lg:grid-cols-3 mb-20">
-          {featuredServices.map((service) => (
-            <article key={service.title} className="group rounded-[2rem] shadow-soft border border-slate-200 p-10 hover:-translate-y-2 transition-transform duration-300 overflow-hidden">
-              <div className="w-16 h-16 rounded-3xl bg-gold/10 text-gold flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-gold/20">
-                {service.icon}
-              </div>
-              <h2 className="text-2xl font-serif  mb-4">{service.title}</h2>
-              <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
-              <ul className="space-y-3">
-                {service.details.map((detail) => (
-                  <li key={detail} className="flex gap-3 text-slate-700 font-medium">
-                    <span className="mt-2 h-2 w-2 rounded-full bg-gold shrink-0"></span>
-                    <span>{detail}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
+        <section className="mb-20 core-services-section">
+          <div className="mb-12 text-center core-services-header">
+            <h2 className="text-4xl font-serif text-primary">Core Services</h2>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-2 core-services-grid">
+            {coreServices.map((service) => (
+              <article key={service.title} className="group rounded-4xl bg-white shadow-soft border border-slate-200 p-6 core-service-card">
+                <div className="w-14 h-14 rounded-3xl bg-gold/10 text-gold flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-gold/20">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-slate-600 mb-4 text-sm leading-relaxed">{service.description}</p>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  {service.details.map((detail) => (
+                    <li key={`${service.title}-${detail}`} className="flex gap-3 items-start">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-gold shrink-0"></span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
 
-        <section className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] mb-20">
-          <div className="rounded-[2rem] bg-white p-10 md:p-14 shadow-soft border border-slate-200">
+        <section className="mb-20 other-services-section">
+          <div className="mb-12 text-center other-services-header">
+            <h2 className="text-4xl font-serif text-primary">Other Services</h2>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 other-services-grid">
+            {otherServices.map((service) => (
+              <article key={service.title} className="group rounded-4xl bg-white shadow-soft border border-slate-200 p-6 other-service-card">
+                <div className="w-14 h-14 rounded-3xl bg-gold/10 text-gold flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-gold/20">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-slate-600 mb-4 text-sm leading-relaxed">{service.description}</p>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  {service.details.map((detail) => (
+                    <li key={`${service.title}-${detail}`} className="flex gap-3 items-start">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-gold shrink-0"></span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] mb-20 industry-split-section">
+          <div className="rounded-4xl bg-white p-10 md:p-14 shadow-soft border border-slate-200 industry-left-panel">
             <span className="inline-flex items-center gap-2 rounded-full bg-gold/10 text-gold px-4 py-2 text-sm uppercase tracking-[0.25em] font-semibold mb-6">
               Industry Experience
             </span>
@@ -122,9 +338,9 @@ function Services() {
             <p className="text-slate-600 leading-relaxed mb-8">
               The firm and its professional team have exposure across multiple industries and business segments, enabling practical understanding of operational and financial risks specific to each sector.
             </p>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-3 sm:grid-cols-2 industry-items-grid">
               {industriesServed.map((industry) => (
-                <div key={industry} className="flex gap-3 items-start rounded-3xl bg-slate-50 p-4">
+                <div key={industry} className="flex gap-3 items-start rounded-3xl bg-slate-50 p-4 hover:bg-gold/30 transistion-all duration-300 industry-item">
                   <span className="mt-2 h-2.5 w-2.5 rounded-full bg-gold shrink-0"></span>
                   <p className="text-slate-700 leading-relaxed">{industry}</p>
                 </div>
@@ -132,28 +348,28 @@ function Services() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] bg-slate-950 text-white p-10 md:p-14 shadow-[0_24px_80px_rgba(15,23,42,0.25)] border border-slate-800">
+          <div className="rounded-4xl bg-slate-950 text-white p-10 md:p-14 shadow-[0_24px_80px_rgba(15,23,42,0.25)] border border-slate-800 focus-right-panel">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 text-gold px-4 py-2 text-sm uppercase tracking-[0.25em] font-semibold mb-6">
               Our Professional Focus
             </span>
             <h2 className="text-4xl font-serif text-white mb-6">Areas of focus across assurance and advisory.</h2>
-            <div className="space-y-4">
+            <div className="space-y-4 focus-items-list">
               {whyRaks.map((item) => (
-                <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors duration-300">
+                <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors duration-300 focus-item-card">
                   <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
                   <p className="text-slate-300 leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
           </div>
-          
         </section>
+
         {/* Vision Section */}
-        <section className="mb-24 bg-white rounded-[2rem] border border-slate-200 shadow-soft p-10 md:p-14">
+        <section className="mb-24 bg-white rounded-4xl border border-slate-200 shadow-soft p-10 md:p-14 vision-section">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Our Vision</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">A purpose-driven, professional chartered accountancy firm</h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
+            <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block vision-section-el">Our Vision</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 vision-section-el">A purpose-driven, professional chartered accountancy firm</h2>
+            <p className="text-lg text-slate-600 leading-relaxed vision-section-el">
               To build a professionally driven Chartered Accountancy firm recognized for specialized banking audits, investigative assurance services, and sustainability-focused advisory solutions while maintaining the highest standards of integrity, independence, and professional excellence.
             </p>
           </div>

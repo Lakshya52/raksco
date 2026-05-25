@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Users, ArrowRight } from 'lucide-react';
 import Cta from '../components/Cta';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Leadership() {
+  const containerRef = useRef(null);
+
   const partners = [
     {
       name: 'CA Punit Kumar Rai',
@@ -19,25 +26,50 @@ function Leadership() {
     },
   ];
 
+  useGSAP(() => {
+    // Hero Elements Fade In
+    gsap.from(".leaders-hero-fade", {
+      y: 40,
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.15,
+      ease: "power4.out"
+    });
+
+    // Partner Cards entry
+    gsap.from(".leader-card", {
+      y: 50,
+      opacity: 0,
+      duration: 0.85,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".leaders-grid",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+  }, { scope: containerRef });
+
   return (
-    <div className="pt-24 pb-24 min-h-screen bg-slate-50">
+    <div ref={containerRef} className="pt-24 pb-24 min-h-screen bg-slate-50">
       <div className="bg-primary py-24 text-white -mt-24 pt-48 mb-16 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2074&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <div className="inline-flex items-center justify-center gap-3 px-4 py-2 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase">
+          <div className="inline-flex items-center justify-center gap-3 px-4 py-2 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase leaders-hero-fade">
             <Users size={18} /> Leadership Team
           </div>
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">Our Leadership</h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 leaders-hero-fade">Our Leadership</h1>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto leaders-hero-fade">
             Meet the partners leading RAKS & Company with deep expertise in accounting, audit, compliance, and advisory services.
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid gap-10 lg:grid-cols-2 mb-10">
+        <div className="grid gap-10 lg:grid-cols-2 mb-10 leaders-grid">
           {partners.map((partner) => (
-            <div key={partner.name} className="bg-white rounded-3xl shadow-soft border border-slate-200 overflow-hidden">
+            <div key={partner.name} className="bg-white rounded-3xl shadow-soft border border-slate-200 overflow-hidden leader-card">
               <div className="relative h-96 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-slate-900"></div>
                 <div className="relative z-10 flex h-full items-center justify-center">

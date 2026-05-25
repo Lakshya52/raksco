@@ -1,26 +1,69 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Mail, Phone, MapPin, Clock, ArrowRight } from 'lucide-react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Contact() {
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    // Hero Elements Fade In
+    gsap.from(".contact-hero-fade", {
+      y: 40,
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.15,
+      ease: "power4.out"
+    });
+
+    // Contact Grid Animations on scroll
+    gsap.from(".contact-info-panel", {
+      x: -40,
+      opacity: 0,
+      duration: 0.85,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".contact-grid-container",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    gsap.from(".contact-form-panel", {
+      x: 40,
+      opacity: 0,
+      duration: 0.85,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".contact-grid-container",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+  }, { scope: containerRef });
+
   return (
-    <div className="pt-24 pb-24 min-h-screen bg-slate-50">
+    <div ref={containerRef} className="pt-24 pb-24 min-h-screen bg-slate-50">
       {/* Header */}
       <div className="bg-primary py-20 text-white mt-[-6rem] pt-[12rem] mb-16 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">Contact <span className="text-gold">Us</span></h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 contact-hero-fade">Contact <span className="text-gold">Us</span></h1>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto contact-hero-fade">
             Get in touch with our team of Chartered Accountants. We are here to help you navigate your financial landscape.
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-12 contact-grid-container">
           {/* Contact Information */}
-          <div className="lg:col-span-1 space-y-8">
+          <div className="lg:col-span-1 space-y-8 contact-info-panel">
             <div className="bg-white p-8 rounded-xl shadow-soft border border-slate-100">
-              <h3 className="text-2xl font-serif text-primary mb-6">Get In Touch</h3>
+              <h3 className="text-lg font-serif text-primary mb-6">Whether you are planning a capital raise, need structured debt advisory, require project finance documentation, or are seeking to transform your business — the first step is a conversation. We respond to all enquiries within 24 hours.</h3>
 
               <div className="space-y-6 text-slate-600">
                 <div className="flex gap-4">
@@ -67,7 +110,7 @@ function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 contact-form-panel">
             <div className="bg-white p-8 md:p-12 rounded-xl shadow-soft border border-slate-100">
               <h3 className="text-3xl font-serif text-primary mb-2">Send Us a Message</h3>
               <p className="text-slate-500 mb-8">Fill out the form below and one of our consultants will get back to you shortly.</p>
@@ -79,7 +122,6 @@ function Contact() {
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                      // placeholder="John"
                     />
                   </div>
                   <div>
@@ -87,7 +129,6 @@ function Contact() {
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                      // placeholder="Doe"
                     />
                   </div>
                 </div>
@@ -98,7 +139,6 @@ function Contact() {
                     <input
                       type="email"
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                      // placeholder="john@company.com"
                     />
                   </div>
                   <div>
@@ -106,7 +146,6 @@ function Contact() {
                     <input
                       type="tel"
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
-                      // placeholder="phone number to contact"
                     />
                   </div>
                 </div>

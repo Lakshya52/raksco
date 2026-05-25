@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { ShieldCheck, Search, Sparkles, Users2, TrendingUp } from 'lucide-react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const defaultReasons = [
   {
@@ -30,18 +35,50 @@ const defaultReasons = [
 ];
 
 function WhyUs({ title = 'Our Focus Areas', subtitle = 'Areas of focus across banking, risk, ESG and assurance.', reasons = defaultReasons }) {
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    // Header animation
+    gsap.from(".whyus-header-el", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".whyus-header",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Cards animation
+    gsap.from(".whyus-card", {
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".whyus-grid",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+  }, { scope: containerRef });
+
   return (
-    <section className="py-24 bg-slate-50 border-t border-slate-100">
+    <section ref={containerRef} className="py-24 bg-slate-50 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Our Focus</span>
-          <h2 className="text-4xl md:text-5xl font-serif mb-6">{title}</h2>
-          <p className="text-lg text-slate-600 leading-relaxed">{subtitle}</p>
+        <div className="text-center max-w-3xl mx-auto mb-14 whyus-header">
+          <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block whyus-header-el">Our Focus</span>
+          <h2 className="text-4xl md:text-5xl font-serif mb-6 whyus-header-el">{title}</h2>
+          <p className="text-lg text-slate-600 leading-relaxed whyus-header-el">{subtitle}</p>
         </div>
 
-        <div className="grid gap-8 xl:grid-cols-5 lg:grid-cols-2 md:grid-cols-2">
+        <div className="grid gap-8 xl:grid-cols-5 lg:grid-cols-2 md:grid-cols-2 whyus-grid">
           {reasons.map((reason) => (
-            <div key={reason.title} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft transition-transform duration-300 hover:-translate-y-1">
+            <div key={reason.title} className="whyus-card rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft transition-transform duration-300 hover:-translate-y-1">
               <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-gold/10 text-gold">
                 {reason.icon}
               </div>
