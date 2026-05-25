@@ -107,7 +107,7 @@ function About() {
     <div ref={containerRef} className="pt-24 pb-24 min-h-screen bg-slate-50">
       {/* Header */}
       <div className="bg-primary py-24 text-white mt-[-6rem] pt-[12rem] mb-16 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1556761175-4b46a572b786?q=70&w=1400&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <div className="inline-block px-4 py-1.5 bg-accent/20 text-accent border border-accent/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase about-hero-fade">
             Who We Are
@@ -138,8 +138,11 @@ function About() {
           <div className="relative story-img">
             <div className="absolute inset-0 bg-accent/10 rounded-2xl transform translate-x-4 translate-y-4"></div>
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+              loading="lazy"
+              decoding="async"
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=70&w=1200&auto=format&fit=crop"
               alt="Professional office setup"
+              sizes="(max-width: 768px) 100vw, 1200px"
               className="rounded-2xl shadow-lg relative z-10 w-full object-cover h-[500px]"
             />
           </div>

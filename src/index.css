@@ -52,6 +52,22 @@
     @apply font-medium text-[0.95rem] text-slate-700 hover:text-accent transition-colors;
   }
 
+  .dot-glow-animation {
+    animation: move-dot-glow 12s linear infinite;
+    background-position: 0 0;
+  }
+}
+
+@keyframes move-dot-glow {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 40px 40px;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* *{

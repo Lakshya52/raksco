@@ -27,9 +27,7 @@ function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-white font-semibold mb-6 hover:text-accent transition-colors">
-              <h4 className="text-white font-semibold mb-6">Major Services</h4>
-            </h4>
+            <h4 className="text-white font-semibold mb-6">Major Services</h4>
             <ul className="space-y-4">
               <li><Link to={`/services/banking-financial-sector-assignments`} className="hover:text-accent transition-colors">Banking & Financial Sector</Link></li>
               <li><Link to={`/services/esg-sustainability-green-finance-advisory`} className="hover:text-accent transition-colors">ESG, Sustainability & Green Finance</Link></li>

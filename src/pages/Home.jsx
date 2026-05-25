@@ -1,14 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Calculator, Briefcase, TrendingUp, ShieldCheck, CheckCircle2, ArrowRight, Building2, Factory, MonitorSmartphone, HeartPulse, Landmark, ShoppingCart, Shield, FileSearch, Users2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import WhyUs from '../components/WhyUs';
 import Cta from '../components/Cta';
 import { allServices } from '../data/servicesData';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   const containerRef = useRef(null);
@@ -159,7 +153,8 @@ function Home() {
           <div className="absolute inset-0 bg-primary"></div>
           <img
             loading="eager"
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+            fetchPriority="high"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=70&w=1600&auto=format&fit=crop"
             alt=""
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
@@ -167,7 +162,7 @@ function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-12 md:py-16 2xl:py-20">
-          <div className="max-w-4xl relative">
+          <div className="max-w-6xl relative mx-auto flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-5 py-1.5 md:py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs md:text-sm font-semibold mb-6 2xl:mb-8 tracking-widest uppercase text-accent shadow-[0_0_20px_rgba(37,99,235,0.1)] hero-fade-in">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
@@ -176,12 +171,12 @@ function Home() {
               Chartered Accountants
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem] font-serif text-white mb-6 2xl:mb-8 leading-[1.1] drop-shadow-2xl hero-fade-in">
-              Financial Advisory <br className="hidden md:block" />& Compliance.
+            <h1 className="text-4xl text-center md:text-5xl lg:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem]  text-white mb-6 2xl:mb-8 leading-[1.1] drop-shadow-2xl hero-fade-in font-serif">
+              Financial Due Delligence <br className="hidden md:block" />& Compliance.
             </h1>
 
-            <div className="border-l-4 border-accent/50 pl-4 md:pl-6 mb-8 2xl:mb-12 hero-fade-in">
-              <p className="text-lg md:text-xl 2xl:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light">
+            <div className="pl-4 md:pl-6 mb-8 2xl:mb-12 ">
+              <p className="text-lg md:text-xl 2xl:text-2xl text-slate-300 max-w-4xl leading-relaxed font-light">
                 Financial insights, tax compliance, and advisory for regulated businesses. Supporting your work with clear professional guidance.
               </p>
             </div>
@@ -247,9 +242,11 @@ function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative about-img">
               <img
-                loading="eager"
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop"
+                loading="lazy"
+                decoding="async"
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=70&w=1200&auto=format&fit=crop"
                 alt="Financial charts and desk"
+                sizes="(max-width: 1024px) 100vw, 700px"
                 className="rounded-2xl shadow-soft w-full aspect-video object-cover"
               />
             </div>
@@ -369,9 +366,11 @@ function Home() {
             <div className="relative method-img">
               <div className="absolute inset-0 bg-accent/10 rounded-2xl transform translate-x-4 translate-y-4"></div>
               <img
-                loading="eager"
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+                loading="lazy"
+                decoding="async"
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=70&w=1200&auto=format&fit=crop"
                 alt="Professional desk environment"
+                sizes="(max-width: 768px) 100vw, 1200px"
                 className="rounded-2xl shadow-lg relative z-10 w-full object-cover h-[500px]"
               />
             </div>

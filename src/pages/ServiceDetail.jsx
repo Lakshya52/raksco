@@ -56,7 +56,7 @@ function ServiceDetail() {
       {/* Premium Dark Hero Header */}
       <section className="bg-primary text-white -mt-24 pt-44 pb-20 relative overflow-hidden">
         {/* Decorative subtle background pattern */}
-        <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=70&w=1400&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[100px] animate-pulse"></div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">

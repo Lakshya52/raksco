@@ -1,13 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Clock, ArrowRight } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { PopupModal } from 'react-calendly';
+import BookConsultationCta from '../components/BookConsultationCta';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Contact() {
   const containerRef = useRef(null);
+  const [calendlyOpen, setCalendlyOpen] = useState(false);
 
   useGSAP(() => {
     // Hero Elements Fade In
@@ -49,7 +52,7 @@ function Contact() {
     <div ref={containerRef} className="pt-24 pb-24 min-h-screen bg-slate-50">
       {/* Header */}
       <div className="bg-primary py-20 text-white mt-[-6rem] pt-[12rem] mb-16 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=70&w=1400&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 contact-hero-fade">Contact <span className="text-accent">Us</span></h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto contact-hero-fade">
@@ -188,7 +191,15 @@ function Contact() {
             </div>
           </div>
         </div>
+        <BookConsultationCta onBookClick={() => setCalendlyOpen(true)} />
       </div>
+
+      <PopupModal
+        url="https://calendly.com/lakshyachandaliya7/30min"
+        onModalClose={() => setCalendlyOpen(false)}
+        open={calendlyOpen}
+        rootElement={document.getElementById('root')}
+      />
     </div>
   );
 }

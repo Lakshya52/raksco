@@ -10,10 +10,10 @@ const Cta = () => {
 
                 {/* White Dot Pattern */}
                 <div
-                    className="absolute inset-0 z-0 opacity-20"
+                    className="absolute inset-0 z-0 opacity-30 dot-glow-animation"
                     style={{
                         backgroundImage:
-                            "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.9) 1px, transparent 0)",
+                            "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.95) 1px, transparent 0)",
                         backgroundSize: "20px 20px",
                     }}
                 />

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Award, Briefcase, ExternalLink } from 'lucide-react';
-import { PopupModal } from 'react-calendly';
 import { allServices } from '../data/servicesData';
 import { useLenis } from 'lenis/react';
 
@@ -9,7 +8,6 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [calendlyOpen, setCalendlyOpen] = useState(false);
   const location = useLocation();
   const lenis = useLenis();
 
@@ -17,8 +15,8 @@ function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll, { passive: true });
   }, []);
 
   // Close mobile menus on route change
@@ -161,28 +159,20 @@ function Navbar() {
             {/* Contact */}
             <Link
               to="/contact"
-              className={`nav-link relative py-1.5 transition-colors ${isActive('/contact') ? 'text-accent font-semibold' : 'text-slate-700 hover:text-accent'
-                }`}
+              className={`inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-bold transition-all duration-300 ${isActive('/contact') ? 'bg-accent text-primary' : 'bg-primary text-white hover:bg-accent hover:text-primary'} hover:shadow-[0_4px_15px_rgba(15,23,42,0.15)] active:scale-95`}
             >
-              Contact
-              {isActive('/contact') && (
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent rounded-full"></span>
-              )}
+              Contact Us
             </Link>
-
-            {/* CTA Button */}
-            <button
-              onClick={() => setCalendlyOpen(true)}
-              className="bg-primary hover:bg-accent hover:text-primary text-white px-6 py-2.5 rounded-xl font-bold transition-all duration-300 hover:shadow-[0_4px_15px_rgba(15,23,42,0.15)] active:scale-95"
-            >
-              Book Consultation
-            </button>
           </nav>
 
           {/* Mobile Menu Open Trigger */}
           <button
+            type="button"
             className="md:hidden text-primary p-2 focus:outline-none"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -190,7 +180,7 @@ function Navbar() {
 
         {/* Mobile Navigation Dropdown */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 py-6 px-6 flex flex-col gap-4 max-h-[85vh] overflow-y-auto" data-lenis-prevent>
+          <div id="mobile-menu" className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 py-6 px-6 flex flex-col gap-4 max-h-[85vh] overflow-y-auto" data-lenis-prevent>
 
             <Link
               to="/"
@@ -259,32 +249,14 @@ function Navbar() {
 
             <Link
               to="/contact"
-              className={`nav-link block text-lg font-medium p-2 rounded-xl transition-colors ${isActive('/contact') ? 'text-accent bg-accent/5 font-semibold' : 'text-slate-800'
-                }`}
+              className={`block text-lg font-medium p-3 rounded-xl transition-all duration-300 ${isActive('/contact') ? 'bg-accent text-primary font-semibold' : 'bg-primary text-white hover:bg-accent hover:text-primary'} hover:shadow-[0_4px_15px_rgba(15,23,42,0.15)]`}
             >
-              Contact
+              Contact Us
             </Link>
-
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                setCalendlyOpen(true);
-              }}
-              className="bg-primary hover:bg-accent hover:text-primary text-white py-3.5 rounded-xl font-bold mt-4 w-full text-center shadow-lg transition-all duration-300 active:scale-95"
-            >
-              Book Consultation
-            </button>
           </div>
         )}
       </header>
 
-      {/* Calendly Popup Modal */}
-      <PopupModal
-        url="https://calendly.com/lakshyachandaliya7/30min"
-        onModalClose={() => setCalendlyOpen(false)}
-        open={calendlyOpen}
-        rootElement={document.getElementById("root")}
-      />
     </>
   );
 }
