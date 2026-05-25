@@ -95,17 +95,17 @@ function ServiceDetail() {
       {/* Main Content Layout Section */}
       <div className="max-w-7xl mx-auto px-6 mt-16">
         <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_0.65fr] gap-12 items-start">
-          
+
           {/* LEFT COLUMN: Deep Information */}
           <div className="space-y-12">
-            
+
             {/* Overview */}
             <article className="bg-white rounded-3xl p-8 md:p-10 shadow-soft border border-slate-200/80 detail-content-el">
               <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6 flex items-center gap-3">
                 <span className="h-6 w-1 bg-accent rounded-full inline-block"></span>
                 Service Overview
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed font-light mb-6">
+              <p className="text-lg text-slate-600 leading-relaxed font-light mb-6 text-justify">
                 {service.longDescription}
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
@@ -114,7 +114,7 @@ function ServiceDetail() {
                     <div className="mt-1 bg-accent/15 text-accent rounded-full p-1 shrink-0">
                       <CheckCircle2 size={16} />
                     </div>
-                    <span className="text-slate-700 text-sm font-medium leading-normal">{detail}</span>
+                    <span className="text-slate-700 text-sm font-medium leading-normal text-justify">{detail}</span>
                   </div>
                 ))}
               </div>
@@ -132,17 +132,17 @@ function ServiceDetail() {
 
               <div className="grid gap-6 sm:grid-cols-2">
                 {service.detailedOfferings?.map((offering, idx) => (
-                  <div 
-                    key={idx} 
-                    className="p-6 rounded-2xl border border-slate-150 bg-slate-50/50 hover:bg-white hover:border-accent hover:shadow-soft transition-all duration-300 group flex flex-col"
+                  <div
+                    key={idx}
+                    className="p-6 rounded-2xl border border-accent-dark/40 bg-slate-50/50 hover:bg-accent-light hover:border-accent hover:shadow-soft transition-all duration-300 group flex flex-col "
                   >
-                    <div className="text-3xl font-bold font-serif text-accent/30 group-hover:text-accent transition-colors mb-3">
+                    <div className="text-3xl font-bold font-serif text-accent  transition-colors mb-3">
                       {String(idx + 1).padStart(2, '0')}
                     </div>
                     <h3 className="text-lg font-semibold text-slate-800 mb-2 font-serif group-hover:text-primary transition-colors">
                       {offering.title}
                     </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed grow">
+                    <p className="text-slate-600 text-sm leading-relaxed grow text-justify">
                       {offering.description}
                     </p>
                   </div>
@@ -151,7 +151,7 @@ function ServiceDetail() {
             </section>
 
             {/* Process Timeline Section */}
-            {service.processTimeline && (
+            {/* {service.processTimeline && (
               <section className="bg-white rounded-3xl p-8 md:p-10 shadow-soft border border-slate-200/80 detail-content-el">
                 <div className="mb-10">
                   <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-2 block">Our Workflow</span>
@@ -164,7 +164,7 @@ function ServiceDetail() {
                 <div className="relative pl-6 sm:pl-8 border-l-2 border-slate-200 space-y-10 py-2 ml-4">
                   {service.processTimeline.map((step, idx) => (
                     <div key={idx} className="relative group">
-                      {/* Timeline dot bubble */}
+                      {/* Timeline dot bubble 
                       <span className="absolute -left-12 sm:-left-[3.25rem] top-1.5 w-8 h-8 rounded-full bg-slate-100 border-2 border-slate-350 flex items-center justify-center font-bold text-xs text-slate-500 group-hover:bg-accent group-hover:border-accent group-hover:text-primary transition-all duration-300 shadow-sm">
                         {idx + 1}
                       </span>
@@ -184,10 +184,10 @@ function ServiceDetail() {
                   ))}
                 </div>
               </section>
-            )}
+            )} */}
 
             {/* Collapsible FAQ Accordion */}
-            {service.faqs && (
+            {/* {service.faqs && (
               <section className="bg-white rounded-3xl p-8 md:p-10 shadow-soft border border-slate-200/80 detail-content-el">
                 <div className="mb-8">
                   <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-2 block">Clarifications</span>
@@ -236,25 +236,25 @@ function ServiceDetail() {
                   })}
                 </div>
               </section>
-            )}
+            )} */}
 
           </div>
 
           {/* RIGHT COLUMN: Sidebar Metadata & CTA */}
           <aside className="space-y-8 sticky top-28 detail-content-el">
-            
+
             {/* At a Glance Spec Card */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-soft relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
-              
+
               <h3 className="text-xl font-serif text-primary mb-6 flex items-center gap-2">
                 At a Glance
               </h3>
 
               <div className="space-y-6">
-                
+
                 {/* Target Clients */}
-                <div>
+                {/* <div>
                   <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                     <Users size={14} className="text-accent" />
                     Target Clients
@@ -267,7 +267,7 @@ function ServiceDetail() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
 
                 {/* Core Frameworks */}
                 <hr className="border-slate-100" />
@@ -305,7 +305,7 @@ function ServiceDetail() {
             <div className="bg-slate-900 text-white rounded-3xl p-8 border border-slate-800 shadow-[0_20px_50px_rgba(15,23,42,0.15)] relative overflow-hidden group">
               {/* Background abstract overlay glow */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/10 rounded-full blur-[40px] group-hover:bg-accent/20 transition-colors duration-500"></div>
-              
+
               <div className="relative z-10">
                 <span className="text-accent uppercase tracking-widest font-semibold text-xs mb-2 block">
                   Professional Enquiries
@@ -316,8 +316,8 @@ function ServiceDetail() {
                 <p className="text-sm text-slate-400 leading-relaxed mb-6">
                   Get in touch with our expert Chartered Accountants to discuss your operational, financial compliance, or strategic needs.
                 </p>
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact"
                   className="w-full text-center inline-flex justify-center items-center gap-2 bg-accent hover:bg-accent-dark text-slate-950 font-bold py-3.5 px-6 rounded-xl transition-all duration-300 hover:shadow-[0_0_25px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 >
                   Contact Our Office

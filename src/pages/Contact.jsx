@@ -63,7 +63,9 @@ function Contact() {
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8 contact-info-panel">
             <div className="bg-white p-8 rounded-xl shadow-soft border border-slate-100">
-              <h3 className="text-lg font-serif text-primary mb-6">Whether you are planning a capital raise, need structured debt advisory, require project finance documentation, or are seeking to transform your business — the first step is a conversation. We respond to all enquiries within 24 hours.</h3>
+              <h3 className="text-3xl font-serif text-primary ">Send Us a Message</h3>
+              <p className="text-slate-500  text-justify my-10 mt-6">Whether you are planning a capital raise, need structured debt advisory, require project finance documentation, or are seeking to transform your business — the first step is a conversation. We respond to all enquiries within 24 hours.</p>
+              {/* <h3 className="text-lg font-serif text-primary mb-6">Whether you are planning a capital raise, need structured debt advisory, require project finance documentation, or are seeking to transform your business — the first step is a conversation. We respond to all enquiries within 24 hours.</h3> */}
 
               <div className="space-y-6 text-slate-600">
                 <div className="flex gap-4">
@@ -112,8 +114,8 @@ function Contact() {
           {/* Contact Form */}
           <div className="lg:col-span-2 contact-form-panel">
             <div className="bg-white p-8 md:p-12 rounded-xl shadow-soft border border-slate-100">
-              <h3 className="text-3xl font-serif text-primary mb-2">Send Us a Message</h3>
-              <p className="text-slate-500 mb-8">Fill out the form below and one of our consultants will get back to you shortly.</p>
+              {/* <h3 className="text-3xl font-serif text-primary mb-2">Send Us a Message</h3>
+              <p className="text-slate-500 mb-8">Whether you are planning a capital raise, need structured debt advisory, require project finance documentation, or are seeking to transform your business — the first step is a conversation. We respond to all enquiries within 24 hours.</p> */}
 
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">

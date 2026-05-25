@@ -5,9 +5,9 @@
   :root {
     --color-primary: 15 23 42;
     --color-primary-light: 30 41 59;
-    --color-accent: 37 99 235;
-    --color-accent-dark: 29 78 216;
-    --color-accent-light: 191 219 254;
+    --color-accent: 34 197 94;
+    --color-accent-dark: 21 128 61;
+    --color-accent-light: 220 252 231;
     --color-slate-50: 248 250 252;
     --color-slate-100: 241 245 249;
     --color-slate-200: 226 232 240;
@@ -54,6 +54,9 @@
 
 }
 
+/* *{
+  border: 1px solid red;
+} */
 /* Lenis smooth scrolling styles */
 html.lenis,
 html.lenis body {

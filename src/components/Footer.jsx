@@ -11,7 +11,7 @@ function Footer() {
             <Link to="/" className="font-serif text-2xl font-bold text-white flex items-center gap-1 mb-6">
               RAKS<span className="text-accent">&</span>Company
             </Link>
-            <p className="leading-relaxed mb-6 text-slate-400 max-w-sm">
+            <p className="leading-relaxed mb-6 text-slate-400 max-w-sm text-justify">
               A firm of Chartered Accountants providing professional services in audit, taxation, and financial advisory.
             </p>
           </div>
@@ -28,23 +28,19 @@ function Footer() {
 
           <div className="lg:col-span-3">
             <h4 className="text-white font-semibold mb-6 hover:text-accent transition-colors">
-              <Link to="/services">Major Services</Link>
+              <h4 className="text-white font-semibold mb-6">Major Services</h4>
             </h4>
             <ul className="space-y-4">
-              <li><Link to="/services" className="hover:text-accent transition-colors">Tax Advisory & Compliance</Link></li>
-              <li><Link to="/services" className="hover:text-accent transition-colors">Audit & Assurance</Link></li>
-              <li><Link to="/services" className="hover:text-accent transition-colors">Financial Advisory</Link></li>
-              <li><Link to="/services" className="hover:text-accent transition-colors">Risk Management</Link></li>
+              <li><Link to={`/services/banking-financial-sector-assignments`} className="hover:text-accent transition-colors">Banking & Financial Sector</Link></li>
+              <li><Link to={`/services/esg-sustainability-green-finance-advisory`} className="hover:text-accent transition-colors">ESG, Sustainability & Green Finance</Link></li>
+              <li><Link to={`/services/assurance-advisory-services`} className="hover:text-accent transition-colors">Assurance & Advisory Services</Link></li>
+              <li><Link to={`/services/agency-for-specialized-monitoring`} className="hover:text-accent transition-colors">Agency for Specialized Monitoring</Link></li>
             </ul>
           </div>
 
           <div className="lg:col-span-3">
             <h4 className="text-white font-semibold mb-6">Contact Us</h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="text-accent shrink-0 mt-1" size={20} />
-                <span>214, 2nd Floor, Vishal Chambers, Noida Sector 18, Uttar Pradesh - 201301<br /></span>
-              </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-accent shrink-0" size={20} />
                 <span>+91 120 444 5816</span>
@@ -52,6 +48,10 @@ function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="text-accent shrink-0" size={20} />
                 <span>contact@raksco.in</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="text-accent shrink-0 mt-1" size={20} />
+                <span>214, 2nd Floor, Vishal Chambers, Noida Sector 18, Uttar Pradesh - 201301<br /></span>
               </li>
             </ul>
           </div>

@@ -63,10 +63,10 @@ function Navbar() {
     <>
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-305 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-2.5 border-b border-slate-100' : 'bg-white/95 backdrop-blur-md py-4'
         }`}>
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div className="max-w-7xl sm:mx-auto px-4 md:px-6 flex justify-between items-center">
 
           {/* Logo */}
-          <Link to="/" className="font-serif text-2xl font-bold text-primary flex items-center gap-1 group">
+          <Link to="/" className="font-serif text-xl md:text-2xl font-bold text-primary flex items-center gap-1 group">
             <span className="group-hover:text-accent transition-colors duration-300">RAKS</span>
             <span className="text-accent">&</span>
             <span className="group-hover:text-accent transition-colors duration-300">Company</span>
@@ -128,10 +128,10 @@ function Navbar() {
               {/* Hover Dropdown Mega-Menu Panel */}
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[22rem] bg-white rounded-2xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-3 group-hover:translate-y-0 z-50 p-4">
                 <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 px-2 flex justify-between items-center">
-                  <span>Our Practice Areas</span>
-                  <Link to="/services" className="text-accent hover:underline flex items-center gap-0.5 lowercase text-[10px]">
+                  {/* <span>Our Practice Areas</span> */}
+                  {/* <Link to="/services" className="text-accent hover:underline flex items-center gap-0.5 lowercase text-[10px]">
                     view all <ExternalLink size={10} />
-                  </Link>
+                  </Link> */}
                 </div>
 
                 <div className="space-y-1.5 max-h-[30rem] overflow-y-auto custom-scrollbar" data-lenis-prevent>

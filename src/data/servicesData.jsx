@@ -5,7 +5,7 @@ export const coreServices = [
   {
     slug: 'banking-financial-sector-assignments',
     icon: <Building2 size={32} />,
-    title: 'Banking & Financial Sector Assignments',
+    title: 'Banking & Financial Sector',
     description: 'Specialized support for banks, NBFCs, financial institutions, and regulated entities across audits, compliance and risk review.',
     tagline: 'Securing institutional integrity and regulatory compliance through expert oversight and credit control.',
     longDescription: 'Navigating the heavily regulated financial services sector requires a deep understanding of standard credit operations, risk frameworks, and statutory guidelines. Our firm specializes in conducting rigorous reviews and credit audits designed specifically for banks, NBFCs, and financial intermediaries. We help identify potential portfolio risks, audit asset health, and ensure that institutional operations remain fully compliant with RBI and other regulatory mandates. By combining thorough investigative techniques with structured audit models, we provide lenders and management with absolute clarity on credit control and fund utilization.',

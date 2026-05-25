@@ -14,7 +14,7 @@ const Cta = () => {
                 <div className="relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">Professional Inquiries</h2>
                     <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
-                        For professional consultations and service inquiries, please reach out to our office.
+                        Connect with our team for strategic financial guidance, compliance support, and business advisory services tailored to your organization.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-primary px-8 py-4 rounded font-semibold text-lg transition-colors duration-300 shadow-xl">
                         Contact Us <ArrowRight size={20} />

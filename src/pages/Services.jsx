@@ -13,18 +13,18 @@ function Services() {
   const containerRef = useRef(null);
 
   const industriesServed = [
-    'Banking & Financial Services',
     'Manufacturing',
     'Trading & Distribution',
-    'Infrastructure & Construction',
-    'Logistics & Transportation',
     'Retail Businesses',
     'E-commerce',
-    'Renewable Energy & Green Businesses',
     'FMCG',
     'Hospitality',
     'Professional Services',
+    'Infrastructure & Construction',
+    'Logistics & Transportation',
+    'Banking & Financial Services',
     'MSMEs & Mid-sized Enterprises',
+    'Renewable Energy & Green Businesses',
   ];
 
   const whyRaks = [
@@ -89,7 +89,7 @@ function Services() {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-slate-600 mb-6 text-sm leading-relaxed">{service.description}</p>
+                <p className="text-slate-600 mb-6 text-sm leading-relaxed text-justify">{service.description}</p>
                 <div className="mt-auto pt-4 border-t border-slate-100">
                   <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-accent transition-colors">
                     Learn more <ArrowRight size={16} />
@@ -112,7 +112,7 @@ function Services() {
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-semibold mb-3">{service.title}</h3>
-                <p className="text-slate-650 mb-6 text-sm leading-relaxed">{service.description}</p>
+                <p className="text-slate-650 mb-6 text-sm leading-relaxed text-justify">{service.description}</p>
                 <div className="mt-auto pt-4 border-t border-slate-100">
                   <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-accent transition-colors">
                     Learn more <ArrowRight size={16} />
@@ -129,7 +129,7 @@ function Services() {
               Industry Experience
             </span>
             <h2 className="text-4xl font-serif text-primary mb-6">The firm and its professional team have exposure across industries and business segments</h2>
-            <p className="text-slate-600 leading-relaxed mb-8">
+            <p className="text-slate-600 leading-relaxed mb-8 text-justify">
               The firm and its professional team have exposure across multiple industries and business segments, enabling practical understanding of operational and financial risks specific to each sector.
             </p>
             <div className="grid gap-3 sm:grid-cols-2 industry-items-grid">
@@ -151,7 +151,7 @@ function Services() {
               {whyRaks.map((item) => (
                 <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors duration-300 focus-item-card">
                   <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-slate-300 leading-relaxed">{item.description}</p>
+                  <p className="text-slate-300 leading-relaxed text-justify">{item.description}</p>
                 </div>
               ))}
             </div>

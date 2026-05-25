@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Calculator, Briefcase, TrendingUp, ShieldCheck, CheckCircle2, ArrowRight, Building2, Factory, MonitorSmartphone, HeartPulse, Landmark, ShoppingCart, Shield, FileSearch, Users2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import WhyUs from '../components/WhyUs';
@@ -13,120 +13,157 @@ gsap.registerPlugin(ScrollTrigger);
 function Home() {
   const containerRef = useRef(null);
 
-  useGSAP(() => {
-    // Hero Elements Intro Animation on load
-    gsap.from(".hero-fade-in", {
-      y: 40,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.15,
-      ease: "power4.out"
-    });
+  // useGSAP(() => {
+  //   // Hero Elements Intro Animation on load
+  //   // gsap.from(".hero-fade-in", {
+  //   //   y: 40,
+  //   //   opacity: 0,
+  //   //   duration: 1,
+  //   //   stagger: 0.15,
+  //   //   ease: "power4.out"
+  //   // });
 
-    // Hero Background Parallax Scroll
-    gsap.to(".hero-bg", {
-      yPercent: 15,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".hero-section",
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-      }
-    });
+  //   // Hero Background Parallax Scroll
+  //   // gsap.to(".hero-bg", {
+  //   //   yPercent: 15,
+  //   //   ease: "none",
+  //   //   scrollTrigger: {
+  //   //     trigger: ".hero-section",
+  //   //     start: "top top",
+  //   //     end: "bottom top",
+  //   //     scrub: true
+  //   //   }
+  //   // });
 
 
 
-    // About Section Animation (Split Layout)
-    gsap.from(".about-img", {
-      x: -40,
-      opacity: 0,
-      duration: 0.9,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".about-section",
-        start: "top bottom-=100",
-        toggleActions: "play none none none"
-      }
-    });
+  //   // About Section Animation (Split Layout)
+  //   gsap.from(".about-img", {
+  //     x: -40,
+  //     opacity: 0,
+  //     duration: 0.9,
+  //     ease: "power3.out",
+  //     scrollTrigger: {
+  //       trigger: ".about-section",
+  //       start: "top bottom-=100",
+  //       toggleActions: "play none none none"
+  //     }
+  //   });
 
-    gsap.from(".about-content-el", {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".about-content",
-        start: "top bottom-=100",
-        toggleActions: "play none none none"
-      }
-    });
+  //   gsap.from(".about-content-el", {
+  //     y: 30,
+  //     opacity: 0,
+  //     duration: 0.8,
+  //     stagger: 0.15,
+  //     ease: "power3.out",
+  //     scrollTrigger: {
+  //       trigger: ".about-content",
+  //       start: "top bottom-=100",
+  //       toggleActions: "play none none none"
+  //     }
+  //   });
 
-    // Methodology Section Animation
-    gsap.from(".method-content-el", {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".method-content",
-        start: "top bottom-=100",
-        toggleActions: "play none none none"
-      }
-    });
+  //   // Methodology Section Animation
+  //   gsap.from(".method-content-el", {
+  //     y: 30,
+  //     opacity: 0,
+  //     duration: 0.8,
+  //     stagger: 0.15,
+  //     ease: "power3.out",
+  //     scrollTrigger: {
+  //       trigger: ".method-content",
+  //       start: "top bottom-=100",
+  //       toggleActions: "play none none none"
+  //     }
+  //   });
 
-    gsap.from(".method-item", {
-      x: -30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".method-list",
-        start: "top bottom-=100",
-        toggleActions: "play none none none"
-      }
-    });
+  //   gsap.from(".method-item", {
+  //     x: -30,
+  //     opacity: 0,
+  //     duration: 0.8,
+  //     stagger: 0.2,
+  //     ease: "power3.out",
+  //     scrollTrigger: {
+  //       trigger: ".method-list",
+  //       start: "top bottom-=100",
+  //       toggleActions: "play none none none"
+  //     }
+  //   });
 
-    gsap.from(".method-img", {
-      x: 40,
-      opacity: 0,
-      duration: 0.9,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".method-section",
-        start: "top bottom-=100",
-        toggleActions: "play none none none"
-      }
-    });
+  //   gsap.from(".method-img", {
+  //     x: 40,
+  //     opacity: 0,
+  //     duration: 0.9,
+  //     ease: "power3.out",
+  //     scrollTrigger: {
+  //       trigger: ".method-section",
+  //       start: "top bottom-=100",
+  //       toggleActions: "play none none none"
+  //     }
+  //   });
 
-    // CTA Box Zoom-in Scroll
-    gsap.from(".cta-container", {
-      scale: 0.95,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".cta-container",
-        start: "top bottom-=50",
-        toggleActions: "play none none none"
-      }
-    });
-  }, { scope: containerRef });
+  //   // CTA Box Zoom-in Scroll
+  //   gsap.from(".cta-container", {
+  //     scale: 0.95,
+  //     opacity: 0,
+  //     duration: 0.8,
+  //     ease: "power3.out",
+  //     scrollTrigger: {
+  //       trigger: ".cta-container",
+  //       start: "top bottom-=50",
+  //       toggleActions: "play none none none"
+  //     }
+  //   });
+
+  //   const onLoad = () => ScrollTrigger.refresh();
+  //   window.addEventListener('load', onLoad);
+  //   return () => window.removeEventListener('load', onLoad);
+  // }, { scope: containerRef });
+
+  // useEffect(() => {
+  //   const images = containerRef.current?.querySelectorAll('img');
+  //   if (!images || images.length === 0) return;
+
+  //   let loadedCount = 0;
+
+  //   const onImageLoad = () => {
+  //     loadedCount++;
+  //     if (loadedCount === images.length) {
+  //       ScrollTrigger.refresh();
+  //     }
+  //   };
+
+  //   images.forEach(img => {
+  //     if (img.complete) {
+  //       onImageLoad(); // already cached
+  //     } else {
+  //       img.addEventListener('load', onImageLoad);
+  //       img.addEventListener('error', onImageLoad); // also count failed loads
+  //     }
+  //   });
+
+  //   return () => {
+  //     images.forEach(img => {
+  //       img.removeEventListener('load', onImageLoad);
+  //       img.removeEventListener('error', onImageLoad);
+  //     });
+  //   };
+  // }, []);
 
   return (
     <div ref={containerRef}>
       {/* Hero Section */}
-      <section className="relative min-h-svh flex items-center pt-20 bg-primary text-white overflow-hidden hero-section">
+      <section className="relative min-h-dvh flex items-center pt-20 bg-primary text-white overflow-hidden hero-section">
         {/* Background Image with Parallax & Gradient Overlay */}
-        <div
-          className="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center bg-fixed hero-bg"
-        >
-          <div className="absolute inset-0 bg-linear-to-r from-primary via-primary/90 to-primary/70"></div>
-          <div className="absolute top-1/4 left-1/4 w-[30rem] h-[30rem] bg-accent/20 rounded-full blur-[128px] animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-accent/10 rounded-full blur-[128px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-primary"></div>
+          <img
+            loading="eager"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-12 md:py-16 2xl:py-20">
@@ -150,9 +187,15 @@ function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start hero-fade-in">
-              <Link to="/services" className="group relative inline-flex items-center justify-center gap-2 md:gap-3 bg-accent hover:bg-accent-dark text-white px-6 md:px-8 py-3 md:py-4 rounded font-bold text-base md:text-lg transition-all duration-300 shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_40px_rgba(37,99,235,0.5)] hover:-translate-y-1">
+              <Link
+                to="/services"
+                className="group relative inline-flex items-center justify-center gap-2 md:gap-3 bg-accent hover:bg-accent-dark text-white px-6 md:px-8 py-3 md:py-4 rounded font-bold text-base md:text-lg transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.35)] hover:shadow-[0_0_40px_rgba(34,197,94,0.55)] hover:-translate-y-1"
+              >
                 Our Services
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+                <ArrowRight
+                  className="group-hover:translate-x-1 transition-transform"
+                  size={20}
+                />
               </Link>
               <Link to="/contact" className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-6 md:px-8 py-3 md:py-4 rounded font-bold text-base md:text-lg transition-all duration-300 hover:-translate-y-1">
                 Contact Us
@@ -163,10 +206,10 @@ function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/50 animate-bounce hidden md:flex">
+        {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/50 animate-bounce hidden md:flex">
           <span className="text-xs tracking-widest uppercase font-medium">Scroll</span>
           <div className="w-px h-8 bg-linear-to-b from-white/50 to-transparent"></div>
-        </div>
+        </div> */}
       </section>
 
       {/* Services Section */}
@@ -204,9 +247,10 @@ function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative about-img">
               <img
+                loading="eager"
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop"
                 alt="Financial charts and desk"
-                className="rounded-2xl shadow-soft w-full"
+                className="rounded-2xl shadow-soft w-full aspect-video object-cover"
               />
             </div>
 
@@ -214,10 +258,10 @@ function Home() {
               <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block about-content-el">Firm Overview</span>
               <h2 className="text-4xl md:text-5xl mb-6 about-content-el">Professional Services with Integrity and Ethics</h2>
               <div className="space-y-4 text-lg text-slate-600 mb-8 about-content-el">
-                <p>
+                <p className='text-justify' >
                   At RAKS & Company, we provide professional services in the fields of auditing, taxation, and corporate advisory.
                 </p>
-                <p>
+                <p className='text-justify' >
                   Our team of Chartered Accountants is dedicated to maintaining the highest level of professional ethics, delivering services in accordance with statutory requirements.
                 </p>
               </div>
@@ -247,7 +291,7 @@ function Home() {
         </div>
       </section>
 
-      <WhyUs />
+      {/* <WhyUs /> */}
 
       {/* Industries Section */}
       <section className="py-24 bg-slate-50 border-t border-slate-100">
@@ -258,20 +302,20 @@ function Home() {
             <p className="text-lg text-slate-600">Providing specialized professional services tailored to the unique regulatory and financial requirements of various industries.</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {[
-              { icon: <Building2 size={24} />, name: "Real Estate" },
-              { icon: <Factory size={24} />, name: "Manufacturing" },
-              { icon: <MonitorSmartphone size={24} />, name: "Technology" },
-              { icon: <HeartPulse size={24} />, name: "Healthcare" },
-              { icon: <Landmark size={24} />, name: "Financial" },
-              { icon: <ShoppingCart size={24} />, name: "Retail" }
+              { icon: <Building2 size={40} />, name: "Real Estate" },
+              { icon: <Factory size={40} />, name: "Manufacturing" },
+              { icon: <MonitorSmartphone size={40} />, name: "Technology" },
+              { icon: <HeartPulse size={40} />, name: "Healthcare" },
+              { icon: <Landmark size={40} />, name: "Financial" },
+              { icon: <ShoppingCart size={40} />, name: "Retail" }
             ].map((industry, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                <div className="w-18 h-18 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                   {industry.icon}
                 </div>
-                <h3 className="font-semibold text-slate-800 text-sm">{industry.name}</h3>
+                <h3 className="font-medium font-sans text-slate-800 text-lg">{industry.name}</h3>
               </div>
             ))}
           </div>
@@ -298,7 +342,7 @@ function Home() {
                   </div>
                   <div>
                     <h4 className="text-xl font-serif text-primary mb-2">Ethical Standards</h4>
-                    <p className="text-slate-600">Strict adherence to the Code of Ethics issued by the Institute of Chartered Accountants of India.</p>
+                    <p className="text-slate-600 text-justify">Strict adherence to the Code of Ethics issued by the Institute of Chartered Accountants of India.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 method-item">
@@ -307,7 +351,7 @@ function Home() {
                   </div>
                   <div>
                     <h4 className="text-xl font-serif text-primary mb-2">Rigorous Analysis</h4>
-                    <p className="text-slate-600">Thorough examination of financial data to ensure accurate compliance and reporting.</p>
+                    <p className="text-slate-600 text-justify">Thorough examination of financial data to ensure accurate compliance and reporting.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 method-item">
@@ -316,7 +360,7 @@ function Home() {
                   </div>
                   <div>
                     <h4 className="text-xl font-serif text-primary mb-2">Clear Communication</h4>
-                    <p className="text-slate-600">Timely and professional correspondence regarding regulatory updates and compliance requirements.</p>
+                    <p className="text-slate-600 text-justify">Timely and professional correspondence regarding regulatory updates and compliance requirements.</p>
                   </div>
                 </div>
               </div>
@@ -325,6 +369,7 @@ function Home() {
             <div className="relative method-img">
               <div className="absolute inset-0 bg-accent/10 rounded-2xl transform translate-x-4 translate-y-4"></div>
               <img
+                loading="eager"
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
                 alt="Professional desk environment"
                 className="rounded-2xl shadow-lg relative z-10 w-full object-cover h-[500px]"

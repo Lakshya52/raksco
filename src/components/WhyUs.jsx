@@ -76,14 +76,14 @@ function WhyUs({ title = 'Our Focus Areas', subtitle = 'Areas of focus across ba
           <p className="text-lg text-slate-600 leading-relaxed whyus-header-el">{subtitle}</p>
         </div>
 
-        <div className="grid gap-8 xl:grid-cols-5 lg:grid-cols-2 md:grid-cols-2 whyus-grid">
+        <div className="grid gap-2 xl:grid-cols-5 lg:grid-cols-2 md:grid-cols-2 whyus-grid">
           {reasons.map((reason) => (
             <div key={reason.title} className="whyus-card rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft transition-transform duration-300 hover:-translate-y-1">
               <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-accent/10 text-accent">
                 {reason.icon}
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">{reason.title}</h3>
-              <p className="text-slate-600 leading-relaxed">{reason.description}</p>
+              <p className="text-slate-600 leading-relaxed text-justify">{reason.description}</p>
             </div>
           ))}
         </div>
