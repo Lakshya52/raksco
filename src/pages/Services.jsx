@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
-import { Building2, Globe, ShieldCheck, Eye, Briefcase, FileText, Layers } from 'lucide-react';
+import { Building2, Globe, ShieldCheck, Eye, Briefcase, FileText, Layers, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { coreServices, otherServices } from '../data/servicesData';
 import Cta from '../components/Cta';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -9,90 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Services() {
   const containerRef = useRef(null);
-
-  const coreServices = [
-    {
-      icon: <Building2 size={32} />,
-      title: 'Banking & Financial Sector Assignments',
-      description: 'Specialized support for banks, NBFCs, financial institutions, and regulated entities across audits, compliance and risk review.',
-      details: [
-        'Stock audits, credit audits and revenue audits',
-        'Concurrent audits and statutory reporting',
-        'Information Systems (IS) audits for financial workflows',
-        'Regulatory compliance reviews under RBI/IRDAI/NBFC norms',
-      ],
-    },
-    {
-      icon: <Globe size={32} />,
-      title: 'ESG, Sustainability & Green Finance Advisory',
-      description: 'Advisory services designed to help organizations align with ESG best practices, sustainability reporting, and green finance frameworks.',
-      details: [
-        'Sustainability assurance and ESG compliance reviews',
-        'Green finance advisory and sustainability strategy',
-        'Materiality assessments and stakeholder reporting',
-        'Assistance with ESG disclosures and framework alignment',
-      ],
-    },
-    {
-      icon: <ShieldCheck size={32} />,
-      title: 'Assurance & Advisory Services',
-      description: 'Assurance services backed by practical advisory to improve controls, governance and performance for growing businesses.',
-      details: [
-        'Statutory, internal and tax audits',
-        'Risk management and internal control reviews',
-        'Financial due diligence and corporate advisory',
-        'Governance support and compliance monitoring',
-      ],
-    },
-    {
-      icon: <Eye size={32} />,
-      title: 'Agency for Specialized Monitoring (ASM)',
-      description: 'Independent monitoring and oversight services for lenders, investors, and institutions requiring structured supervision of financed projects, stressed assets, and operational performance.',
-      details: [
-        'Monitoring of funded projects, capital utilization, and cash flow movement',
-        'Site visits, progress tracking, and submission of periodic monitoring reports',
-        'Verification of asset creation, inventory, receivables, and end-use of funds',
-        'Early warning signal identification and risk escalation support',
-        'Compliance monitoring against sanction terms, covenants, and regulatory requirements',
-        'Coordination support between lenders, borrowers, consultants, and stakeholders',
-      ],
-    },
-  ];
-
-  const otherServices = [
-    {
-      icon: <Briefcase size={32} />,
-      title: 'Business Advisory',
-      description: 'Empowering businesses and individuals through robust financial and strategic solutions.',
-      details: [
-        'Advisory on business setup, financial planning, and strategic consulting.',
-        'Implementation of risk management frameworks to foster sustainable growth.',
-        'Compliance support and data-driven insights for informed decision-making in an evolving economic landscape.',
-      ],
-    },
-    {
-      icon: <Layers size={32} />,
-      title: 'Regulatory & Compliance Support',
-      description: 'Secretarial compliances including company incorporation, statutory maintenance, and regulatory filings.',
-      details: [
-        'Company incorporation, maintenance of statutory registers, and Board/AGM documentation.',
-        'Advisory and filings under FEMA and RBI regulations for foreign investments and cross-border transactions.',
-        'Assistance obtaining and renewing statutory licenses and registrations such as FSSAI, MSME, BIS, ISO and sector-specific approvals.',
-        'Regulatory monitoring and compliance management for timely adherence to evolving legal requirements.',
-      ],
-    },
-    {
-      icon: <FileText size={32} />,
-      title: 'Accounting & Financial Reporting',
-      description: 'Maintaining statutory-compliant financial records and reporting for operational clarity and regulatory confidence.',
-      details: [
-        'Maintaining statutory-compliant financial records and preparation of financial statements.',
-        'Managing payables, receivables, reconciliations, and general ledger efficiently.',
-        'Support for tax compliance, budgeting, and financial analysis for informed decision-making.',
-        'Leveraging cloud-based solutions and automation for real-time insights and process optimization.',
-      ],
-    },
-  ];
 
   const industriesServed = [
     'Banking & Financial Services',
@@ -141,126 +59,6 @@ function Services() {
       stagger: 0.15,
       ease: "power4.out"
     });
-
-    // Core Services section header
-    gsap.from(".core-services-header", {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      scrollTrigger: {
-        trigger: ".core-services-section",
-        start: "top 85%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    // Core Services cards grid
-    gsap.from(".core-service-card", {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".core-services-grid",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    // Other Services section header
-    gsap.from(".other-services-header", {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      scrollTrigger: {
-        trigger: ".other-services-section",
-        start: "top 85%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    // Other Services cards grid
-    gsap.from(".other-service-card", {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".other-services-grid",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    // Industry Split Section Left Panel
-    gsap.from(".industry-left-panel", {
-      x: -40,
-      opacity: 0,
-      duration: 0.85,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".industry-split-section",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    // Industry Items Stagger
-    gsap.from(".industry-item", {
-      scale: 0.95,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.05,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".industry-items-grid",
-        start: "top 85%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    // Industry Split Section Right Panel
-    gsap.from(".focus-right-panel", {
-      x: 40,
-      opacity: 0,
-      duration: 0.85,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".industry-split-section",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    // Focus Cards Stagger
-    gsap.from(".focus-item-card", {
-      y: 30,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.12,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".focus-items-list",
-        start: "top 85%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    // Vision Section
-    gsap.from(".vision-section-el", {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".vision-section",
-        start: "top 85%",
-        toggleActions: "play none none none"
-      }
-    });
   }, { scope: containerRef });
 
   return (
@@ -285,20 +83,18 @@ function Services() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-2 core-services-grid">
             {coreServices.map((service) => (
-              <article key={service.title} className="group rounded-4xl bg-white shadow-soft border border-slate-200 p-6 core-service-card">
+              <article key={service.title} className="group flex flex-col rounded-4xl bg-white shadow-soft border border-slate-200 p-6 core-service-card relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-0 bg-gold transition-all duration-300 group-hover:h-full"></div>
                 <div className="w-14 h-14 rounded-3xl bg-gold/10 text-gold flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-gold/20">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-slate-600 mb-4 text-sm leading-relaxed">{service.description}</p>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  {service.details.map((detail) => (
-                    <li key={`${service.title}-${detail}`} className="flex gap-3 items-start">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-gold shrink-0"></span>
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-slate-600 mb-6 text-sm leading-relaxed">{service.description}</p>
+                <div className="mt-auto pt-4 border-t border-slate-100">
+                  <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-gold transition-colors">
+                    Learn more <ArrowRight size={16} />
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
@@ -308,22 +104,20 @@ function Services() {
           <div className="mb-12 text-center other-services-header">
             <h2 className="text-4xl font-serif text-primary">Other Services</h2>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 other-services-grid">
+          <div className="grid gap-8 md:grid-cols-3 other-services-grid">
             {otherServices.map((service) => (
-              <article key={service.title} className="group rounded-4xl bg-white shadow-soft border border-slate-200 p-6 other-service-card">
-                <div className="w-14 h-14 rounded-3xl bg-gold/10 text-gold flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-gold/20">
+              <article key={service.title} className="group flex flex-col rounded-3xl bg-white shadow-sm border border-slate-200 p-6 hover:shadow-soft transition-all duration-300 other-service-card relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-0 bg-gold transition-all duration-300 group-hover:h-full"></div>
+                <div className="w-12 h-12 rounded-2xl bg-gold/10 text-gold flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-gold group-hover:text-white">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-slate-600 mb-4 text-sm leading-relaxed">{service.description}</p>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  {service.details.map((detail) => (
-                    <li key={`${service.title}-${detail}`} className="flex gap-3 items-start">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-gold shrink-0"></span>
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-lg font-semibold mb-3">{service.title}</h3>
+                <p className="text-slate-600 mb-6 text-sm leading-relaxed">{service.description}</p>
+                <div className="mt-auto pt-4 border-t border-slate-100">
+                  <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-gold transition-colors">
+                    Learn more <ArrowRight size={16} />
+                  </Link>
+                </div>
               </article>
             ))}
           </div>

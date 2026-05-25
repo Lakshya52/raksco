@@ -3,6 +3,7 @@ import { Calculator, Briefcase, TrendingUp, ShieldCheck, CheckCircle2, ArrowRigh
 import { Link } from 'react-router-dom';
 import WhyUs from '../components/WhyUs';
 import Cta from '../components/Cta';
+import { allServices } from '../data/servicesData';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -178,53 +179,21 @@ function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-soft border border-slate-100 transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1 h-0 bg-gold transition-all duration-300 group-hover:h-full"></div>
-              <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-6">
-                <Calculator size={28} />
+            {allServices.slice(0, 4).map((service, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-soft border border-slate-100 transition-all duration-300 group relative overflow-hidden flex flex-col">
+                <div className="absolute top-0 left-0 w-1 h-0 bg-gold transition-all duration-300 group-hover:h-full"></div>
+                <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-6">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl mb-4 font-serif">{service.title}</h3>
+                <p className="text-slate-500 mb-6 line-clamp-3 leading-relaxed">{service.description}</p>
+                <div className="mt-auto">
+                  <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-gold transition-colors">
+                    Learn more <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
-              <h3 className="text-xl mb-4 font-serif">Tax Advisory & Compliance</h3>
-              <p className="text-slate-500 mb-6 line-clamp-3">Strategic tax planning, corporate tax returns, and international tax structuring to optimize your liabilities and ensure total compliance.</p>
-              <Link to="/services" className="text-primary font-semibold flex items-center gap-2 group-hover:text-gold transition-colors">
-                Learn more <ArrowRight size={16} />
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-soft border border-slate-100 transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1 h-0 bg-gold transition-all duration-300 group-hover:h-full"></div>
-              <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-6">
-                <Briefcase size={28} />
-              </div>
-              <h3 className="text-xl mb-4 font-serif">Audit & Assurance</h3>
-              <p className="text-slate-500 mb-6 line-clamp-3">Rigorous statutory and internal audits that provide deep insights, mitigate risks, and build stakeholder trust in your financial reporting.</p>
-              <Link to="/services" className="text-primary font-semibold flex items-center gap-2 group-hover:text-gold transition-colors">
-                Learn more <ArrowRight size={16} />
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-soft border border-slate-100 transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1 h-0 bg-gold transition-all duration-300 group-hover:h-full"></div>
-              <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-6">
-                <TrendingUp size={28} />
-              </div>
-              <h3 className="text-xl mb-4 font-serif">Financial Advisory</h3>
-              <p className="text-slate-500 mb-6 line-clamp-3">Mergers and acquisitions, business valuation, and capital restructuring services to drive your strategic growth initiatives.</p>
-              <Link to="/services" className="text-primary font-semibold flex items-center gap-2 group-hover:text-gold transition-colors">
-                Learn more <ArrowRight size={16} />
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-soft border border-slate-100 transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1 h-0 bg-gold transition-all duration-300 group-hover:h-full"></div>
-              <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-6">
-                <ShieldCheck size={28} />
-              </div>
-              <h3 className="text-xl mb-4 font-serif">Risk Management</h3>
-              <p className="text-slate-500 mb-6 line-clamp-3">Identifying, evaluating, and mitigating operational and financial risks to safeguard your enterprise's future.</p>
-              <Link to="/services" className="text-primary font-semibold flex items-center gap-2 group-hover:text-gold transition-colors">
-                Learn more <ArrowRight size={16} />
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>
