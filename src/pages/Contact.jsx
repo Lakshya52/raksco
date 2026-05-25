@@ -51,7 +51,7 @@ function Contact() {
       <div className="bg-primary py-20 text-white mt-[-6rem] pt-[12rem] mb-16 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 contact-hero-fade">Contact <span className="text-gold">Us</span></h1>
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 contact-hero-fade">Contact <span className="text-accent">Us</span></h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto contact-hero-fade">
             Get in touch with our team of Chartered Accountants. We are here to help you navigate your financial landscape.
           </p>
@@ -67,7 +67,7 @@ function Contact() {
 
               <div className="space-y-6 text-slate-600">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-gold/10 text-gold rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center shrink-0">
                     <MapPin size={24} />
                   </div>
                   <div>
@@ -77,7 +77,7 @@ function Contact() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-gold/10 text-gold rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center shrink-0">
                     <Phone size={24} />
                   </div>
                   <div>
@@ -87,7 +87,7 @@ function Contact() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-gold/10 text-gold rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center shrink-0">
                     <Mail size={24} />
                   </div>
                   <div>
@@ -97,7 +97,7 @@ function Contact() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-gold/10 text-gold rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center shrink-0">
                     <Clock size={24} />
                   </div>
                   <div>
@@ -121,14 +121,14 @@ function Contact() {
                     <label className="block text-sm font-medium text-slate-700 mb-2">First Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
                     />
                   </div>
                 </div>
@@ -138,21 +138,21 @@ function Contact() {
                     <label className="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Phone Number</label>
                     <input
                       type="tel"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors"
+                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">Service Required</label>
-                  <select className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors bg-white" defaultValue="">
+                  <select className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors bg-white" defaultValue="">
                     <option value="" disabled>Select a service...</option>
                     <option value="Tax Advisory & Compliance">Tax Advisory & Compliance</option>
                     <option value="Audit & Assurance">Audit & Assurance</option>
@@ -174,7 +174,7 @@ function Contact() {
                   <label className="block text-sm font-medium text-slate-700 mb-2">Message</label>
                   <textarea
                     rows="5"
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors resize-none"
                     placeholder="How can we help you?"
                   ></textarea>
                 </div>

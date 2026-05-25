@@ -66,7 +66,7 @@ function Services() {
       <div className="bg-primary py-24 text-white -mt-24 pt-48 mb-16 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <div className="inline-flex items-center justify-center gap-3 px-4 py-2 bg-gold/20 text-gold border border-gold/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase services-hero-fade">
+          <div className="inline-flex items-center justify-center gap-3 px-4 py-2 bg-accent/20 text-accent border border-accent/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase services-hero-fade">
             Our services
           </div>
           <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 services-hero-fade">Focused Financial Expertise for Modern Businesses</h1>
@@ -84,14 +84,14 @@ function Services() {
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-2 core-services-grid">
             {coreServices.map((service) => (
               <article key={service.title} className="group flex flex-col rounded-4xl bg-white shadow-soft border border-slate-200 p-6 core-service-card relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1 h-0 bg-gold transition-all duration-300 group-hover:h-full"></div>
-                <div className="w-14 h-14 rounded-3xl bg-gold/10 text-gold flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-gold/20">
+                <div className="absolute top-0 left-0 w-1 h-0 bg-accent transition-all duration-300 group-hover:h-full"></div>
+                <div className="w-14 h-14 rounded-3xl bg-accent/10 text-accent flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-accent/20">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-slate-600 mb-6 text-sm leading-relaxed">{service.description}</p>
                 <div className="mt-auto pt-4 border-t border-slate-100">
-                  <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-gold transition-colors">
+                  <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-accent transition-colors">
                     Learn more <ArrowRight size={16} />
                   </Link>
                 </div>
@@ -107,14 +107,14 @@ function Services() {
           <div className="grid gap-8 md:grid-cols-3 other-services-grid">
             {otherServices.map((service) => (
               <article key={service.title} className="group flex flex-col rounded-3xl bg-white shadow-sm border border-slate-200 p-6 hover:shadow-soft transition-all duration-300 other-service-card relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1 h-0 bg-gold transition-all duration-300 group-hover:h-full"></div>
-                <div className="w-12 h-12 rounded-2xl bg-gold/10 text-gold flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-gold group-hover:text-white">
+                <div className="absolute top-0 left-0 w-1 h-0 bg-accent transition-all duration-300 group-hover:h-full"></div>
+                <div className="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-accent group-hover:text-white">
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-semibold mb-3">{service.title}</h3>
-                <p className="text-slate-600 mb-6 text-sm leading-relaxed">{service.description}</p>
+                <p className="text-slate-650 mb-6 text-sm leading-relaxed">{service.description}</p>
                 <div className="mt-auto pt-4 border-t border-slate-100">
-                  <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-gold transition-colors">
+                  <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-accent transition-colors">
                     Learn more <ArrowRight size={16} />
                   </Link>
                 </div>
@@ -125,7 +125,7 @@ function Services() {
 
         <section className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] mb-20 industry-split-section">
           <div className="rounded-4xl bg-white p-10 md:p-14 shadow-soft border border-slate-200 industry-left-panel">
-            <span className="inline-flex items-center gap-2 rounded-full bg-gold/10 text-gold px-4 py-2 text-sm uppercase tracking-[0.25em] font-semibold mb-6">
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 text-accent px-4 py-2 text-sm uppercase tracking-[0.25em] font-semibold mb-6">
               Industry Experience
             </span>
             <h2 className="text-4xl font-serif text-primary mb-6">The firm and its professional team have exposure across industries and business segments</h2>
@@ -134,8 +134,8 @@ function Services() {
             </p>
             <div className="grid gap-3 sm:grid-cols-2 industry-items-grid">
               {industriesServed.map((industry) => (
-                <div key={industry} className="flex gap-3 items-start rounded-3xl bg-slate-50 p-4 hover:bg-gold/30 transistion-all duration-300 industry-item">
-                  <span className="mt-2 h-2.5 w-2.5 rounded-full bg-gold shrink-0"></span>
+                <div key={industry} className="flex gap-3 items-start rounded-3xl bg-slate-50 p-4 hover:bg-accent/30 transistion-all duration-300 industry-item">
+                  <span className="mt-2 h-2.5 w-2.5 rounded-full bg-accent shrink-0"></span>
                   <p className="text-slate-700 leading-relaxed">{industry}</p>
                 </div>
               ))}
@@ -143,7 +143,7 @@ function Services() {
           </div>
 
           <div className="rounded-4xl bg-slate-950 text-white p-10 md:p-14 shadow-[0_24px_80px_rgba(15,23,42,0.25)] border border-slate-800 focus-right-panel">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 text-gold px-4 py-2 text-sm uppercase tracking-[0.25em] font-semibold mb-6">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 text-accent px-4 py-2 text-sm uppercase tracking-[0.25em] font-semibold mb-6">
               Our Professional Focus
             </span>
             <h2 className="text-4xl font-serif text-white mb-6">Areas of focus across assurance and advisory.</h2>
@@ -161,7 +161,7 @@ function Services() {
         {/* Vision Section */}
         <section className="mb-24 bg-white rounded-4xl border border-slate-200 shadow-soft p-10 md:p-14 vision-section">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block vision-section-el">Our Vision</span>
+            <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block vision-section-el">Our Vision</span>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 vision-section-el">A purpose-driven, professional chartered accountancy firm</h2>
             <p className="text-lg text-slate-600 leading-relaxed vision-section-el">
               To build a professionally driven Chartered Accountancy firm recognized for specialized banking audits, investigative assurance services, and sustainability-focused advisory solutions while maintaining the highest standards of integrity, independence, and professional excellence.

@@ -5,9 +5,9 @@
   :root {
     --color-primary: 15 23 42;
     --color-primary-light: 30 41 59;
-    --color-gold: 212 175 55;
-    --color-gold-dark: 181 149 47;
-    --color-gold-light: 243 229 171;
+    --color-accent: 37 99 235;
+    --color-accent-dark: 29 78 216;
+    --color-accent-light: 191 219 254;
     --color-slate-50: 248 250 252;
     --color-slate-100: 241 245 249;
     --color-slate-200: 226 232 240;
@@ -24,23 +24,32 @@
   html {
     scroll-behavior: auto;
   }
+
   body {
     @apply antialiased text-slate-700 bg-slate-50;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif text-primary font-semibold leading-tight;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-primary px-6 py-3 rounded font-semibold text-lg transition-colors duration-300 border-2 border-gold hover:border-gold-dark;
+    @apply inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-primary px-6 py-3 rounded font-semibold text-lg transition-colors duration-300 border-2 border-accent hover:border-accent-dark;
   }
+
   .btn-outline {
     @apply inline-flex items-center gap-2 bg-transparent hover:bg-white text-white hover:text-primary px-6 py-3 rounded font-semibold text-lg transition-colors duration-300 border-2 border-white;
   }
+
   .nav-link {
-    @apply font-medium text-[0.95rem] text-slate-700 hover:text-gold transition-colors;
+    @apply font-medium text-[0.95rem] text-slate-700 hover:text-accent transition-colors;
   }
 
 }
@@ -62,4 +71,3 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-

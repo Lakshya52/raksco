@@ -11,10 +11,10 @@ export default {
           DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
           light: 'rgb(var(--color-primary-light) / <alpha-value>)',
         },
-        gold: {
-          DEFAULT: 'rgb(var(--color-gold) / <alpha-value>)',
-          dark: 'rgb(var(--color-gold-dark) / <alpha-value>)',
-          light: 'rgb(var(--color-gold-light) / <alpha-value>)',
+        accent: {
+          DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+          dark: 'rgb(var(--color-accent-dark) / <alpha-value>)',
+          light: 'rgb(var(--color-accent-light) / <alpha-value>)',
         },
         slate: {
           50: 'rgb(var(--color-slate-50) / <alpha-value>)',

@@ -71,7 +71,7 @@ function WhyUs({ title = 'Our Focus Areas', subtitle = 'Areas of focus across ba
     <section ref={containerRef} className="py-24 bg-slate-50 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-14 whyus-header">
-          <span className="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block whyus-header-el">Our Focus</span>
+          <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block whyus-header-el">Our Focus</span>
           <h2 className="text-4xl md:text-5xl font-serif mb-6 whyus-header-el">{title}</h2>
           <p className="text-lg text-slate-600 leading-relaxed whyus-header-el">{subtitle}</p>
         </div>
@@ -79,7 +79,7 @@ function WhyUs({ title = 'Our Focus Areas', subtitle = 'Areas of focus across ba
         <div className="grid gap-8 xl:grid-cols-5 lg:grid-cols-2 md:grid-cols-2 whyus-grid">
           {reasons.map((reason) => (
             <div key={reason.title} className="whyus-card rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft transition-transform duration-300 hover:-translate-y-1">
-              <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-gold/10 text-gold">
+              <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-accent/10 text-accent">
                 {reason.icon}
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">{reason.title}</h3>
