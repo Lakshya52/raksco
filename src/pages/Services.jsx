@@ -174,7 +174,7 @@ function Services() {
             <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block vision-section-el">Our Vision</span>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 vision-section-el">A purpose-driven, professional chartered accountancy firm</h2>
             <p className="text-lg text-slate-600 leading-relaxed vision-section-el">
-              To build a professionally driven Chartered Accountancy firm recognized for specialized banking audits, investigative assurance services, and sustainability-focused advisory solutions while maintaining the highest standards of integrity, independence, and professional excellence.
+              To build a professionally driven Chartered Accountancy firm for  specialized banking audits, investigative assurance services, and sustainability-focused advisory solutions.
             </p>
           </div>
         </section>

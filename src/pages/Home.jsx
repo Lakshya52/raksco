@@ -7,143 +7,6 @@ import { allServices } from '../data/servicesData';
 function Home() {
   const containerRef = useRef(null);
 
-  // useGSAP(() => {
-  //   // Hero Elements Intro Animation on load
-  //   // gsap.from(".hero-fade-in", {
-  //   //   y: 40,
-  //   //   opacity: 0,
-  //   //   duration: 1,
-  //   //   stagger: 0.15,
-  //   //   ease: "power4.out"
-  //   // });
-
-  //   // Hero Background Parallax Scroll
-  //   // gsap.to(".hero-bg", {
-  //   //   yPercent: 15,
-  //   //   ease: "none",
-  //   //   scrollTrigger: {
-  //   //     trigger: ".hero-section",
-  //   //     start: "top top",
-  //   //     end: "bottom top",
-  //   //     scrub: true
-  //   //   }
-  //   // });
-
-
-
-  //   // About Section Animation (Split Layout)
-  //   gsap.from(".about-img", {
-  //     x: -40,
-  //     opacity: 0,
-  //     duration: 0.9,
-  //     ease: "power3.out",
-  //     scrollTrigger: {
-  //       trigger: ".about-section",
-  //       start: "top bottom-=100",
-  //       toggleActions: "play none none none"
-  //     }
-  //   });
-
-  //   gsap.from(".about-content-el", {
-  //     y: 30,
-  //     opacity: 0,
-  //     duration: 0.8,
-  //     stagger: 0.15,
-  //     ease: "power3.out",
-  //     scrollTrigger: {
-  //       trigger: ".about-content",
-  //       start: "top bottom-=100",
-  //       toggleActions: "play none none none"
-  //     }
-  //   });
-
-  //   // Methodology Section Animation
-  //   gsap.from(".method-content-el", {
-  //     y: 30,
-  //     opacity: 0,
-  //     duration: 0.8,
-  //     stagger: 0.15,
-  //     ease: "power3.out",
-  //     scrollTrigger: {
-  //       trigger: ".method-content",
-  //       start: "top bottom-=100",
-  //       toggleActions: "play none none none"
-  //     }
-  //   });
-
-  //   gsap.from(".method-item", {
-  //     x: -30,
-  //     opacity: 0,
-  //     duration: 0.8,
-  //     stagger: 0.2,
-  //     ease: "power3.out",
-  //     scrollTrigger: {
-  //       trigger: ".method-list",
-  //       start: "top bottom-=100",
-  //       toggleActions: "play none none none"
-  //     }
-  //   });
-
-  //   gsap.from(".method-img", {
-  //     x: 40,
-  //     opacity: 0,
-  //     duration: 0.9,
-  //     ease: "power3.out",
-  //     scrollTrigger: {
-  //       trigger: ".method-section",
-  //       start: "top bottom-=100",
-  //       toggleActions: "play none none none"
-  //     }
-  //   });
-
-  //   // CTA Box Zoom-in Scroll
-  //   gsap.from(".cta-container", {
-  //     scale: 0.95,
-  //     opacity: 0,
-  //     duration: 0.8,
-  //     ease: "power3.out",
-  //     scrollTrigger: {
-  //       trigger: ".cta-container",
-  //       start: "top bottom-=50",
-  //       toggleActions: "play none none none"
-  //     }
-  //   });
-
-  //   const onLoad = () => ScrollTrigger.refresh();
-  //   window.addEventListener('load', onLoad);
-  //   return () => window.removeEventListener('load', onLoad);
-  // }, { scope: containerRef });
-
-  // useEffect(() => {
-  //   const images = containerRef.current?.querySelectorAll('img');
-  //   if (!images || images.length === 0) return;
-
-  //   let loadedCount = 0;
-
-  //   const onImageLoad = () => {
-  //     loadedCount++;
-  //     if (loadedCount === images.length) {
-  //       ScrollTrigger.refresh();
-  //     }
-  //   };
-
-  //   images.forEach(img => {
-  //     if (img.complete) {
-  //       onImageLoad(); // already cached
-  //     } else {
-  //       img.addEventListener('load', onImageLoad);
-  //       img.addEventListener('error', onImageLoad); // also count failed loads
-  //     }
-  //   });
-
-  //   return () => {
-  //     images.forEach(img => {
-  //       img.removeEventListener('load', onImageLoad);
-  //       img.removeEventListener('error', onImageLoad);
-  //     });
-  //   };
-  // }, []);
-
   return (
     <div ref={containerRef}>
       {/* Hero Section */}
@@ -240,7 +103,7 @@ function Home() {
       <section id="about" className="py-24 bg-white about-section">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative about-img">
+            <div className="relative" style={{ height: "100%" }}>
               <img
                 loading="lazy"
                 decoding="async"
@@ -386,7 +249,7 @@ function Home() {
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl text-white mb-6">Professional Enquiries</h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            For professional consultations and service inquiries, please reach out to our office.
+            For professional consultations and service Enquiries, please reach out to our office.
           </p>
           <Link to="/contact" className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded font-semibold text-lg hover:bg-accent transition-colors duration-300 shadow-xl hover:-translate-y-1 transform">
             Contact Us

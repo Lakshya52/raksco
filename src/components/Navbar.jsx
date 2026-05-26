@@ -137,19 +137,14 @@ function Navbar() {
                     <Link
                       key={service.slug}
                       to={`/services/${service.slug}`}
-                      className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item"
+                      className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item"
                     >
                       <div className="mt-0.5 text-accent/80 bg-accent/10 p-1.5 rounded-lg shrink-0 group-hover/item:bg-accent group-hover/item:text-white transition-colors duration-300 scale-90">
                         {service.icon}
                       </div>
-                      <div>
-                        <h4 className="text-xs font-bold text-slate-800 group-hover/item:text-primary transition-colors leading-tight mb-0.5 font-sans">
-                          {service.title}
-                        </h4>
-                        <p className="text-[11px] text-slate-400 line-clamp-1 leading-snug">
-                          {service.tagline}
-                        </p>
-                      </div>
+                      <h4 className="text-md font-bold text-slate-800 group-hover/item:text-primary transition-colors leading-tight mb-0.5 font-sans">
+                        {service.title}
+                      </h4>
                     </Link>
                   ))}
                 </div>

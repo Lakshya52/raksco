@@ -83,7 +83,7 @@ function Contact() {
               <div className="relative z-10 flex-grow flex flex-col">
                 <h3 className="text-4xl font-serif text-white mb-6">Let's Talk</h3>
                 <p className="text-slate-300 text-justify mb-12 leading-relaxed font-light text-lg">
-                  Whether you are planning a capital raise, need structured debt advisory, require project finance documentation, or are seeking to transform your business — the first step is a conversation. We respond to all enquiries within 24 hours.
+                  Whether you are planning a capital raise, need structured debt advisory, require project finance documentation, or are seeking to transform your business — the first step is a conversation.
                 </p>
 
                 <div className="space-y-8 text-slate-300 mt-auto">
@@ -114,7 +114,7 @@ function Contact() {
                     <div>
                       <h4 className="font-semibold text-white mb-1.5 tracking-wide text-lg">Email Address</h4>
                       <p className="leading-relaxed font-light hover:text-white transition-colors cursor-pointer">contact@raksco.in</p>
-                      <p className="leading-relaxed font-light hover:text-white transition-colors cursor-pointer">support@raksco.in</p>
+                      {/* <p className="leading-relaxed font-light hover:text-white transition-colors cursor-pointer">support@raksco.in</p> */}
                     </div>
                   </div>
 
@@ -134,7 +134,7 @@ function Contact() {
 
           {/* Contact Form */}
           <div className="lg:col-span-2 contact-form-panel">
-            <div className="bg-white p-8 md:p-14 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 h-full">
+            <div className="bg-white p-8 md:p-14 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-200 h-full shadow-xl">
               <div className="mb-10">
                 <span className="text-accent uppercase tracking-widest text-xs font-bold mb-3 block">Get in touch</span>
                 <h3 className="text-4xl font-serif text-primary mb-3">Send Us a Message</h3>
@@ -147,7 +147,7 @@ function Contact() {
                     <label className="block text-sm font-semibold text-slate-700 mb-2 group-focus-within:text-primary transition-colors">First Name</label>
                     <input
                       type="text"
-                      placeholder="John"
+                      placeholder="First Name"
                       className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-300 shadow-sm"
                     />
                   </div>
@@ -155,7 +155,7 @@ function Contact() {
                     <label className="block text-sm font-semibold text-slate-700 mb-2 group-focus-within:text-primary transition-colors">Last Name</label>
                     <input
                       type="text"
-                      placeholder="Doe"
+                      placeholder="Last Name"
                       className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-300 shadow-sm"
                     />
                   </div>
@@ -166,7 +166,7 @@ function Contact() {
                     <label className="block text-sm font-semibold text-slate-700 mb-2 group-focus-within:text-primary transition-colors">Email Address</label>
                     <input
                       type="email"
-                      placeholder="john@example.com"
+                      placeholder="Email Address"
                       className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-300 shadow-sm"
                     />
                   </div>
@@ -174,7 +174,7 @@ function Contact() {
                     <label className="block text-sm font-semibold text-slate-700 mb-2 group-focus-within:text-primary transition-colors">Phone Number</label>
                     <input
                       type="tel"
-                      placeholder="+91 98765 43210"
+                      placeholder="Phone Number"
                       className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-300 shadow-sm"
                     />
                   </div>
@@ -185,19 +185,14 @@ function Contact() {
                   <div className="relative">
                     <select className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-300 appearance-none shadow-sm font-medium text-slate-700" defaultValue="">
                       <option value="" disabled>Select a service...</option>
-                      <option value="Tax Advisory & Compliance">Tax Advisory & Compliance</option>
-                      <option value="Audit & Assurance">Audit & Assurance</option>
-                      <option value="GST Advisory & Compliance">GST Advisory & Compliance</option>
-                      <option value="Financial Advisory">Financial Advisory</option>
-                      <option value="Accounting & Bookkeeping">Accounting & Bookkeeping</option>
-                      <option value="Startup Advisory & Registration">Startup Advisory & Registration</option>
-                      <option value="Corporate Law Advisory">Corporate Law Advisory</option>
-                      <option value="FEMA & RBI Compliance">FEMA & RBI Compliance</option>
-                      <option value="Income Tax & Wealth Planning">Income Tax & Wealth Planning</option>
-                      <option value="Project Reports & CMA Data">Project Reports & CMA Data</option>
-                      <option value="Risk Management">Risk Management</option>
-                      <option value="Management Consultancy Services">Management Consultancy Services</option>
-                      <option value="Other Services">Other Services</option>
+                      <option value="Banking & Financial Sector">Banking & Financial Sector</option>
+                      <option value="ESG, Sustainability & Green Finance Advisory">ESG, Sustainability & Green Finance Advisory</option>
+                      <option value="Assurance & Advisory Services">Assurance & Advisory Services</option>
+                      <option value="Agency for Specialized Monitoring (ASM)">Agency for Specialized Monitoring (ASM)</option>
+                      <option value="Business Advisory">Business Advisory</option>
+                      <option value="Regulatory & Compliance Support">Regulatory & Compliance Support</option>
+                      <option value="Accounting & Financial Reporting">Accounting & Financial Reporting</option>
+                      <option value="Other">Other Services</option>
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-slate-500">
                       <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>

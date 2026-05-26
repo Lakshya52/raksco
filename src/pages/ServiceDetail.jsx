@@ -282,10 +282,10 @@ function ServiceDetail() {
                 {/* Core Frameworks */}
                 <hr className="border-slate-100" />
                 <div>
-                  <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  {/* <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                     <FileSpreadsheet size={14} className="text-accent" />
                     Key Frameworks
-                  </h4>
+                  </h4> */}
                   <ul className="space-y-2">
                     {service.atAGlance.frameworks.map((framework, i) => (
                       <li key={i} className="text-sm text-slate-700 flex gap-2 items-start font-medium">
@@ -324,7 +324,7 @@ function ServiceDetail() {
                   Need customized assistance?
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed mb-6">
-                  Get in touch with our expert Chartered Accountants to discuss your operational, financial compliance, or strategic needs.
+                  Get in touch with us to discuss your operational, financial compliance, or needs.
                 </p>
                 <Link
                   to="/contact"

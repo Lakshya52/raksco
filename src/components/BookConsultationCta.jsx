@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 function BookConsultationCta({ onBookClick }) {
   return (
-    <section className="mt-16 w-full bg-primary text-white rounded-4xl overflow-hidden relative">
+    <section className="mt-16 w-full bg-primary text-white rounded-4xl overflow-hidden relative shadow-xl">
       <div
         className="absolute inset-0 z-0 opacity-30 dot-glow-animation"
         style={{
@@ -17,13 +17,13 @@ function BookConsultationCta({ onBookClick }) {
       <div className="relative z-10 max-w-7xl mx-auto px-16 py-14 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="max-w-3xl">
           <span className="text-accent uppercase tracking-[0.35em] text-xs font-semibold mb-4 inline-block">
-            Book a Consultation
+            Consultation
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4 text-white">
             Ready to discuss your next financial move?
           </h2>
           <p className="text-slate-100 text-lg max-w-2xl leading-relaxed">
-            Connect with our team for tailored advisory, compliance support, and strategic accounting solutions designed for your business.
+            Connect with our team for tailored advisory, compliance support, and accounting solutions designed for your business.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ function BookConsultationCta({ onBookClick }) {
           onClick={onBookClick}
           className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-slate-100"
         >
-          Book Consultation <ArrowRight size={20} />
+          Consultation <ArrowRight size={20} />
         </button>
       </div>
     </section>
