@@ -30,23 +30,23 @@ function Services() {
   const whyRaks = [
     {
       title: 'Banking & Finance Assignments',
-      description: 'The firm undertakes banking sector assignments including stock audits, credit audits, concurrent audits, and IS audits.'
+      description: 'The firm undertakes banking sector assignments including stock audits, credit audits, concurrent audits and IS audits.'
     },
     {
       title: 'Forensic & Investigative Reviews',
-      description: 'The firm undertakes forensic audits, investigations, and risk-based review assignments.'
+      description: 'The firm undertakes forensic audits, investigations and risk-based review assignments.'
     },
     {
       title: 'ESG & Sustainability Reporting',
-      description: 'The firm provides advisory and reporting support in ESG compliance, BRSR disclosures, and sustainability frameworks.'
+      description: 'The firm provides advisory and reporting support in ESG compliance, BRSR disclosures and sustainability frameworks.'
     },
     {
       title: 'Audit & Assurance Services',
-      description: 'The firm undertakes statutory audits, internal audits, compliance reviews, and due diligence assignments.'
+      description: 'The firm undertakes statutory audits, internal audits, compliance reviews and due diligence assignments.'
     },
     {
       title: 'Accounting & Regulatory Support',
-      description: 'The firm provides accounting, financial reporting, and regulatory compliance support services.'
+      description: 'The firm provides accounting, financial reporting and regulatory compliance support services.'
     },
   ];
 
@@ -81,7 +81,7 @@ function Services() {
           </div>
           <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 services-hero-fade">Focused Financial Expertise for Modern Businesses</h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto services-hero-fade">
-            We combine banking sector experience, ESG advisory, and assurance approaches to help clients navigate regulatory complexity with clarity.
+            We combine banking sector experience, ESG advisory and assurance approaches to help clients navigate regulatory complexity with clarity.
           </p>
         </div>
       </div>
@@ -138,7 +138,7 @@ function Services() {
             <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 text-accent px-4 py-2 text-sm uppercase tracking-[0.25em] font-semibold mb-6">
               Industry Experience
             </span>
-            <h2 className="text-4xl font-serif text-primary mb-6">The firm and its professional team have exposure across industries and business segments</h2>
+            <h2 className="text-4xl font-serif text-primary mb-6">The firm have practical experience accross 12 industries and business segments.</h2>
             <p className="text-slate-600 leading-relaxed mb-8 text-justify">
               The firm and its professional team have exposure across multiple industries and business segments, enabling practical understanding of operational and financial risks specific to each sector.
             </p>
@@ -174,7 +174,7 @@ function Services() {
             <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block vision-section-el">Our Vision</span>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 vision-section-el">A purpose-driven, professional chartered accountancy firm</h2>
             <p className="text-lg text-slate-600 leading-relaxed vision-section-el">
-              To build a professionally driven Chartered Accountancy firm for  specialized banking audits, investigative assurance services, and sustainability-focused advisory solutions.
+              To build a professionally driven Chartered Accountancy firm for  specialized banking audits, investigative assurance services and sustainability-focused advisory solutions.
             </p>
           </div>
         </section>

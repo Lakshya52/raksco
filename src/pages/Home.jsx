@@ -35,12 +35,12 @@ function Home() {
             </div>
 
             <h1 className="text-4xl text-center md:text-5xl lg:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem]  text-white mb-6 2xl:mb-8 leading-[1.1] drop-shadow-2xl hero-fade-in font-serif">
-              Financial Due Diligence <br className="hidden md:block" />& Compliance.
+              Financial Advisory & Compliance for Regulated Businesses.
             </h1>
 
             <div className="pl-4 md:pl-6 mb-8 2xl:mb-12 ">
               <p className="text-lg md:text-xl 2xl:text-2xl text-slate-300 max-w-4xl leading-relaxed font-light">
-                Financial insights, tax compliance, and advisory for regulated businesses. Supporting your work with clear professional guidance.
+                Financial insights, tax compliance and advisory for regulated businesses. Supporting your work with clear professional guidance.
               </p>
             </div>
 
@@ -76,7 +76,7 @@ function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Our Expertise</span>
             <h2 className="text-4xl md:text-5xl mb-6">Professional Services</h2>
-            <p className="text-lg text-slate-600">We provide a full spectrum of accounting, tax, and advisory services designed to meet the complex needs of modern enterprises.</p>
+            <p className="text-lg text-slate-600">We provide a full spectrum of accounting, tax and advisory services designed to meet the complex needs of modern enterprises.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -117,10 +117,10 @@ function Home() {
 
             <div className="about-content">
               <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block about-content-el">Firm Overview</span>
-              <h2 className="text-4xl md:text-5xl mb-6 about-content-el">Professional Services with Integrity and Ethics</h2>
+              <h2 className="text-4xl md:text-5xl mb-6 about-content-el">Where Professional Standards Meet Practical Expertise</h2>
               <div className="space-y-4 text-lg text-slate-600 mb-8 about-content-el">
                 <p className='text-justify' >
-                  At RAKS & Company, we provide professional services in the fields of auditing, taxation, and corporate advisory.
+                  At RAKS & Company, we provide professional services in the fields of auditing, taxation and corporate advisory.
                 </p>
                 <p className='text-justify' >
                   Our team of Chartered Accountants is dedicated to maintaining the highest level of professional ethics, delivering services in accordance with statutory requirements.
@@ -192,7 +192,7 @@ function Home() {
               <h2 className="text-4xl md:text-5xl mb-6 method-content-el">Our Professional Approach</h2>
               <div className="space-y-4 text-lg text-slate-600 mb-8 method-content-el">
                 <p>
-                  We are committed to delivering services with the highest degree of professional skepticism, independence, and objectivity.
+                  We are committed to delivering services with the highest degree of professional scepticism, independence and objectivity.
                 </p>
               </div>
 

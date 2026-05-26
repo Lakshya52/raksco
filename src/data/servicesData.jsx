@@ -6,35 +6,35 @@ export const coreServices = [
     slug: 'banking-financial-sector-assignments',
     icon: <Building2 size={32} />,
     title: 'Banking & Financial Sector',
-    description: 'Specialized support for banks, NBFCs, financial institutions, and regulated entities across audits, compliance and risk review.',
-    longDescription: 'Provision of audit, review, and compliance support services for banks, NBFCs, and financial sector entities relating to credit processes, operational controls, and regulatory requirements. The scope includes examination of financial records, review of operational procedures, verification of documentation, and support relating to statutory and regulatory reporting requirements.\n\nThe services are carried out with a structured approach towards transaction review, documentation assessment, internal control evaluation, and compliance monitoring in accordance with applicable regulatory frameworks.',
+    description: 'Specialized support for banks, NBFCs, financial institutions and regulated entities across audits, compliance and risk review.',
+    longDescription: 'Provision of audit, review and compliance support services for banks, NBFCs and financial sector entities relating to credit processes, operational controls and regulatory requirements. The scope includes examination of financial records, review of operational procedures, verification of documentation and support relating to statutory and regulatory reporting requirements.\n\nThe services are carried out with a structured approach towards transaction review, documentation assessment, internal control evaluation and compliance monitoring in accordance with applicable regulatory frameworks.',
     atAGlance: {
       targetClients: ['Statutory & Private Banks', 'Non-Banking Financial Companies (NBFCs)', 'Microfinance Institutions', 'Asset Reconstruction Companies (ARCs)'],
       frameworks: ['RBI Master Directions', 'IRDAI Guidelines', 'FEMA Directives', 'Banking Regulation Act, 1949'],
       approach: 'Risk-based, analytical transaction verification paired with rigorous credit governance review.'
     },
     details: [
-      'Stock audits, credit audits, and revenue audits',
+      'Stock audits, credit auditsand revenue audits',
       'Concurrent audits and statutory reporting support',
       'Information Systems (IS) audits for financial workflows',
-      'Regulatory compliance reviews under RBI, IRDAI, and NBFC frameworks'
+      'Regulatory compliance reviews under RBI, IRDAIand NBFC frameworks'
     ],
     detailedOfferings: [
       {
         title: 'Stock, Credit & Revenue Audits',
-        description: 'Review of stock statements, drawing power calculations, borrower records, security documentation, and related financial information for assessment of reporting consistency and compliance with sanction terms.'
+        description: 'Review of stock statements, drawing power calculations, borrower records, security documentation and related financial information for assessment of reporting consistency and compliance with sanction terms.'
       },
       {
         title: 'Concurrent & Statutory Audits',
-        description: 'Examination of selected transactions, operational procedures, branch-level controls, and reporting processes to support monitoring and compliance requirements.'
+        description: 'Examination of selected transactions, operational procedures, branch-level controlsand reporting processes to support monitoring and compliance requirements.'
       },
       {
         title: 'Information Systems (IS) Audit',
-        description: 'Review of financial systems, access controls, transaction workflows, and information security processes within banking and financial operations.'
+        description: 'Review of financial systems, access controls, transaction workflowsand information security processes within banking and financial operations.'
       },
       {
         title: 'Regulatory Compliance Reviews',
-        description: 'Review support relating to RBI directions, IRDAI regulations, FEMA provisions, asset classification norms, provisioning requirements, and related regulatory reporting processes.'
+        description: 'Review support relating to RBI directions, IRDAI regulations, FEMA provisions, asset classification norms, provisioning requirementsand related regulatory reporting processes.'
       }
     ]
   },
@@ -42,8 +42,8 @@ export const coreServices = [
     slug: 'esg-sustainability-green-finance-advisory',
     icon: <Globe size={32} />,
     title: 'ESG, Sustainability & Green Finance Advisory',
-    description: 'Advisory services designed to help organizations align with ESG best practices, sustainability reporting, and green finance frameworks.',
-    longDescription: 'Provision of advisory and reporting support services relating to Environmental, Social, and Governance (ESG) practices, sustainability reporting frameworks, and regulatory disclosure requirements. The scope includes assistance in sustainability-related reporting processes, ESG data review, policy documentation, framework alignment, and support relating to Business Responsibility and Sustainability Reporting (BRSR) requirements.\n\nThe services are carried out with reference to applicable regulatory guidelines, reporting standards, and sustainability disclosure frameworks relevant to Indian business and financial reporting environments.',
+    description: 'Advisory services designed to help organisations align with ESG best practices, sustainability reportingand green finance frameworks.',
+    longDescription: 'Provision of advisory and reporting support services relating to Environmental, Socialand Governance (ESG) practices, sustainability reporting frameworksand regulatory disclosure requirements. The scope includes assistance in sustainability-related reporting processes, ESG data review, policy documentation, framework alignmentand support relating to Business Responsibility and Sustainability Reporting (BRSR) requirements.\n\nThe services are carried out with reference to applicable regulatory guidelines, reporting standardsand sustainability disclosure frameworks relevant to Indian business and financial reporting environments.',
     atAGlance: {
       targetClients: ['Listed Public Entities', 'Infrastructure Developers', 'Export-oriented Enterprises', 'Renewable Energy Ventures'],
       frameworks: ['SEBI BRSR Framework', 'National Guidelines on Responsible Business Conduct (NGBRC)', 'Sustainability Reporting Standards Board (SRSB) Guidance', 'ESG Reporting & Disclosure Frameworks'],
@@ -59,19 +59,19 @@ export const coreServices = [
     detailedOfferings: [
       {
         title: 'ESG & Sustainability Reporting Support',
-        description: 'Assistance in preparation, compilation, and review of sustainability-related disclosures covering environmental, social, and governance parameters in accordance with applicable reporting frameworks and disclosure requirements.'
+        description: 'Assistance in preparation, compilationand review of sustainability-related disclosures covering environmental, socialand governance parameters in accordance with applicable reporting frameworks and disclosure requirements.'
       },
       {
         title: 'BRSR & Regulatory Disclosure Assistance',
-        description: 'Support relating to Business Responsibility and Sustainability Reporting (BRSR), BRSR Core disclosures, ESG reporting processes, and related documentation requirements under applicable SEBI regulations.'
+        description: 'Support relating to Business Responsibility and Sustainability Reporting (BRSR), BRSR Core disclosures, ESG reporting processesand related documentation requirements under applicable SEBI regulations.'
       },
       {
         title: 'ESG Data Review & Documentation',
-        description: 'Review of ESG-related information, sustainability metrics, supporting records, internal documentation, and reporting processes for consistency and disclosure readiness.'
+        description: 'Review of ESG-related information, sustainability metrics, supporting records, internal documentationand reporting processes for consistency and disclosure readiness.'
       },
       {
         title: 'Sustainability Framework & Green Finance Advisory',
-        description: 'Advisory support relating to sustainability frameworks, ESG governance processes, climate-related reporting considerations, sustainable finance documentation, and responsible business reporting practices.'
+        description: 'Advisory support relating to sustainability frameworks, ESG governance processes, climate-related reporting considerations, sustainable finance documentationand responsible business reporting practices.'
       }
     ]
   },
@@ -80,11 +80,11 @@ export const coreServices = [
     icon: <ShieldCheck size={32} />,
     title: 'Assurance & Advisory Services',
     description: 'Assurance services backed by practical advisory to improve controls, governance and performance for growing businesses.',
-    longDescription: 'Provision of assurance, audit, and advisory support services relating to financial reporting, internal controls, regulatory compliance, and governance processes. The scope includes examination of financial records, review of operational procedures, evaluation of internal control systems, and support relating to statutory and compliance requirements.\n\nThe services are carried out through structured review procedures, documentation assessment, control evaluation, and reporting processes in accordance with applicable regulatory and professional frameworks.',
+    longDescription: 'Provision of assurance, auditand advisory support services relating to financial reporting, internal controls, regulatory complianceand governance processes. The scope includes examination of financial records, review of operational procedures, evaluation of internal control systemsand support relating to statutory and compliance requirements.\n\nThe services are carried out through structured review procedures, documentation assessment, control evaluationand reporting processes in accordance with applicable regulatory and professional frameworks.',
     atAGlance: {
       targetClients: ['Corporates & Private Limited Companies', 'Partnerships & LLPs', 'Stressed Assets & Turnarounds', 'Joint Ventures & Subsidiaries'],
       frameworks: ['Companies Act, 2013', 'Standards on Auditing (SA)', 'Internal Financial Controls (IFC) Framework', 'Applicable Regulatory & Compliance Requirements'],
-      approach: 'Technology-enabled internal review emphasizing process controls, statutory compliance, and financial accuracy.'
+      approach: 'Technology-enabled internal review emphasizing process controls, statutory complianceand financial accuracy.'
     },
     details: [
       'Statutory audits and internal audits',
@@ -96,19 +96,19 @@ export const coreServices = [
     detailedOfferings: [
       {
         title: 'Statutory & Internal Audits',
-        description: 'Review and examination of financial records, accounting processes, supporting documentation, and operational controls for reporting and compliance purposes in accordance with applicable statutory requirements.'
+        description: 'Review and examination of financial records, accounting processes, supporting documentationand operational controls for reporting and compliance purposes in accordance with applicable statutory requirements.'
       },
       {
         title: 'Compliance & Governance Reviews',
-        description: 'Assessment of compliance processes, governance structures, regulatory documentation, and operational procedures relating to applicable laws, rules, and reporting requirements.'
+        description: 'Assessment of compliance processes, governance structures, regulatory documentationand operational procedures relating to applicable laws, rulesand reporting requirements.'
       },
       {
         title: 'Due Diligence & Forensic Review Support',
-        description: 'Review of financial and operational information, transaction records, supporting documents, and related data for assessment and reporting purposes during business reviews, investigations, or transaction-related evaluations.'
+        description: 'Review of financial and operational information, transaction records, supporting documentsand related data for assessment and reporting purposes during business reviews, investigations, or transaction-related evaluations.'
       },
       {
         title: 'Internal Controls & Risk Assessment',
-        description: 'Evaluation of internal control systems, workflow procedures, authorization processes, and reporting mechanisms to support risk identification and process review.'
+        description: 'Evaluation of internal control systems, workflow procedures, authorization processesand reporting mechanisms to support risk identification and process review.'
       }
     ]
   },
@@ -116,12 +116,12 @@ export const coreServices = [
     slug: 'agency-for-specialized-monitoring',
     icon: <Eye size={32} />,
     title: 'Agency for Specialized Monitoring (ASM)',
-    description: 'Independent monitoring and oversight services for lenders, investors, and institutions requiring structured supervision of financed projects, stressed assets, and operational performance.',
-    longDescription: 'Provision of monitoring and verification support services relating to project implementation, fund utilization, operational progress, and compliance with specified terms and conditions. The scope includes review of project records, site verification support, documentation assessment, monitoring of utilization processes, and reporting based on available records and information.\n\nThe services are carried out through structured monitoring procedures, review of supporting documentation, verification processes, and reporting mechanisms in accordance with applicable engagement requirements and regulatory frameworks.',
+    description: 'Independent monitoring and oversight services for lenders, investorsand institutions requiring structured supervision of financed projects, stressed assetsand operational performance.',
+    longDescription: 'Provision of monitoring and verification support services relating to project implementation, fund utilization, operational progressand compliance with specified terms and conditions. The scope includes review of project records, site verification support, documentation assessment, monitoring of utilization processesand reporting based on available records and information.\n\nThe services are carried out through structured monitoring procedures, review of supporting documentation, verification processesand reporting mechanisms in accordance with applicable engagement requirements and regulatory frameworks.',
     atAGlance: {
       targetClients: ['Consortium Lenders & Public Sector Banks', 'Private Equity & Venture Debt Funds', 'Insolvency Professionals (CIRP)', 'Infrastructure & Real Estate Developers'],
       frameworks: ['Terms of Sanction & Approval Conditions', 'Project Monitoring & Reporting Requirements', 'Applicable Regulatory Guidelines', 'Internal Compliance & Documentation Frameworks'],
-      approach: 'Rigorous transactional, bank-statement, and physical field auditing with dynamic, regular progress tracking.'
+      approach: 'Rigorous transactional, bank-statementand physical field auditing with dynamic, regular progress tracking.'
     },
     details: [
       'Fund utilization monitoring and reporting',
@@ -133,19 +133,19 @@ export const coreServices = [
     detailedOfferings: [
       {
         title: 'Fund Utilization Monitoring',
-        description: 'Review of utilization records, supporting documents, financial information, and related project records for assessment of utilization status and reporting consistency.'
+        description: 'Review of utilization records, supporting documents, financial informationand related project records for assessment of utilization status and reporting consistency.'
       },
       {
         title: 'Project Progress Verification',
-        description: 'Monitoring support relating to project implementation status, milestone tracking, documentation review, and verification of operational progress based on available records and site observations.'
+        description: 'Monitoring support relating to project implementation status, milestone tracking, documentation reviewand verification of operational progress based on available records and site observations.'
       },
       {
         title: 'Compliance & Documentation Review',
-        description: 'Assessment of approvals, agreements, utilization records, statutory documents, and related compliance documentation for monitoring and reporting purposes.'
+        description: 'Assessment of approvals, agreements, utilization records, statutory documentsand related compliance documentation for monitoring and reporting purposes.'
       },
       {
         title: 'Reporting & Monitoring Support',
-        description: 'Preparation and compilation support for monitoring reports, utilization summaries, progress observations, and related reporting documentation as required under the engagement scope.'
+        description: 'Preparation and compilation support for monitoring reports, utilization summaries, progress observationsand related reporting documentation as required under the engagement scope.'
       }
     ]
   },
@@ -157,7 +157,7 @@ export const otherServices = [
     icon: <Briefcase size={32} />,
     title: 'Business Advisory',
     description: 'Empowering businesses and individuals through financial solutions.',
-    longDescription: 'Provision of advisory and support services relating to business operations, financial planning, compliance processes, and business management. The scope includes assistance relating to business structuring, financial analysis, operational review, regulatory support, and evaluation of business processes for reporting and decision-support purposes.\n\nThe services are carried out through structured review procedures, documentation assessment, financial evaluation, and process-oriented advisory support in accordance with applicable regulatory and business requirements.',
+    longDescription: 'Provision of advisory and support services relating to business operations, financial planning, compliance processesand business management. The scope includes assistance relating to business structuring, financial analysis, operational review, regulatory supportand evaluation of business processes for reporting and decision-support purposes.\n\nThe services are carried out through structured review procedures, documentation assessment, financial evaluationand process-oriented advisory support in accordance with applicable regulatory and business requirements.',
     atAGlance: {
       targetClients: ['Entrepreneurs & Startups', 'SMEs Seeking Capital Scaling', 'Family Businesses in Transition', 'Joint Ventures'],
       frameworks: ['Companies Act, 2013', 'Income Tax Act, 1961', 'GST Regulations', 'Applicable Business & Regulatory Requirements'],
@@ -173,19 +173,19 @@ export const otherServices = [
     detailedOfferings: [
       {
         title: 'Business Setup & Structuring Support',
-        description: 'Advisory support relating to business formation, operational structuring, registration processes, and related documentation requirements in accordance with applicable regulations.'
+        description: 'Advisory support relating to business formation, operational structuring, registration processesand related documentation requirements in accordance with applicable regulations.'
       },
       {
         title: 'Financial Planning & Business Analysis',
-        description: 'Review of financial information, budgeting processes, cash flow analysis, and operational data to support financial planning and business assessment requirements.'
+        description: 'Review of financial information, budgeting processes, cash flow analysisand operational data to support financial planning and business assessment requirements.'
       },
       {
         title: 'Risk Assessment & Process Review',
-        description: 'Evaluation of operational procedures, internal processes, and business control mechanisms for identification and review of process-related risks and reporting considerations.'
+        description: 'Evaluation of operational procedures, internal processesand business control mechanisms for identification and review of process-related risks and reporting considerations.'
       },
       {
         title: 'Compliance & Management Support',
-        description: 'Support relating to regulatory compliance processes, reporting requirements, management information review, and documentation assessment for operational and administrative purposes.'
+        description: 'Support relating to regulatory compliance processes, reporting requirements, management information reviewand documentation assessment for operational and administrative purposes.'
       }
     ]
   },
@@ -193,12 +193,12 @@ export const otherServices = [
     slug: 'regulatory-compliance-support',
     icon: <Layers size={32} />,
     title: 'Regulatory & Compliance Support',
-    description: 'Secretarial compliances including company incorporation, statutory maintenance, and regulatory filings.',
-    longDescription: 'Provision of regulatory and compliance support services relating to corporate filings, statutory documentation, regulatory registrations, and compliance management processes. The scope includes assistance relating to corporate compliance procedures, maintenance of statutory records, regulatory filings, and support under applicable legal and regulatory frameworks.\n\nThe services are carried out through structured documentation review, compliance monitoring, filing support, and process-oriented regulatory assistance in accordance with applicable statutory requirements.',
+    description: 'Secretarial compliances including company incorporation, statutory maintenanceand regulatory filings.',
+    longDescription: 'Provision of regulatory and compliance support services relating to corporate filings, statutory documentation, regulatory registrationsand compliance management processes. The scope includes assistance relating to corporate compliance procedures, maintenance of statutory records, regulatory filingsand support under applicable legal and regulatory frameworks.\n\nThe services are carried out through structured documentation review, compliance monitoring, filing supportand process-oriented regulatory assistance in accordance with applicable statutory requirements.',
     atAGlance: {
       targetClients: ['Corporates & MNCs in India', 'FDI-funded Entities', 'Food, Trade & Import Ventures', 'Startups & Growing SMEs'],
       frameworks: ['Companies Act, 2013', 'FEMA Regulations', 'RBI Guidelines', 'Applicable Statutory & Regulatory Requirements'],
-      approach: 'Proactive calendar-driven compliance tracking, precise document management, and direct regulatory filing support.'
+      approach: 'Proactive calendar-driven compliance tracking, precise document managementand direct regulatory filing support.'
     },
     details: [
       'Corporate and secretarial compliance support',
@@ -210,19 +210,19 @@ export const otherServices = [
     detailedOfferings: [
       {
         title: 'Corporate & Secretarial Compliance',
-        description: 'Support relating to company incorporation procedures, maintenance of statutory registers, preparation of board and shareholder meeting documentation, and related corporate compliance processes.'
+        description: 'Support relating to company incorporation procedures, maintenance of statutory registers, preparation of board and shareholder meeting documentationand related corporate compliance processes.'
       },
       {
         title: 'FEMA & RBI Regulatory Support',
-        description: 'Assistance relating to FEMA compliances, RBI reporting requirements, foreign investment documentation, cross-border transaction filings, and related regulatory procedures.'
+        description: 'Assistance relating to FEMA compliances, RBI reporting requirements, foreign investment documentation, cross-border transaction filingsand related regulatory procedures.'
       },
       {
         title: 'Licenses & Statutory Registrations',
-        description: 'Support for obtaining, renewing, and maintaining statutory registrations, licenses, and sector-specific approvals including MSME, FSSAI, BIS, ISO-related documentation support, and related regulatory processes.'
+        description: 'Support for obtaining, renewingand maintaining statutory registrations, licensesand sector-specific approvals including MSME, FSSAI, BIS, ISO-related documentation supportand related regulatory processes.'
       },
       {
         title: 'Compliance Monitoring & Reporting',
-        description: 'Review and monitoring of statutory due dates, filing requirements, compliance documentation, and regulatory reporting processes to support timely compliance management.'
+        description: 'Review and monitoring of statutory due dates, filing requirements, compliance documentationand regulatory reporting processes to support timely compliance management.'
       }
     ],
   },
@@ -231,35 +231,35 @@ export const otherServices = [
     icon: <FileText size={32} />,
     title: 'Accounting & Financial Reporting',
     description: 'Maintaining statutory-compliant financial records and reporting for operational clarity and regulatory confidence.',
-    longDescription: 'Provision of accounting and financial reporting support services relating to maintenance of books of accounts, preparation of financial statements, reconciliation processes, and compliance-related financial documentation. The scope includes support for accounting operations, financial reporting procedures, budgeting processes, and review of financial information in accordance with applicable regulatory and accounting frameworks.\n\nThe services are carried out through structured accounting procedures, documentation review, reconciliation processes, and reporting support using conventional and technology-enabled accounting systems.',
+    longDescription: 'Provision of accounting and financial reporting support services relating to maintenance of books of accounts, preparation of financial statements, reconciliation processesand compliance-related financial documentation. The scope includes support for accounting operations, financial reporting procedures, budgeting processesand review of financial information in accordance with applicable regulatory and accounting frameworks.\n\nThe services are carried out through structured accounting procedures, documentation review, reconciliation processesand reporting support using conventional and technology-enabled accounting systems.',
     atAGlance: {
       targetClients: ['MNC Subsidiaries', 'Growing Corporates & Businesses', 'E-commerce Brands & Retailers', 'Professional Service Firms'],
       frameworks: ['Accounting Standards (AS) / Ind AS', 'Companies Act, 2013', 'Income Tax Act, 1961', 'GST Regulations'],
-      approach: 'Process-driven, cloud-integrated accounting emphasizing ledgers balance, tax-readiness, and operational reporting.'
+      approach: 'Process-driven, cloud-integrated accounting emphasizing ledgers balance, tax-readinessand operational reporting.'
     },
     details: [
       'Maintenance of books of accounts and financial records',
       'Preparation of financial statements and reporting support',
-      'Payables, receivables, and reconciliation processes',
+      'Payables, receivablesand reconciliation processes',
       'Budgeting and financial analysis support',
       'Cloud-based accounting and process automation support'
     ],
     detailedOfferings: [
       {
         title: 'Accounting & Bookkeeping Support',
-        description: 'Maintenance and review of accounting records, journal entries, ledger management, and transaction classification to support financial reporting and record-keeping requirements.'
+        description: 'Maintenance and review of accounting records, journal entries, ledger managementand transaction classification to support financial reporting and record-keeping requirements.'
       },
       {
         title: 'Financial Statements & Reporting',
-        description: 'Preparation and compilation support for balance sheets, profit and loss statements, cash flow statements, and related financial reports in accordance with applicable accounting and statutory requirements.'
+        description: 'Preparation and compilation support for balance sheets, profit and loss statements, cash flow statementsand related financial reports in accordance with applicable accounting and statutory requirements.'
       },
       {
         title: 'Reconciliations & Financial Review',
-        description: 'Review and reconciliation of bank accounts, receivables, payables, general ledger balances, and related financial records to support reporting consistency and documentation accuracy.'
+        description: 'Review and reconciliation of bank accounts, receivables, payables, general ledger balancesand related financial records to support reporting consistency and documentation accuracy.'
       },
       {
         title: 'Cloud Accounting & Process Support',
-        description: 'Support relating to cloud-based accounting systems, digital accounting workflows, automation processes, and maintenance of accounting information for reporting and operational purposes.'
+        description: 'Support relating to cloud-based accounting systems, digital accounting workflows, automation processesand maintenance of accounting information for reporting and operational purposes.'
       }
     ]
   },

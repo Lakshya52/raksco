@@ -15,21 +15,21 @@ function Leadership() {
     {
       name: 'Punit Kumar Rai',
       title: 'Partner',
-      bio: 'He has professional experience in audit, assurance, banking assignments, financial reviews, and regulatory compliance. His exposure includes handling complex audit engagements, financial due diligence assignments, statutory audits, and banking sector reviews for diversified entities.',
+      bio: 'He has professional experience in audit, assurance, banking assignments, financial reviews and regulatory compliance. His exposure includes handling complex audit engagements, financial due diligence assignments, statutory audits and banking sector reviews for diversified entities.',
       bio2: 'His practical understanding of risk-based auditing and banking operations enables the firm to deliver focused and process-driven audit solutions to financial institutions and corporate clients.',
     },
     {
       name: 'Ayush Saxena',
       title: 'Partner',
-      bio: 'He specialized in emerging assurance domains including forensic audits, ESG-oriented compliance reviews, investigative assignments, due diligence engagements, and technology-driven audit processes. His professional exposure includes assignments under the Companies Act, forensic examination procedures, and advisory support for governance and compliance frameworks.',
-      bio2: 'He actively focuses on integrating sustainability, governance, and risk-based evaluation methodologies into the firm’s service offerings, particularly for the banking and finance ecosystem.',
+      bio: 'He specialized in emerging assurance domains including forensic audits, ESG-oriented compliance reviews, investigative assignments, due diligence engagements and technology-driven audit processes. His professional exposure includes assignments under the Companies Act, forensic examination procedures and advisory support for governance and compliance frameworks.',
+      bio2: 'He actively focuses on integrating sustainability, governance and risk-based evaluation methodologies into the firm’s service offerings, particularly for the banking and finance ecosystem.',
     },
   ];
 
   const leadershipPrinciples = [
     {
       title: 'Ethical Stewardship',
-      description: 'We lead with integrity, independence and professional skepticism in every engagement.',
+      description: 'We lead with integrity, independence and professional scepticism in every engagement.',
     },
     {
       title: 'Sector Expertise',
@@ -45,7 +45,7 @@ function Leadership() {
     'Regulatory compliance and governance assurance',
     'Risk-based audit and financial reporting support',
     'ESG, sustainability and investigative advisory',
-    'Customized solutions for regulated enterprises',
+    'customised solutions for regulated enterprises',
   ];
 
   useGSAP(() => {
@@ -94,9 +94,9 @@ function Leadership() {
               <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent mb-6 leaders-hero-fade">
                 <Users size={18} /> Leadership Team
               </div>
-              <h1 className="text-5xl md:text-6xl font-serif leading-tight mb-6 text-white drop-shadow-[0_16px_30px_rgba(0,0,0,0.35)] leaders-hero-fade">Leadership that combines industry experience with future-ready advisory.</h1>
+              <h1 className="text-5xl md:text-6xl font-serif leading-tight mb-6 text-white drop-shadow-[0_16px_30px_rgba(0,0,0,0.35)] leaders-hero-fade">Meet the Partners of RAKS & Company</h1>
               <p className="max-w-2xl text-slate-200 leading-relaxed text-lg drop-shadow-[0_10px_20px_rgba(0,0,0,0.2)] leaders-hero-fade">
-                Our partners have experience in audit, assurance, banking sector assignments, and regulatory compliance.
+                Our partners have experience in audit, assurance, banking sector assignments and regulatory compliance.
               </p>
             </div>
 

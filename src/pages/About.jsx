@@ -135,13 +135,13 @@ function About() {
           <div className="story-text-block">
             <div className="space-y-4 text-slate-600 text-lg leading-relaxed text-justify">
               <p>
-                RAKS & Company is a contemporary Chartered Accountancy firm focused on delivering specialized assurance, audit, compliance, and advisory solutions with a strong emphasis on the banking and financial services sector.
+                RAKS & Company is a contemporary Chartered Accountancy firm focused on delivering specialized assurance, audit, compliance and advisory solutions with a strong emphasis on the banking and financial services sector.
               </p>
               <p>
-                Founded with the objective of combining professional rigor with sector-specific expertise, the firm is positioned to undertake diversified banking assignments including stock audits, revenue audits, credit audits, concurrent audits, forensic reviews, and Information Systems (IS) audits. Alongside traditional assurance services, the firm is also actively building capabilities in sustainability assurance, ESG compliance reviews, and green finance advisory aligned with evolving regulatory and international frameworks.
+                Founded with the objective of combining professional rigor with sector-specific expertise, the firm is positioned to undertake diversified banking assignments including stock audits, revenue audits, credit audits, concurrent audits, forensic reviews and Information Systems (IS) audits. Alongside traditional assurance services, the firm is also actively building capabilities in sustainability assurance, ESG compliance reviews and green finance advisory aligned with evolving regulatory and international frameworks.
               </p>
               <p>
-                The firm operates with a dedicated team of qualified professionals and domain specialists capable of handling assignments involving financial scrutiny, regulatory compliance, operational assessment, and investigative procedures across varied industries.
+                The firm operates with a dedicated team of qualified professionals and domain specialists capable of handling assignments involving financial scrutiny, regulatory compliance, operational assessment and investigative procedures across varied industries.
               </p>
             </div>
           </div>
@@ -164,7 +164,7 @@ function About() {
             <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block vision-container-el">Our Vision</span>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 vision-container-el">A purpose-driven, professional chartered accountancy firm</h2>
             <p className="text-lg text-slate-600 leading-relaxed vision-container-el ">
-              To build a professionally driven Chartered Accountancy firm for  specialized banking audits, investigative assurance services, and sustainability-focused advisory solutions.
+              To build a professionally driven Chartered Accountancy firm for  specialized banking audits, investigative assurance services and sustainability-focused advisory solutions.
             </p>
           </div>
         </section>
@@ -174,7 +174,7 @@ function About() {
             <span className="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">What We Stand For</span>
             <h3 className="text-2xl font-serif mb-4">The Focused Industry Expertise</h3>
             <p className="text-slate-600 leading-relaxed text-justify">
-              We concentrate on banking, finance, and risk-oriented engagements to deliver deeper insights and more relevant assurance outcomes.
+              We concentrate on banking, finance and risk-oriented engagements to deliver deeper insights and more relevant assurance outcomes.
             </p>
           </div>
 
@@ -182,7 +182,7 @@ function About() {
             <span className="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">How We Deliver</span>
             <h3 className="text-2xl font-serif mb-4">Professional, Process-Driven Execution</h3>
             <p className="text-slate-600 leading-relaxed text-justify">
-              Our structured review methodology, strong documentation practices, and rigorous quality checks ensure clarity and consistency across every assignment.
+              Our structured review methodology, strong documentation practices and rigorous quality checks ensure clarity and consistency across every assignment.
             </p>
           </div>
 
@@ -190,7 +190,7 @@ function About() {
             <span className="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">Our Engagement Focus</span>
             <h3 className="text-2xl font-serif mb-4">Advisory for evolving regulatory requirements</h3>
             <p className="text-slate-600 leading-relaxed text-justify">
-              We combine experience in audits, investigations, and ESG advisory to support clients through changing compliance expectations.
+              We combine experience in audits, investigations and ESG advisory to support clients through changing compliance expectations.
             </p>
           </div>
         </section>
@@ -208,7 +208,7 @@ function About() {
                 <Target size={32} />
               </div>
               <h3 className="text-2xl font-serif text-primary mb-3">Precision</h3>
-              <p className="text-slate-600 text-lg">Exactitude in every calculation, filing, and strategy we develop.</p>
+              <p className="text-slate-600 text-lg">Exactitude in every calculation, filing and strategy we develop.</p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-soft border border-slate-100 text-center hover:-translate-y-2 transition-transform duration-300 value-card">

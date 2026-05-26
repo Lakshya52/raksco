@@ -321,7 +321,7 @@ function ServiceDetail() {
                   Professional Enquiries
                 </span>
                 <h3 className="text-2xl font-serif text-white mb-4">
-                  Need customized assistance?
+                  Need customised assistance?
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed mb-6">
                   Get in touch with us to discuss your operational, financial compliance, or needs.

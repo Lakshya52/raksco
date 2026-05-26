@@ -11,9 +11,10 @@ function Footer() {
             <Link to="/" className="font-serif text-2xl font-bold text-white flex items-center gap-1 mb-6">
               RAKS<span className="text-accent">&</span>Company
             </Link>
-            <p className="leading-relaxed mb-6 text-slate-400 max-w-sm text-justify">
-              A firm of Chartered Accountants providing professional services in audit, taxation, and financial advisory.
+            <p className="leading-relaxed mb-6 text-slate-400 max-w-sm ">
+              A firm of Chartered Accountants providing professional services in audit, taxation and financial advisory.
             </p>
+
           </div>
 
           <div className="lg:col-span-2">
@@ -55,7 +56,12 @@ function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 text-center text-sm text-slate-500">
+        <div className="flex items-center justify-between pt-8 border-t border-white/10 text-center text-sm text-slate-500">
+          <div className="flex flex-wrap items-center gap-4 text-sm">
+            <Link to="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+            <Link to="/terms-and-conditions" className="hover:text-accent transition-colors">Terms & Conditions</Link>
+            <Link to="/legal-disclaimer" className="hover:text-accent transition-colors">Legal Disclaimer</Link>
+          </div>
           <p>&copy; {new Date().getFullYear()} RAKS & Company Chartered Accountants. All rights reserved.</p>
         </div>
       </div>

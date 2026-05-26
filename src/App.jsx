@@ -11,7 +11,9 @@ const Services = lazy(() => import('./pages/Services'));
 const About = lazy(() => import('./pages/About'));
 const Leadership = lazy(() => import('./pages/Leadership'));
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
-
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
+const LegalDisclaimer = lazy(() => import('./pages/LegalDisclaimer'));
 function App() {
   return (
     <ReactLenis root>
@@ -28,6 +30,9 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/leadership" element={<Leadership />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                <Route path="/legal-disclaimer" element={<LegalDisclaimer />} />
               </Routes>
             </Suspense>
           </main>
