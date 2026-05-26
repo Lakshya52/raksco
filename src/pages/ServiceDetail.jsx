@@ -54,9 +54,19 @@ function ServiceDetail() {
   return (
     <div ref={containerRef} className="pt-24 pb-24 min-h-screen bg-slate-50">
       {/* Premium Dark Hero Header */}
-      <section className="bg-primary text-white -mt-24 pt-44 pb-20 relative overflow-hidden">
+      <section className="bg-header-hero text-white -mt-24 pt-44 pb-20 relative overflow-hidden">
         {/* Decorative subtle background pattern */}
-        <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=70&w=1400&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-header-hero"></div>
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=70&w=1400&auto=format&fit=crop"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-r from-header-hero via-header-hero/90 to-header-hero/70"></div>
+        </div>
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[100px] animate-pulse"></div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -286,7 +296,7 @@ function ServiceDetail() {
                   </ul>
                 </div>
 
-                {/* Our Philosophy */}
+                {/* Our Philosophy
                 <hr className="border-slate-100" />
                 <div>
                   <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
@@ -296,13 +306,13 @@ function ServiceDetail() {
                   <p className="text-xs text-slate-500 leading-relaxed italic bg-slate-50 p-4 rounded-xl border border-slate-100">
                     "{service.atAGlance.approach}"
                   </p>
-                </div>
+                </div> */}
 
               </div>
             </div>
 
             {/* Sidebar CTA Card */}
-            <div className="bg-slate-900 text-white rounded-3xl p-8 border border-slate-800 shadow-[0_20px_50px_rgba(15,23,42,0.15)] relative overflow-hidden group">
+            <div className="bg-[oklch(0.27_0.13_266.24)] text-white rounded-3xl p-8 border border-slate-800 shadow-[0_20px_50px_rgba(15,23,42,0.15)] relative overflow-hidden group">
               {/* Background abstract overlay glow */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/10 rounded-full blur-[40px] group-hover:bg-accent/20 transition-colors duration-500"></div>
 

@@ -106,8 +106,18 @@ function About() {
   return (
     <div ref={containerRef} className="pt-24 pb-24 min-h-screen bg-slate-50">
       {/* Header */}
-      <div className="bg-primary py-24 text-white mt-[-6rem] pt-[12rem] mb-16 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1556761175-4b46a572b786?q=70&w=1400&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+      <div className="bg-header-hero py-24 text-white mt-[-6rem] pt-[12rem] mb-16 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-header-hero"></div>
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=70&w=1400&auto=format&fit=crop"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-header-hero via-header-hero/90 to-header-hero/70 backdrop-blur-sm"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <div className="inline-block px-4 py-1.5 bg-accent/20 text-accent border border-accent/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase about-hero-fade">
             Who We Are

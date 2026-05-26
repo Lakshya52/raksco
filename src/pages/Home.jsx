@@ -147,10 +147,10 @@ function Home() {
   return (
     <div ref={containerRef}>
       {/* Hero Section */}
-      <section className="relative min-h-dvh flex items-center pt-20 bg-primary text-white overflow-hidden hero-section">
+      <section className="relative min-h-dvh flex items-center pt-20 bg-header-hero text-white overflow-hidden hero-section">
         {/* Background Image with Parallax & Gradient Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-primary"></div>
+          <div className="absolute inset-0 bg-header-hero"></div>
           <img
             loading="eager"
             fetchPriority="high"
@@ -158,7 +158,7 @@ function Home() {
             alt=""
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-header-hero via-header-hero/90 to-header-hero/70"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-12 md:py-16 2xl:py-20">
@@ -172,7 +172,7 @@ function Home() {
             </div>
 
             <h1 className="text-4xl text-center md:text-5xl lg:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem]  text-white mb-6 2xl:mb-8 leading-[1.1] drop-shadow-2xl hero-fade-in font-serif">
-              Financial Due Delligence <br className="hidden md:block" />& Compliance.
+              Financial Due Diligence <br className="hidden md:block" />& Compliance.
             </h1>
 
             <div className="pl-4 md:pl-6 mb-8 2xl:mb-12 ">

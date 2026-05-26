@@ -63,8 +63,18 @@ function Services() {
 
   return (
     <div ref={containerRef} className="pt-24 pb-24 min-h-screen bg-slate-50">
-      <div className="bg-primary py-24 text-white -mt-24 pt-48 mb-16 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=70&w=1400&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+      <div className="bg-header-hero py-24 text-white -mt-24 pt-48 mb-16 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-header-hero"></div>
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=70&w=1400&auto=format&fit=crop"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-center "
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-header-hero backdrop-blur-sm via-header-hero/90 to-header-hero/70"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <div className="inline-flex items-center justify-center gap-3 px-4 py-2 bg-accent/20 text-accent border border-accent/50 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase services-hero-fade">
             Our services
@@ -134,7 +144,7 @@ function Services() {
             </p>
             <div className="grid gap-3 sm:grid-cols-2 industry-items-grid">
               {industriesServed.map((industry) => (
-                <div key={industry} className="flex gap-3 items-start rounded-3xl bg-slate-50 p-4 hover:bg-accent/30 transistion-all duration-300 industry-item">
+                <div key={industry} className="flex gap-3 items-start rounded-3xl bg-slate-50 p-4 hover:bg-accent/30 transition-all duration-300 industry-item">
                   <span className="mt-2 h-2.5 w-2.5 rounded-full bg-accent shrink-0"></span>
                   <p className="text-slate-700 leading-relaxed">{industry}</p>
                 </div>
@@ -142,7 +152,7 @@ function Services() {
             </div>
           </div>
 
-          <div className="rounded-4xl bg-slate-950 text-white p-10 md:p-14 shadow-[0_24px_80px_rgba(15,23,42,0.25)] border border-slate-800 focus-right-panel">
+          <div className="rounded-4xl bg-[oklch(0.27_0.13_266.24)] text-white p-10 md:p-14 shadow-[0_24px_80px_rgba(15,23,42,0.25)] border border-slate-800 focus-right-panel">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 text-accent px-4 py-2 text-sm uppercase tracking-[0.25em] font-semibold mb-6">
               Our Professional Focus
             </span>

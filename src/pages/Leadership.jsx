@@ -75,9 +75,18 @@ function Leadership() {
 
   return (
     <div ref={containerRef} className="pt-20 pb-24 min-h-dvh bg-slate-50">
-      <section className="relative overflow-hidden bg-slate-950 text-white py-20">
-        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,_rgba(34,197,94,0.15),transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.12),transparent_25%)]"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=70&w=1400&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-10"></div>
+      <section className="relative overflow-hidden bg-header-hero text-white py-20">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-header-hero"></div>
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=70&w=1400&auto=format&fit=crop"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-r from-header-hero via-header-hero/90 to-header-hero/70"></div>
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="grid gap-10 lg:grid-cols-[1.25fr_0.9fr] items-center">
