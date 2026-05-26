@@ -75,7 +75,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Our Expertise</span>
-            <h2 className="text-4xl md:text-5xl mb-6">Comprehensive Financial Solutions</h2>
+            <h2 className="text-4xl md:text-5xl mb-6">Professional Services</h2>
             <p className="text-lg text-slate-600">We provide a full spectrum of accounting, tax, and advisory services designed to meet the complex needs of modern enterprises.</p>
           </div>
 
@@ -111,6 +111,7 @@ function Home() {
                 alt="Financial charts and desk"
                 sizes="(max-width: 1024px) 100vw, 700px"
                 className="rounded-2xl shadow-soft w-full aspect-video object-cover"
+                style={{ height: "100%" }}
               />
             </div>
 

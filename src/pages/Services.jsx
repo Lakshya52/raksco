@@ -29,24 +29,24 @@ function Services() {
 
   const whyRaks = [
     {
-      title: 'Sector-Focused Approach',
-      description: 'A dedicated focus on banking, finance and risk-oriented assignments rather than a generalized compliance-only practice.',
+      title: 'Banking & Finance Assignments',
+      description: 'The firm undertakes banking sector assignments including stock audits, credit audits, concurrent audits, and IS audits.'
     },
     {
-      title: 'Investigative & Analytical Expertise',
-      description: 'Experience in forensic audits, investigations and risk assessments provides deeper analytical capability during audit engagements.',
+      title: 'Forensic & Investigative Reviews',
+      description: 'The firm undertakes forensic audits, investigations, and risk-based review assignments.'
     },
     {
-      title: 'ESG & Future-Ready Services',
-      description: 'Focused development of sustainability and ESG-oriented assurance services aligned with evolving market and regulatory expectations.',
+      title: 'ESG & Sustainability Reporting',
+      description: 'The firm provides advisory and reporting support in ESG compliance, BRSR disclosures, and sustainability frameworks.'
     },
     {
-      title: 'Professional Execution Team',
-      description: 'A dedicated team of professionals trained to execute assignments efficiently with emphasis on documentation, compliance, timelines and reporting quality.',
+      title: 'Audit & Assurance Services',
+      description: 'The firm undertakes statutory audits, internal audits, compliance reviews, and due diligence assignments.'
     },
     {
-      title: 'Technology & Process Driven',
-      description: 'Structured review methodologies, analytical procedures and risk-based evaluation frameworks improve audit effectiveness.',
+      title: 'Accounting & Regulatory Support',
+      description: 'The firm provides accounting, financial reporting, and regulatory compliance support services.'
     },
   ];
 
@@ -154,7 +154,7 @@ function Services() {
 
           <div className="rounded-4xl bg-[oklch(0.27_0.13_266.24)] text-white p-10 md:p-14 shadow-[0_24px_80px_rgba(15,23,42,0.25)] border border-slate-800 focus-right-panel">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 text-accent px-4 py-2 text-sm uppercase tracking-[0.25em] font-semibold mb-6">
-              Our Professional Focus
+              Service Areas
             </span>
             <h2 className="text-4xl font-serif text-white mb-6">Areas of focus across assurance and advisory.</h2>
             <div className="space-y-4 focus-items-list">

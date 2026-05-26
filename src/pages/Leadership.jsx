@@ -15,7 +15,7 @@ function Leadership() {
     {
       name: 'Punit Kumar Rai',
       title: 'Partner',
-      bio: 'He brings more than a decade of professional experience in audit, assurance, banking assignments, financial reviews, and regulatory compliance. His exposure includes handling complex audit engagements, financial due diligence assignments, statutory audits, and banking sector reviews for diversified entities.',
+      bio: 'He has professional experience in audit, assurance, banking assignments, financial reviews, and regulatory compliance. His exposure includes handling complex audit engagements, financial due diligence assignments, statutory audits, and banking sector reviews for diversified entities.',
       bio2: 'His practical understanding of risk-based auditing and banking operations enables the firm to deliver focused and process-driven audit solutions to financial institutions and corporate clients.',
     },
     {
@@ -96,7 +96,7 @@ function Leadership() {
               </div>
               <h1 className="text-5xl md:text-6xl font-serif leading-tight mb-6 text-white drop-shadow-[0_16px_30px_rgba(0,0,0,0.35)] leaders-hero-fade">Leadership that combines industry experience with future-ready advisory.</h1>
               <p className="max-w-2xl text-slate-200 leading-relaxed text-lg drop-shadow-[0_10px_20px_rgba(0,0,0,0.2)] leaders-hero-fade">
-                Our partners bring deep sector insight, regulatory clarity, and practical guidance to help your business navigate compliance, risk and growth with confidence.
+                Our partners have experience in audit, assurance, banking sector assignments, and regulatory compliance.
               </p>
             </div>
 

@@ -83,7 +83,7 @@ function Contact() {
               <div className="relative z-10 flex-grow flex flex-col">
                 <h3 className="text-4xl font-serif text-white mb-6">Let's Talk</h3>
                 <p className="text-slate-300 text-justify mb-12 leading-relaxed font-light text-lg">
-                  Whether you are planning a capital raise, need structured debt advisory, require project finance documentation, or are seeking to transform your business — the first step is a conversation.
+                  For professional enquiries relating to audit, assurance, tax compliance, or regulatory advisory, please get in touch with our office.
                 </p>
 
                 <div className="space-y-8 text-slate-300 mt-auto">

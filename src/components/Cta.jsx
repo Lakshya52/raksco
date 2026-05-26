@@ -30,9 +30,9 @@ const Cta = () => {
                     </h2>
 
                     <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
-                        Connect with our team for financial guidance,
-                        compliance support, and business advisory services tailored
-                        to your organization.
+                        For professional enquiries relating to audit, assurance, tax compliance,
+                        regulatory advisory, or accounting services, please reach out to our office
+                        and we will respond at the earliest.
                     </p>
 
                     <Link

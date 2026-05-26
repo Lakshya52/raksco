@@ -20,10 +20,10 @@ function BookConsultationCta({ onBookClick }) {
             Consultation
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4 text-white">
-            Ready to discuss your next financial move?
+            Get in Touch
           </h2>
           <p className="text-slate-100 text-lg max-w-2xl leading-relaxed">
-            Connect with our team for tailored advisory, compliance support, and accounting solutions designed for your business.
+            For professional enquiries relating to our services, please contact our office.
           </p>
         </div>
 
