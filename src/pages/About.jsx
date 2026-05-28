@@ -162,7 +162,7 @@ function About() {
         <section className="mb-24 bg-white rounded-[2rem] border border-slate-200 shadow-soft p-10 md:p-14 vision-container">
           <div className="max-w-4xl mx-auto text-center">
             <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block vision-container-el">Our Vision</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 vision-container-el">A purpose-driven, professional chartered accountancy firm</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 vision-container-el">A purpose-driven, CA firm</h2>
             <p className="text-lg text-slate-600 leading-relaxed vision-container-el ">
               To build a professionally driven Chartered Accountancy firm for  specialized banking audits, investigative assurance services and sustainability-focused advisory solutions.
             </p>

@@ -138,6 +138,9 @@ function Home() {
               </div>
             ))}
           </div>
+          <Link to="/services" className="w-full flex items-center justify-center group mt-10 transition-all duration-300 hover:text-black hover:underline ">
+            <span className="group-hover:pl-10 transition-all duration-300" >View all Services</span> <ArrowRight size={18} className="w-0 group-hover:w-10 transition-all duration-300" />
+          </Link>
         </div>
       </section>
 
@@ -221,7 +224,10 @@ function Home() {
             {[
               { icon: <Landmark size={40} />, name: "Banking & Finance" },
               { icon: <Factory size={40} />, name: "Manufacturing" },
-              { icon: <Building2 size={40} />, name: "Infrastructure & Real Estate" },
+              {
+                icon: <Building2 size={40} />,
+                name: "Infrastructure & Real Estate",
+              },
               { icon: <ShoppingCart size={40} />, name: "E-Commerce & Retail" },
               { icon: <Package2 size={40} />, name: "FMCG & Beverages" },
               { icon: <Hammer size={40} />, name: "Steels & Metals" },
@@ -230,7 +236,10 @@ function Home() {
               { icon: <Hotel size={40} />, name: "Hospitality" },
               { icon: <HeartPulse size={40} />, name: "Healthcare" },
               { icon: <Wheat size={40} />, name: "Agriculture & Agro" },
-              { icon: <GraduationCap size={40} />, name: "Education & Research" },
+              {
+                icon: <GraduationCap size={40} />,
+                name: "Education & Research",
+              },
               // { icon: <MonitorSmartphone size={40} />, name: "Technology" },
               // { icon: <Landmark size={40} />, name: "Financial" },
             ].map((industry, index) => (

@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PopupModal } from 'react-calendly';
 // import BookConsultationCta from '../components/BookConsultationCta';
+import { allServices } from '../data/servicesData';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,6 +48,8 @@ function Contact() {
       }
     });
   }, { scope: containerRef });
+
+  
 
   return (
     <div ref={containerRef} className="pt-24 pb-24 min-h-screen bg-slate-50">
@@ -185,14 +188,17 @@ function Contact() {
                   <div className="relative">
                     <select className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-300 appearance-none shadow-sm font-medium text-slate-700" defaultValue="">
                       <option value="" disabled>Select a service...</option>
-                      <option value="Banking & Financial Sector">Banking & Financial Sector</option>
+                      {/* <option value="Banking & Financial Sector">Banking & Financial Sector</option>
                       <option value="ESG, Sustainability & Green Finance Advisory">ESG, Sustainability & Green Finance Advisory</option>
                       <option value="Assurance & Advisory Services">Assurance & Advisory Services</option>
                       <option value="Agency for Specialized Monitoring (ASM)">Agency for Specialized Monitoring (ASM)</option>
                       <option value="Business Advisory">Business Advisory</option>
                       <option value="Regulatory & Compliance Support">Regulatory & Compliance Support</option>
                       <option value="Accounting & Financial Reporting">Accounting & Financial Reporting</option>
-                      <option value="Other">Other Services</option>
+                      <option value="Other">Other Services</option> */}
+                      {allServices.map(service => (
+                        <option key={service.slug} value={service.title}>{service.title}</option>
+                      ))}
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-slate-500">
                       <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
