@@ -1,8 +1,32 @@
-import React, { useRef } from 'react';
-import { Calculator, Briefcase, TrendingUp, ShieldCheck, CheckCircle2, ArrowRight, Building2, Factory, MonitorSmartphone, HeartPulse, Landmark, ShoppingCart, Shield, FileSearch, Users2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Cta from '../components/Cta';
-import { allServices } from '../data/servicesData';
+import React, { useRef } from "react";
+import {
+  Calculator,
+  Briefcase,
+  TrendingUp,
+  ShieldCheck,
+  CheckCircle2,
+  ArrowRight,
+  Building2,
+  MonitorSmartphone,
+  HeartPulse,
+  ShoppingCart,
+  Shield,
+  FileSearch,
+  Users2,
+  Landmark,
+  Factory,
+  Package2,
+  Hammer,
+  Plane,
+  Shirt,
+  Hotel,
+  Wheat,
+  GraduationCap,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import Cta from "../components/Cta";
+import { allServices } from "../data/servicesData";
+import financeHeroImg from "../assets/finance-hero.png";
 
 function Home() {
   const containerRef = useRef(null);
@@ -17,37 +41,40 @@ function Home() {
           <img
             loading="eager"
             fetchPriority="high"
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=70&w=1600&auto=format&fit=crop"
+            // src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=70&w=1600&auto=format&fit=crop"
+            src="https://img.magnific.com/free-photo/business-partners-handshake-global-corporate-with-technology-concept_53876-102615.jpg?t=st=1779966104~exp=1779969704~hmac=7d8b44147afab80f848e951f0a7604b5a34b5739e7dc14eb4a026affa97ba692&w=1480"
             alt=""
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-header-hero via-header-hero/90 to-header-hero/70"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-header-hero via-header-hero/90 to-header-hero/70"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-12 md:py-16 2xl:py-20">
           <div className="max-w-6xl relative mx-auto flex flex-col items-center text-center">
-            <div className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-5 py-1.5 md:py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs md:text-sm font-semibold mb-6 2xl:mb-8 tracking-widest uppercase text-accent shadow-[0_0_20px_rgba(37,99,235,0.1)] hero-fade-in">
+            {/* <div className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-5 py-1.5 md:py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs md:text-sm font-semibold mb-6 2xl:mb-8 tracking-widest uppercase text-accent shadow-[0_0_20px_rgba(37,99,235,0.1)] hero-fade-in">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
               </span>
               Chartered Accountants
-            </div>
+            </div> */}
 
-            <h1 className="text-4xl text-center md:text-5xl lg:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem]  text-white mb-6 2xl:mb-8 leading-[1.1] drop-shadow-2xl hero-fade-in font-serif">
+            <h1 className="mt-10 text-4xl text-center md:text-5xl lg:text-6xl xl:text-[4.5rem] 2xl:text-[5.5rem] text-white mb-6 2xl:mb-8 leading-[1.1] drop-shadow-2xl hero-fade-in font-serif">
               Financial Advisory & Compliance for Regulated Businesses.
             </h1>
 
             <div className="pl-4 md:pl-6 mb-8 2xl:mb-12 ">
               <p className="text-lg md:text-xl 2xl:text-2xl text-slate-300 max-w-4xl leading-relaxed font-light">
-                Financial insights, tax compliance and advisory for regulated businesses. Supporting your work with clear professional guidance.
+                Financial insights, tax compliance and advisory for regulated
+                businesses. Supporting your work with clear professional
+                guidance.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start hero-fade-in">
+            <div className="flex flex-row gap-4 md:gap-6 items-start hero-fade-in">
               <Link
                 to="/services"
-                className="group relative inline-flex items-center justify-center gap-2 md:gap-3 bg-accent hover:bg-accent-dark text-white px-6 md:px-8 py-3 md:py-4 rounded font-bold text-base md:text-lg transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.35)] hover:shadow-[0_0_40px_rgba(34,197,94,0.55)] hover:-translate-y-1"
+                className="group relative inline-flex items-center justify-center gap-2 md:gap-3 bg-accent hover:bg-accent-dark text-white px-6 md:px-8 py-3 md:py-4 rounded font-bold text-sm md:text-lg transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.35)] hover:shadow-[0_0_40px_rgba(34,197,94,0.55)] hover:-translate-y-1"
               >
                 Our Services
                 <ArrowRight
@@ -55,11 +82,13 @@ function Home() {
                   size={20}
                 />
               </Link>
-              <Link to="/contact" className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-6 md:px-8 py-3 md:py-4 rounded font-bold text-base md:text-lg transition-all duration-300 hover:-translate-y-1">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-6 md:px-8 py-3 md:py-4 rounded font-bold text-sm md:text-lg transition-all duration-300 hover:-translate-y-1"
+              >
                 Contact Us
               </Link>
             </div>
-
           </div>
         </div>
 
@@ -74,22 +103,35 @@ function Home() {
       <section id="services" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Our Expertise</span>
+            <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">
+              Our Expertise
+            </span>
             <h2 className="text-4xl md:text-5xl mb-6">Professional Services</h2>
-            <p className="text-lg text-slate-600">We provide a full spectrum of accounting, tax and advisory services designed to meet the complex needs of modern enterprises.</p>
+            <p className="text-lg text-slate-600">
+              We provide a full spectrum of accounting, tax and advisory
+              services designed to meet the complex needs of modern enterprises.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {allServices.slice(0, 4).map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-soft border border-slate-100 transition-all duration-300 group relative overflow-hidden flex flex-col">
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-soft border border-slate-100 transition-all duration-300 group relative overflow-hidden flex flex-col"
+              >
                 <div className="absolute top-0 left-0 w-1 h-0 bg-accent transition-all duration-300 group-hover:h-full"></div>
                 <div className="w-14 h-14 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-6">
                   {service.icon}
                 </div>
                 <h3 className="text-xl mb-4 font-serif">{service.title}</h3>
-                <p className="text-slate-500 mb-6 line-clamp-3 leading-relaxed">{service.description}</p>
+                <p className="text-slate-500 mb-6 line-clamp-3 leading-relaxed">
+                  {service.description}
+                </p>
                 <div className="mt-auto">
-                  <Link to={`/services/${service.slug}`} className="text-primary font-semibold flex items-center gap-2 group-hover:text-accent transition-colors">
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className="text-primary font-semibold flex items-center gap-2 group-hover:text-accent transition-colors"
+                  >
                     Learn more <ArrowRight size={16} />
                   </Link>
                 </div>
@@ -116,14 +158,21 @@ function Home() {
             </div>
 
             <div className="about-content">
-              <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block about-content-el">Firm Overview</span>
-              <h2 className="text-4xl md:text-5xl mb-6 about-content-el">Where Professional Standards Meet Practical Expertise</h2>
+              <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block about-content-el">
+                Firm Overview
+              </span>
+              <h2 className="text-4xl md:text-5xl mb-6 about-content-el">
+                Where Professional Standards Meet Practical Expertise
+              </h2>
               <div className="space-y-4 text-lg text-slate-600 mb-8 about-content-el">
-                <p className='text-justify' >
-                  At RAKS & Company, we provide professional services in the fields of auditing, taxation and corporate advisory.
+                <p className="text-justify">
+                  At RAKS & Company, we provide professional services in the
+                  fields of auditing, taxation and corporate advisory.
                 </p>
-                <p className='text-justify' >
-                  Our team of Chartered Accountants is dedicated to maintaining the highest level of professional ethics, delivering services in accordance with statutory requirements.
+                <p className="text-justify">
+                  Our team of Chartered Accountants is dedicated to maintaining
+                  the highest level of professional ethics, delivering services
+                  in accordance with statutory requirements.
                 </p>
               </div>
 
@@ -158,25 +207,49 @@ function Home() {
       <section className="py-24 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Industries</span>
+            <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">
+              Industries
+            </span>
             <h2 className="text-4xl md:text-5xl mb-6">Sectors We Serve</h2>
-            <p className="text-lg text-slate-600">Providing specialized professional services tailored to the unique regulatory and financial requirements of various industries.</p>
+            <p className="text-lg text-slate-600">
+              Providing specialized professional services tailored to the unique
+              regulatory and financial requirements of various industries.
+            </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {[
-              { icon: <Building2 size={40} />, name: "Real Estate" },
+              { icon: <Landmark size={40} />, name: "Banking & Finance" },
               { icon: <Factory size={40} />, name: "Manufacturing" },
-              { icon: <MonitorSmartphone size={40} />, name: "Technology" },
+              {
+                icon: <Building2 size={40} />,
+                name: "Infrastructure & Real Estate",
+              },
+              { icon: <ShoppingCart size={40} />, name: "E-Commerce & Retail" },
+              { icon: <Package2 size={40} />, name: "FMCG & Beverages" },
+              { icon: <Hammer size={40} />, name: "Steels & Metals" },
+              { icon: <Plane size={40} />, name: "Avaition" },
+              { icon: <Shirt size={40} />, name: "Textiles & Apparels" },
+              { icon: <Hotel size={40} />, name: "Hospitality" },
               { icon: <HeartPulse size={40} />, name: "Healthcare" },
-              { icon: <Landmark size={40} />, name: "Financial" },
-              { icon: <ShoppingCart size={40} />, name: "Retail" }
+              { icon: <Wheat size={40} />, name: "Agriculter & Agro" },
+              {
+                icon: <GraduationCap size={40} />,
+                name: "Education & Research",
+              },
+              // { icon: <MonitorSmartphone size={40} />, name: "Technology" },
+              // { icon: <Landmark size={40} />, name: "Financial" },
             ].map((industry, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
+              >
                 <div className="w-18 h-18 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                   {industry.icon}
                 </div>
-                <h3 className="font-medium font-sans text-slate-800 text-lg">{industry.name}</h3>
+                <h3 className="font-medium font-sans text-slate-800 text-lg">
+                  {industry.name}
+                </h3>
               </div>
             ))}
           </div>
@@ -188,11 +261,17 @@ function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="method-content">
-              <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block method-content-el">Methodology</span>
-              <h2 className="text-4xl md:text-5xl mb-6 method-content-el">Our Professional Approach</h2>
+              <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block method-content-el">
+                Methodology
+              </span>
+              <h2 className="text-4xl md:text-5xl mb-6 method-content-el">
+                Our Professional Approach
+              </h2>
               <div className="space-y-4 text-lg text-slate-600 mb-8 method-content-el">
                 <p>
-                  We are committed to delivering services with the highest degree of professional scepticism, independence and objectivity.
+                  We are committed to delivering services with the highest
+                  degree of professional scepticism, independence and
+                  objectivity.
                 </p>
               </div>
 
@@ -202,8 +281,13 @@ function Home() {
                     <Shield size={24} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-serif text-primary mb-2">Ethical Standards</h4>
-                    <p className="text-slate-600 text-justify">Strict adherence to the Code of Ethics issued by the Institute of Chartered Accountants of India.</p>
+                    <h4 className="text-xl font-serif text-primary mb-2">
+                      Ethical Standards
+                    </h4>
+                    <p className="text-slate-600 text-justify">
+                      Strict adherence to the Code of Ethics issued by the
+                      Institute of Chartered Accountants of India.
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-4 method-item">
@@ -211,8 +295,13 @@ function Home() {
                     <FileSearch size={24} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-serif text-primary mb-2">Rigorous Analysis</h4>
-                    <p className="text-slate-600 text-justify">Thorough examination of financial data to ensure accurate compliance and reporting.</p>
+                    <h4 className="text-xl font-serif text-primary mb-2">
+                      Rigorous Analysis
+                    </h4>
+                    <p className="text-slate-600 text-justify">
+                      Thorough examination of financial data to ensure accurate
+                      compliance and reporting.
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-4 method-item">
@@ -220,8 +309,13 @@ function Home() {
                     <Users2 size={24} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-serif text-primary mb-2">Clear Communication</h4>
-                    <p className="text-slate-600 text-justify">Timely and professional correspondence regarding regulatory updates and compliance requirements.</p>
+                    <h4 className="text-xl font-serif text-primary mb-2">
+                      Clear Communication
+                    </h4>
+                    <p className="text-slate-600 text-justify">
+                      Timely and professional correspondence regarding
+                      regulatory updates and compliance requirements.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -242,7 +336,7 @@ function Home() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 mb-10 cta-container" >
+      <div className="max-w-7xl mx-auto px-6 mb-10 cta-container">
         <Cta />
       </div>
       {/* CTA Section */}
@@ -257,7 +351,6 @@ function Home() {
           </Link>
         </div>
       </section> */}
-
     </div>
   );
 }

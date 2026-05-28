@@ -13,18 +13,18 @@ function Services() {
   const containerRef = useRef(null);
 
   const industriesServed = [
+    'Banking & Finance',
     'Manufacturing',
-    'Trading & Distribution',
-    'Retail Businesses',
-    'E-commerce',
-    'FMCG',
+    'Infrastructure & Real Estate',
+    'E-Commerce & Retail',
+    'FMCG & Beverages',
+    'Steels & Metals',
+    'Aviation',
+    'Textiles & Apparels',
     'Hospitality',
-    'Professional Services',
-    'Infrastructure & Construction',
-    'Logistics & Transportation',
-    'Banking & Financial Services',
-    'MSMEs & Mid-sized Enterprises',
-    'Renewable Energy & Green Businesses',
+    'Healthcare',
+    'Agriculture & Agro',
+    'Education & Research',
   ];
 
   const whyRaks = [
