@@ -19,7 +19,7 @@ export const coreServices = [
     description:
       "Specialized support for banks, NBFCs, financial institutions and regulated entities across audits, compliance and risk review.",
     longDescription:
-      "Provision of audit, review and compliance support services for banks, NBFCs and financial sector entities relating to credit processes, operational controls and regulatory requirements. The scope includes examination of financial records, review of operational procedures, verification of documentation and support relating to statutory and regulatory reporting requirements.\n\nThe services are carried out with a structured approach towards transaction review, documentation assessment, internal control evaluation and compliance monitoring in accordance with applicable regulatory frameworks.",
+      "Audit, review and compliance support services for banks, NBFCs and financial sector entities relating to credit processes, operational controls and regulatory requirements, including examination of financial records, internal control systems and compliance procedures. The scope includes examination of financial records, review of operational procedures, verification of documentation and support relating to statutory and regulatory reporting requirements.\n\nThe services are carried out with a structured approach towards transaction review, documentation assessment, internal control evaluation and compliance monitoring in accordance with applicable regulatory frameworks.",
     atAGlance: {
       targetClients: [
         "Statutory & Private Banks",
@@ -161,16 +161,16 @@ export const coreServices = [
         description:
           "Evaluation of IT controls, system processes, data integrity mechanisms and technology environments to support operational reliability, security and compliance assessments.",
       },
-      {
-        title: "Concurrent Audit",
-        description:
-          "Ongoing review of financial transactions, operational activities and process controls for banks, NBFCs and other entities to support monitoring and compliance requirements.",
-      },
-      {
-        title: "Stock Audit",
-        description:
-          "Verification and review of inventory records, stock valuation processes and physical inventory management systems for reporting, assessment and control purposes.",
-      },
+      // {
+      //   title: "Concurrent Audit",
+      //   description:
+      //     "Ongoing review of financial transactions, operational activities and process controls for banks, NBFCs and other entities to support monitoring and compliance requirements.",
+      // },
+      // {
+      //   title: "Stock Audit",
+      //   description:
+      //     "Verification and review of inventory records, stock valuation processes and physical inventory management systems for reporting, assessment and control purposes.",
+      // },
       {
         title: "Revenue Audit",
         description:
@@ -181,11 +181,11 @@ export const coreServices = [
         description:
           "Review and analysis of financial records, transactional data and supporting information for investigation support, fraud risk assessment and forensic examination purposes.",
       },
-      {
-        title: "Credit Audit",
-        description:
-          "Assessment and review of credit processes, lending documentation, monitoring procedures and portfolio-related records for compliance and risk evaluation purposes.",
-      },
+      // {
+      //   title: "Credit Audit",
+      //   description:
+      //     "Assessment and review of credit processes, lending documentation, monitoring procedures and portfolio-related records for compliance and risk evaluation purposes.",
+      // },
       {
         title: "Internal Audit",
         description:

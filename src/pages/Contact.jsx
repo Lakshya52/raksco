@@ -127,7 +127,9 @@ function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-white mb-1.5 tracking-wide text-lg">Business Hours</h4>
-                      <p className="leading-relaxed font-light">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat - Sun: Closed</p>
+                      <p className="leading-relaxed font-light">Mon - Fri: <br /> 10:00 AM - 6:00 PM
+                      {/* <br />Sat - Sun: Closed */}
+                      </p>
                     </div>
                   </div>
                 </div>

@@ -1,10 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, ChevronDown, ChevronUp, Users, FileSpreadsheet, Compass, HelpCircle } from 'lucide-react';
-import Cta from '../components/Cta';
-import { allServices } from '../data/servicesData';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import React, { useEffect, useRef, useState } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import {
+  ArrowLeft,
+  CheckCircle2,
+  ChevronDown,
+  ChevronUp,
+  Users,
+  FileSpreadsheet,
+  Compass,
+  HelpCircle,
+} from "lucide-react";
+import Cta from "../components/Cta";
+import { allServices } from "../data/servicesData";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function ServiceDetail() {
   const { slug } = useParams();
@@ -19,31 +28,34 @@ function ServiceDetail() {
   // If service not found, redirect to services page
   useEffect(() => {
     if (!service) {
-      navigate('/services');
+      navigate("/services");
     }
   }, [service, navigate]);
 
-  useGSAP(() => {
-    if (!service) return;
+  useGSAP(
+    () => {
+      if (!service) return;
 
-    // Fast, beautiful entrance load animations
-    gsap.from('.detail-hero-el', {
-      y: 35,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.12,
-      ease: 'power3.out'
-    });
+      // Fast, beautiful entrance load animations
+      gsap.from(".detail-hero-el", {
+        y: 35,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.12,
+        ease: "power3.out",
+      });
 
-    gsap.from('.detail-content-el', {
-      y: 40,
-      opacity: 0,
-      duration: 0.85,
-      stagger: 0.12,
-      ease: 'power3.out',
-      delay: 0.15
-    });
-  }, { scope: containerRef, dependencies: [slug] });
+      gsap.from(".detail-content-el", {
+        y: 40,
+        opacity: 0,
+        duration: 0.85,
+        stagger: 0.12,
+        ease: "power3.out",
+        delay: 0.15,
+      });
+    },
+    { scope: containerRef, dependencies: [slug] },
+  );
 
   if (!service) return null;
 
@@ -71,8 +83,15 @@ function ServiceDetail() {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="mb-8 detail-hero-el">
-            <Link to="/services" className="inline-flex items-center gap-2 text-slate-300 hover:text-accent transition-colors font-semibold group">
-              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" /> Back to Services
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 text-slate-300 hover:text-accent transition-colors font-semibold group"
+            >
+              <ArrowLeft
+                size={18}
+                className="group-hover:-translate-x-1 transition-transform"
+              />{" "}
+              Back to Services
             </Link>
           </div>
 
@@ -104,11 +123,9 @@ function ServiceDetail() {
 
       {/* Main Content Layout Section */}
       <div className="max-w-7xl mx-auto px-6 mt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_0.65fr] gap-12 items-start">
-
+        <div className=" items-start">
           {/* LEFT COLUMN: Deep Information */}
           <div className="space-y-12">
-
             {/* Overview */}
             <article className="bg-white rounded-3xl p-8 md:p-10 shadow-soft border border-slate-200/80 detail-content-el">
               <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6 flex items-center gap-3">
@@ -120,11 +137,16 @@ function ServiceDetail() {
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
                 {service.details.map((detail, index) => (
-                  <div key={index} className="flex gap-3 items-start p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-accent/5 transition-all duration-300">
+                  <div
+                    key={index}
+                    className="flex gap-3 items-start p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-accent/5 transition-all duration-300"
+                  >
                     <div className="mt-1 bg-accent/15 text-accent rounded-full p-1 shrink-0">
                       <CheckCircle2 size={16} />
                     </div>
-                    <span className="text-slate-700 text-sm font-medium leading-normal text-justify">{detail}</span>
+                    <span className="text-slate-700 text-sm font-medium leading-normal text-justify">
+                      {detail}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -133,7 +155,9 @@ function ServiceDetail() {
             {/* Core Offerings & Deliverables Grid */}
             <section className="bg-white rounded-3xl p-8 md:p-10 shadow-soft border border-slate-200/80 detail-content-el">
               <div className="mb-8">
-                <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-2 block">Key Capabilities</span>
+                <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-2 block">
+                  Key Capabilities
+                </span>
                 <h2 className="text-2xl md:text-3xl font-serif text-primary flex items-center gap-3">
                   <span className="h-6 w-1 bg-accent rounded-full inline-block"></span>
                   Detailed Offerings & Deliverables
@@ -147,7 +171,7 @@ function ServiceDetail() {
                     className="p-6 rounded-2xl border border-accent-dark/40 bg-slate-50/50 hover:bg-accent-light hover:border-accent hover:shadow-soft transition-all duration-300 group flex flex-col "
                   >
                     <div className="text-3xl font-bold font-serif text-accent  transition-colors mb-3">
-                      {String(idx + 1).padStart(2, '0')}
+                      {String(idx + 1).padStart(2, "0")}
                     </div>
                     <h3 className="text-lg font-semibold text-slate-800 mb-2 font-serif group-hover:text-primary transition-colors">
                       {offering.title}
@@ -247,24 +271,23 @@ function ServiceDetail() {
                 </div>
               </section>
             )} */}
-
           </div>
 
           {/* RIGHT COLUMN: Sidebar Metadata & CTA */}
-          <aside className="space-y-8 sticky top-28 detail-content-el">
+          {/* <aside className="space-y-8 sticky top-28 detail-content-el"> */}
 
-            {/* At a Glance Spec Card */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-soft relative overflow-hidden">
+          {/* At a Glance Spec Card */}
+          {/* <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-soft relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
 
               <h3 className="text-xl font-serif text-primary mb-6 flex items-center gap-2">
                 At a Glance
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-6"> */}
 
-                {/* Target Clients */}
-                {/* <div>
+          {/* Target Clients */}
+          {/* <div>
                   <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                     <Users size={14} className="text-accent" />
                     Target Clients
@@ -279,14 +302,14 @@ function ServiceDetail() {
                   </ul>
                 </div> */}
 
-                {/* Core Frameworks */}
-                <hr className="border-slate-100" />
-                <div>
-                  {/* <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+          {/* Core Frameworks */}
+          {/* <hr className="border-slate-100" />
+                <div> */}
+          {/* <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                     <FileSpreadsheet size={14} className="text-accent" />
                     Key Frameworks
                   </h4> */}
-                  <ul className="space-y-2">
+          {/* <ul className="space-y-2">
                     {service.atAGlance.frameworks.map((framework, i) => (
                       <li key={i} className="text-sm text-slate-700 flex gap-2 items-start font-medium">
                         <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0"></span>
@@ -294,9 +317,9 @@ function ServiceDetail() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
 
-                {/* Our Philosophy
+          {/* Our Philosophy
                 <hr className="border-slate-100" />
                 <div>
                   <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
@@ -307,13 +330,13 @@ function ServiceDetail() {
                     "{service.atAGlance.approach}"
                   </p>
                 </div> */}
-
+          {/* 
               </div>
-            </div>
+            </div> */}
 
-            {/* Sidebar CTA Card */}
-            <div className="bg-[oklch(0.27_0.13_266.24)] text-white rounded-3xl p-8 border border-slate-800 shadow-[0_20px_50px_rgba(15,23,42,0.15)] relative overflow-hidden group">
-              {/* Background abstract overlay glow */}
+          {/* Sidebar CTA Card */}
+          {/* <div className="bg-[oklch(0.27_0.13_266.24)] text-white rounded-3xl p-8 border border-slate-800 shadow-[0_20px_50px_rgba(15,23,42,0.15)] relative overflow-hidden group">
+              {/* Background abstract overlay glow 
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/10 rounded-full blur-[40px] group-hover:bg-accent/20 transition-colors duration-500"></div>
 
               <div className="relative z-10">
@@ -333,10 +356,9 @@ function ServiceDetail() {
                   Contact Our Office
                 </Link>
               </div>
-            </div>
+            </div> */}
 
-          </aside>
-
+          {/* </aside> */}
         </div>
       </div>
 

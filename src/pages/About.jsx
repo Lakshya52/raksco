@@ -135,7 +135,7 @@ function About() {
           <div className="story-text-block">
             <div className="space-y-4 text-slate-600 text-lg leading-relaxed text-justify">
               <p>
-                RAKS & Company is a contemporary Chartered Accountancy firm focused on delivering specialized assurance, audit, compliance and advisory solutions with a strong emphasis on the banking and financial services sector.
+                RAKS & Company is a new-age Chartered Accountancy firm focused on delivering specialized assurance, audit, compliance and advisory solutions with a strong emphasis on the banking and financial services sector.
               </p>
               <p>
                 Founded with the objective of combining professional rigor with sector-specific expertise, the firm is positioned to undertake diversified banking assignments including stock audits, revenue audits, credit audits, concurrent audits, forensic reviews and Information Systems (IS) audits. Alongside traditional assurance services, the firm is also actively building capabilities in sustainability assurance, ESG compliance reviews and green finance advisory aligned with evolving regulatory and international frameworks.

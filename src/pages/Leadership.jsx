@@ -17,12 +17,14 @@ function Leadership() {
       title: 'Partner',
       bio: 'He has professional experience in audit, assurance, banking assignments, financial reviews and regulatory compliance. His exposure includes handling complex audit engagements, financial due diligence assignments, statutory audits and banking sector reviews for diversified entities.',
       bio2: 'His practical understanding of risk-based auditing and banking operations enables the firm to deliver focused and process-driven audit solutions to financial institutions and corporate clients.',
+      specialties: ["Audit & Assurance","Regulatory Compliance","Banking Sector"]
     },
     {
       name: 'Ayush Saxena',
       title: 'Partner',
       bio: 'He specialized in emerging assurance domains including forensic audits, ESG-oriented compliance reviews, investigative assignments, due diligence engagements and technology-driven audit processes. His professional exposure includes assignments under the Companies Act, forensic examination procedures and advisory support for governance and compliance frameworks.',
       bio2: 'He actively focuses on integrating sustainability, governance and risk-based evaluation methodologies into the firm’s service offerings, particularly for the banking and finance ecosystem.',
+      specialties: ["Accounting", "ESG Compliance", "ASM"]
     },
   ];
 
@@ -42,10 +44,10 @@ function Leadership() {
   ];
 
   const leadershipFocus = [
-    'Regulatory compliance and governance assurance',
-    'Risk-based audit and financial reporting support',
-    'ESG, sustainability and investigative advisory',
-    'customised solutions for regulated enterprises',
+    'Audit, assurance and governance support for growing enterprises',
+    'Regulatory compliance and financial reporting assistance',
+    'ESG, sustainability and green finance advisory services',
+    'Independent monitoring and risk oversight for institutions',
   ];
 
   useGSAP(() => {
@@ -96,7 +98,7 @@ function Leadership() {
               </div>
               <h1 className="text-5xl md:text-6xl font-serif leading-tight mb-6 text-white drop-shadow-[0_16px_30px_rgba(0,0,0,0.35)] leaders-hero-fade">Meet the Partners of RAKS & Company</h1>
               <p className="max-w-2xl text-slate-200 leading-relaxed text-lg drop-shadow-[0_10px_20px_rgba(0,0,0,0.2)] leaders-hero-fade">
-                Our partners have experience in audit, assurance, banking sector assignments and regulatory compliance.
+                Our partners have experience in audit & assurance, due diligence, and banking sector assignments and regulatory compliance.
               </p>
             </div>
 
@@ -146,9 +148,14 @@ function Leadership() {
                 <p className="text-slate-600 leading-relaxed mb-4 text-justify">{partner.bio}</p>
                 <p className="text-slate-600 leading-relaxed text-justify">{partner.bio2}</p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">Audit & Assurance</span>
+                  {partner.specialties && partner.specialties.map((specialty, index) => (
+                    <span key={index} className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">
+                      {specialty}
+                    </span>
+                  ))}
+                  {/* <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">Audit & Assurance</span>
                   <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">Regulatory Compliance</span>
-                  <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">Banking Sector</span>
+                  <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">Banking Sector</span> */}
                 </div>
               </div>
             </div>
@@ -164,9 +171,9 @@ function Leadership() {
           </div>
           <div className="grid gap-4">
             {leadershipPrinciples.map((item) => (
-              <div key={item.title} className="rounded-[2rem] bg-white border border-slate-200 p-8 shadow-soft">
-                <h3 className="text-xl font-semibold text-primary mb-3">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{item.description}</p>
+              <div key={item.title} className="rounded-[2rem] bg-white border border-slate-200 p-8 shadow-soft flex items-center">
+                <h3 className="text-xl font-semibold text-primary ">{item.title}</h3>
+                {/* <p className="text-slate-600 leading-relaxed">{item.description}</p> */}
               </div>
             ))}
           </div>
@@ -176,12 +183,12 @@ function Leadership() {
         <section className="mt-12 rounded-[2rem] bg-white border border-slate-200 p-10 shadow-soft">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
-              <span className="text-accent uppercase tracking-widest text-xs font-semibold">Leadership priorities</span>
-              <h3 className="text-3xl font-serif text-primary mt-3">Focused on compliance, risk and client growth</h3>
+              <span className="text-accent uppercase tracking-widest text-xs font-semibold">Industry Focused Experties</span>
+              <h3 className="text-3xl font-serif text-primary mt-3">Delivering assurance, compliance and strategic advisory solutions</h3>
             </div>
-            <Link to="/contact" className="inline-flex items-center gap-2 text-accent font-semibold hover:text-accent-dark">
+            {/* <Link to="/contact" className="inline-flex items-center gap-2 text-accent font-semibold hover:text-accent-dark">
               Speak with our leadership <ArrowRight size={18} />
-            </Link>
+            </Link> */}
           </div>
 
           <div className="grid gap-6 mt-8 sm:grid-cols-2 xl:grid-cols-4">

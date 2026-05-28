@@ -31,8 +31,7 @@ const Cta = () => {
 
                     <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
                         For professional enquiries relating to audit, assurance, tax compliance,
-                        regulatory advisory, or accounting services, please reach out to our office
-                        and we will respond at the earliest.
+                        regulatory advisory, or accounting services, please reach out to us.
                     </p>
 
                     <Link
