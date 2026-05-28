@@ -221,22 +221,16 @@ function Home() {
             {[
               { icon: <Landmark size={40} />, name: "Banking & Finance" },
               { icon: <Factory size={40} />, name: "Manufacturing" },
-              {
-                icon: <Building2 size={40} />,
-                name: "Infrastructure & Real Estate",
-              },
+              { icon: <Building2 size={40} />, name: "Infrastructure & Real Estate" },
               { icon: <ShoppingCart size={40} />, name: "E-Commerce & Retail" },
               { icon: <Package2 size={40} />, name: "FMCG & Beverages" },
               { icon: <Hammer size={40} />, name: "Steels & Metals" },
-              { icon: <Plane size={40} />, name: "Avaition" },
+              { icon: <Plane size={40} />, name: "Aviation" },
               { icon: <Shirt size={40} />, name: "Textiles & Apparels" },
               { icon: <Hotel size={40} />, name: "Hospitality" },
               { icon: <HeartPulse size={40} />, name: "Healthcare" },
-              { icon: <Wheat size={40} />, name: "Agriculter & Agro" },
-              {
-                icon: <GraduationCap size={40} />,
-                name: "Education & Research",
-              },
+              { icon: <Wheat size={40} />, name: "Agriculture & Agro" },
+              { icon: <GraduationCap size={40} />, name: "Education & Research" },
               // { icon: <MonitorSmartphone size={40} />, name: "Technology" },
               // { icon: <Landmark size={40} />, name: "Financial" },
             ].map((industry, index) => (

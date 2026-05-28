@@ -90,14 +90,14 @@ function ServiceDetail() {
             </div>
 
             {/* Premium Glowing Service Icon */}
-            <div className="shrink-0 flex items-center justify-center detail-hero-el">
+            {/* <div className="shrink-0 flex items-center justify-center detail-hero-el">
               <div className="w-24 h-24 md:w-32 md:h-32 bg-white/5 backdrop-blur-md text-accent rounded-3xl border border-white/20 flex items-center justify-center shadow-[0_12px_40px_rgba(0,0,0,0.3)] relative group overflow-hidden">
                 <div className="absolute inset-0 bg-accent/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                 <div className="relative z-10 scale-125 md:scale-[1.5]">
                   {service.icon}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

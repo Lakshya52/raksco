@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PopupModal } from 'react-calendly';
-import BookConsultationCta from '../components/BookConsultationCta';
+// import BookConsultationCta from '../components/BookConsultationCta';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -216,15 +216,15 @@ function Contact() {
             </div>
           </div>
         </div>
-        <BookConsultationCta onBookClick={() => setCalendlyOpen(true)} />
+        {/* <BookConsultationCta onBookClick={() => setCalendlyOpen(true)} /> */}
       </div>
 
-      <PopupModal
+      {/* <PopupModal
         url="https://calendly.com/lakshyachandaliya7/30min"
         onModalClose={() => setCalendlyOpen(false)}
         open={calendlyOpen}
         rootElement={document.getElementById('root')}
-      />
+      /> */}
     </div>
   );
 }

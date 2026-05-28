@@ -32,7 +32,7 @@ function BookConsultationCta({ onBookClick }) {
           onClick={onBookClick}
           className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-slate-100"
         >
-          Consultation <ArrowRight size={20} />
+          Schedule Conferencing <ArrowRight size={20} />
         </button>
       </div>
     </section>
